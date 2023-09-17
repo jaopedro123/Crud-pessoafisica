@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#CorpoCadastro{
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #313338;
+}
+
+/* Conteiner Cadastro */ 
+.meudiv{  
+    /* Tamanho do Conteiner */
+    height: 760px; 
+    width: 850px;
+    padding: 5rem;
+
+    /* Posição dos Elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Estilização do Conteiner */
+    background-color: #1b1a1dd5;
+    border: solid 3px #7c3bb1;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #000000c7;
+}
+
+/* Posição e Estilização do h1 Cadastro*/
+.title{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+.form-título{
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.form-título #h1title::after{
+    content: '';
+    display: block;
+    width:14.4rem;
+    height: 0.3rem;
+    background-color: #7c3bb1;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+#flex{
+    display: flex;
+}
+/* Fim */
+
+/* Estilização Caixa de Concordar com os Termos de Uso, Texto e o Link */
+
+.inputcheckbox[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.inputcheckbox[type=checkbox]:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 0;
+    left: 0;
+    border: solid 1px #7c3bb1;
+    background-color: white;
+}
+.inputcheckbox[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 8px;
+    border: solid #7c3bb1;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 1px;
+    left: 5px;
+}
+
+/* Estilização do link para Termos de Uso e Política de Privacidade */
+#linktermos{
+    margin-left: 3px;
+    text-decoration: none;
+    color: #3480a3;
+}
+#linktermos:hover{
+    color: #7aadc5;
+}
+
+/* Estilização do Texto Concordar com os Termos */
+
+#spantermos{
+    font-weight: 500;
+    margin: 0px 5px;
+    color: white;
+}
+
+/* Estilização do Checkbox Não Costa */
+#NaoCosta{
+    font-size: 0.93rem;
+    font-weight: 500;
+    margin-top: -3px;
+    margin-bottom: 5px;
+    color: white;
+}
+.input[disabled] {
+    background-color: #686868; /* Cor de fundo cinza para indicar que está desativado */
+    pointer-events: none; /* Impede eventos de clique no input */
+}
+
+/* FIM */
+
+/* Estilizão do Link para Pessoa Física/Jurídica */ 
+
+.botãoPessoa{
+    margin-bottom: 20px;
+}
+.botãoPessoa #botaofisi{
+    text-decoration: none;
+    border: solid 3px #7c3bb1;
+    background-color: #7c3bb1;
+    border-radius: 3px;
+    padding: 0.4rem 1rem;
+    color: white;
+}
+.botãoPessoa #botaofisi:hover{
+    background-color: #854fb1;
+}
+
+.botãoPessoa2 #botaofisi2{
+    text-decoration: none;
+    border: solid 3px #7c3bb1;
+    background-color: white;
+    font-weight: 500;
+    margin-left: 15px;
+    border-radius: 3px;
+    padding: 0.4rem 1rem;
+}
+.botãoPessoa2 #botaofisi2:hover{
+    color: white;
+    background-color: #854fb1;
+}
+/* FIM */
+
+/* Estilizão Link para ir ao Login e Botão Limpar */ 
+.login-button{
+    display: flex;
+    align-items: center;
+}
+
+.login-button #linkpLogin{
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    padding: 0.4rem 1.3rem;
+    margin-bottom: 20px;
+    
+    color: white;
+    border: solid 3px #7c3bb1;
+    background-color: #7c3bb1;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.login-button #linkpLogin:hover{
+    background-color: #824cafee;
+}
+
+.login-button #ButtonReset{
+    font-weight: 600;
+    padding: 0.55rem 1.3rem;
+    margin-bottom: 20px;
+
+    color: white;
+    border: solid 3px #7c3bb1;
+    background-color: #7c3bb1;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-button #ButtonReset:hover{
+    background-color: #824cafee;
+}
+/*FIM*/
+
+/* Posição, Tamanho e Estilização dos Inputs */
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.input-box .input{
+    display: block;
+    outline: 0;
+    margin: 0.6rem 0;
+    padding: 0.8rem 3rem;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px 2px #000000b7;
+    font-size: 1rem;
+    transition: all 0.5s;
+}
+
+.input-box .input:hover{
+    background-color: #c7c7c7;
+}
+.input-box .input:focus-visible{
+    border-radius: 1.2rem; /* Define um arredondamento na borda de 1.2rem quando clica dentro do campo */
+}
+
+
+/* Estilização do Label e dos Inputs*/
+.input-box .label{
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+.input-box .input::placeholder{
+    color: #000000be;
+}
+
+/* Icones de Error e de Sucesso Estilização */
+.input-box.success .input {
+    border: 2px solid #4ECA64;
+}
+
+.input-box.error .input {
+    border: 2px solid #DB5A5A;
+}
+
+.input-box.error #i.img-error {
+    visibility: visible;
+}
+
+.input-box.success #i.img-success {
+    visibility: visible;
+}
+
+.input-box.error .small{
+    color: #DB5A5A;
+    visibility: visible;
+}
+
+.input-box #i {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.input-box .small {
+    visibility: hidden;
+    position: relative;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+/*FIM*/
+
+/* Estilização Botão Criar Conta*/
+#BotaoEnviar{
+    color: white;
+    margin-top: -10px;
+    font-size: 0.93rem;
+    font-weight: 500;
+}
+.continue-button #BotaoEnviar{
+    color: #fff;
+    width: 100%;
+    border: none;
+    background-color: #7c3bb1;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.continue-button #BotaoEnviar:hover{
+    background-color: #824cafee;
+}
+
+/* FIM DO CADASTRO*/
+
+
+/* LOGIN */
+
+/* Conteiner Login*/
+.meudivlogin{  
+    /* Tamanho do Conteiner Login*/
+    height: 620px; 
+    width: 650px;
+    padding: 5rem;
+
+    /* Posição dos Elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Estilização do Conteiner login */
+    background-color: #1b1a1dd5;
+    border: solid 3px #7c3bb1;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #000000c7;
+}
+
+/* Posição e Estilização da Logo no Login*/
+.form-image{
+    display: flex;
+    justify-content: space-around;
+}
+#logorapaMother{
+    width: 170px;
+    height: 90px;
+}
+
+/* Posição e Estilização do h1 Login */
+.form-título2{
+    margin-top: -3rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.form-título2 #h1title::after {
+    content: '';
+    display: block;
+    width:7rem;
+    height: 0.3rem;
+    background-color: #7c3bb1;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+/* Sistema de Ocultar/Mostar Senha*/
+#icon{
+    position: absolute;
+    top: 53%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: url('../../imagens/hide.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+#icon.hide{
+    background: url('../../imagens/show.png');
+    background-size: cover;
+}
+
+/* Sistema de Ocultar/Mostar Senha para o Confirmar Senha*/
+#icon2{
+    position: absolute;
+    top: 53%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: url('../../imagens/hide.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+#icon2.hide{
+    background: url('../../imagens/show.png');
+    background-size: cover;
+}
+/* FIM */
+
+
+/* Estilização do Link Esqueceu a Senha? */
+#senha{
+    font-size: 0.9rem;
+    position: absolute;
+    text-decoration: none;
+    color: #2d7da1;
+    margin-top: 8px;
+    font-weight: 500;
+}
+#senha:hover{
+    color: #7aadc5;
+}
+
+#logarcom{
+    color: white;
+    font-size: 1.6rem;
+    text-align: center; 
+    margin-top: 5%;
+}
+
+/* Posição e Estilo do Icone "Google"*/
+.sociais{
+    text-align: center;
+    justify-content: space-between;
+    margin: 8px;
+}
+#logoRedes{ 
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+/* Estilizão do Botão Criar Conta/Acessar Conta */
+
+.botaoAcessar #BotaoEnviar{
+    width: 100%;
+    border: none;
+    background-color: #7c3bb1;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-bottom: 15px;
+}
+.botaoAcessar #BotaoEnviar:hover {
+    background-color: #8243b6;
+}
+
+/* FIM DO LOGIN*/
+
+
+/* CSS do Formulário "Esqueci a Senha" */
+
+/* Conteiner do formulário "Esqueci a Senha"*/
+.meudivsenha{   
+    /* Tamanho do Conteiner "Esqueci a Senha"*/
+    width: 550px;
+    height: 420px;
+    padding: 5rem;
+    
+    /* Posição dos elementos "Esqueci a Senha"*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Estilização dos elementos "Esqueci a Senha"*/
+    background-color: #1b1a1dd5;
+    border: solid 3px #7c3bb1;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #000000ef;
+}
+
+/* Posição e Estilização do h1 "Esqueci a Senha"*/
+.form-títuloSenha{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.form-títuloSenha #h1senha::after{
+    content: '';
+    display: block;
+    width:20.8rem;
+    height: 0.3rem;
+    background-color: #7c3bb1;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+/* Posição, Tamanho e Estilização dos Inputs e Labels*/
+.labelforgotpassword{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+
+.input-box .inputforgotpassword{
+    font-size: 1rem;
+    display: block;
+    outline: 0;
+    margin: 0.6rem 0;
+    padding: 0.8rem 3rem;
+    margin-top: -8px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px 2px #000000b7;
+    transition: all 0.5s;
+}
+.input-box .inputforgotpassword:hover{
+    background-color: #c7c7c7;
+}
+.input-box .inputforgotpassword:focus-visible{
+    border-radius: 1.2rem; /* Define um arredondamento na borda de 1.2rem quando clica dentro do campo*/
+}
+
+/* Icones de Error e de Sucesso do Input "Esqueci a Senha"*/
+.input-box.success .inputforgotpassword {
+    border: 1px solid #4ECA64;
+}
+
+.input-box.error .inputforgotpassword {
+    border: 1px solid #DB5A5A;
+}
+
+/*FIM DO FORMULÁRIO "ESQUECI A SENHA"*/
+
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 1330px){
+    
+    .meudivlogin {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width: 1197px){
+    .input-box{
+        margin-bottom: 0rem;
+    }
+
+    .form-header{
+        margin-bottom: 2rem;
+    }
+
+    .continue-button #BotaoEnviar{
+        margin-top: 0;
+    }
+
+    .input-box{
+        width: 26rem;
+    }
+
+    .input-box2{
+        width: 26rem;
+    }
+   
+}
+
+@media screen and (max-width: 1064px){
+
+    .form-header{
+        margin-bottom: 4rem;
+    }
+
+    .form-header2{
+        margin-bottom: 4rem;
+    }
+
+    .continue-button #BotaoEnviar{
+        margin-top: 2.5rem;
+    }
+
+    .meudivlogin{
+        width: 80%;
+        height: auto;
+    }
+    
+    .input-group{
+        flex-direction: column;
+        padding-right: 5rem;
+        max-height: 16rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+
+    .input-box{
+        width: auto;
+        margin-bottom: 1.6rem;
+    }
+   
+    
+}
+
+@media screen and (max-width: 375px){
+
+    .form{
+        height: 85vh;
+    }
+    .input-group{
+        padding-top: 20px;
+        padding-right: 0;
+        max-height: 20rem;
+    }
+
+    .form-header{
+        margin-bottom: 2rem;
+    }
+
+    .login-button #ButtonReset{
+        padding: 0rem 0.1rem;
+    }
+    .login-button #linkpLogin{
+        padding: 0rem 0.1rem;
+    }
+
+    .botãoPessoa #botaofisi{
+        padding: 0rem 0.1rem;
+    }
+    .botãoPessoa2 #botaofisi2{
+        padding: 0rem 0.1rem;
+    }
+
+    .continue-button{
+        display: flex;
+        justify-content: center;
+    }
+
+    .continue-button #BotaoEnviar{
+        width: 80%;
+        margin-top: 0;
+        padding: 0.42rem;
+    }
+
+    .input-box{
+        margin-bottom: 1.2rem;
+    }
+
+    .form-header .title #h1title{
+        font-size: 28px;
+        padding-right: 15px;
+    }
+
+    .form-header #h1title::after{
+        width: 8.3rem;
+    }
+    
+}
+
+@media screen and (max-width: 325px){
+
+    .input-group{
+        max-height: 18rem;
+    }
+
+    .meudivlogin{
+        width: 90%;
+    }
+
+    .form{
+        height: 92vh;
+    }
+
+    .continue-button{
+        padding-top: 16px;
+    }
+
+    .input-box .input{
+        width: 14rem;
+        margin: 0.3rem 1px;
+        padding: 0.4rem 0.7rem;
+    }
+    
+}
+
+/* FIM DA RESPONSIVIDADE*/

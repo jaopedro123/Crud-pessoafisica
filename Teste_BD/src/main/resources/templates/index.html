@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <title>Motherboard</title>
+        <link rel="stylesheet" href="assets/css/css.css" type="text/css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="icones/logorapa.png">
+    </head>
+<body>
+    <header class="header">
+
+         <!--Menu Lateral-->
+
+    <div class="pagina">
+
+        <!-- MENU LATERAL -->
+        <div class="left-sidebar" id="sidebar">
+
+          <!-- LOGO DO TOPO -->
+          <a class="menu-logo" href="#">
+            <img id="logoDoMenuLateral" src="icones/logorapa.png">
+          </a>
+          <!-- Botão de fechamento -->
+            <div id="closeBtn" class="close-button">X</div>
+
+          <!-- CONTEUDO DO CENTRO DO MENU -->
+          <div class="conteudo-sidebar">
+            
+            <a class="menu-item" href="#">
+              <img src="icones/cpu.png">
+              <p class="nomeDasCategorias">Hardware</p>
+            </a>
+    
+            <a class="menu-item" href="#">
+              <img src="icones/gaming-pc.png">
+              <p class="nomeDasCategorias">Computadores</p>
+            </a>
+    
+            <a class="menu-item" href="#">
+            <img src="icones/teclado-e-mouse.png">
+           <p class="nomeDasCategorias">Periféricos</p>
+            </a>
+    
+            <a class="menu-item" href="#">
+            <img src="icones/dispositivos-eletronicos.png">
+            <p class="nomeDasCategorias">Eletrônicos</p>
+            </a>
+    
+            <a class="menu-item" href="#">
+            <img src="icones/monitor.png">
+            <p class="nomeDasCategorias">Monitores</p>
+            </a>
+    
+            <a class="menu-item" href="#">
+            <img src="icones/jogos.png">
+            <p class="nomeDasCategorias">Espaço Gamer</p>
+            </a>
+    
+            <a class="menu-item bottom" th:href="@{/Config}">
+            <img src="icones/configuracoes-cog.png">
+            <p class="nomeConfiguraçoes">Configurações</p>
+            </a>
+
+          </div>  
+</div>
+        </div>
+        <!-- Botao hamburguer -->
+        <section>
+          <nav>      
+            <ul class="hamburguer"> 
+              <li class="hamburguertamanho">
+                <a id="menuBtn" class="active" href="#">
+                  <img src="icones/cardapio.png">     
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
+        <div class="overlay hidden" id="overlay"></div>
+      <!--Final do Menu Lateral-->
+        <div class="logoheader">
+          <a th:href="@{/}"> <img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
+        </div>
+        <!--Começo da Barra de pesquisa-->
+        <div class="barra">
+            <span class="search-icon">
+                <img src="icones/lupa.png">
+            </span>
+            <input type="text" placeholder="Pesquisar...">
+        </div>
+        <!--FIM da Barra de pesquisa-->
+        <div class="icone2">
+          <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
+            <label for="switch-flat"></label>
+            </div>
+            <div class="icone">
+                <a th:href="@{/Favoritos}" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
+                <a th:href="@{/html}" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
+                <a th:href="@{/Cadastro}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
+            </div>
+        </header>
+
+<!--slideshow-->
+<BR/><BR/>
+    <div class="slideshow-container">
+    <div class="my-slides fade">
+        <img src="Imagens/o-melhor-headset.webp" >
+    </div>
+    <div class="my-slides fade">
+        <img src="Imagens/headesetGaming.png" >
+    </div>
+
+<!-- Adicione mais imagens conforme necessário -->
+
+<!-- Botões para avançar/anterior -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <!--slideshowFIM-->
+    <!--divisão de produtos-->
+    <div class="display">
+        <section class="displayflexhome">
+            <div class="divprod">
+                <!-- Carrossel 1 --><br/>
+                <h1 class="textopromo">Melhores produtos:</h1>
+                <div class="container65">
+                    <button class="scroll-button scroll-right scroll-right-1">&lt;</button>
+                    <div class="carousel">
+                        <div class="items">
+                            <!-- Itens do Carrossel 1 -->
+                            <div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div><div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens conforme necessário -->
+                        </div>
+                    </div>
+                    <button class="scroll-button scroll-left scroll-left-1">&gt;</button>
+                </div>
+            </div>
+
+            <div class="divprod">
+                <br/>
+                <h1 class="textopromo">Recomendaçoes:</h1>
+                <!-- Carrossel 2 -->
+                <div class="container65">
+                    <button class="scroll-button scroll-right scroll-right-2">&lt;</button>
+                    <div class="carousel">
+                        <div class="items">
+                            <!-- Itens do Carrossel 2 -->
+                            <div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div><div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div><div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div><div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div><div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens conforme necessário -->
+                        </div>
+                    </div>
+                    <button class="scroll-button scroll-left scroll-left-2">&gt;</button>
+                </div>
+            </div>
+            <div class="divprod">
+                <!-- Carrossel 3 -->
+                <br/>
+                <h1 class="textopromo">Nossas promoçoes:</h1>
+                <div class="container65">
+                    <button class="scroll-button scroll-right scroll-right-3">&lt;</button>
+                    <div class="carousel">
+                        <div class="items">
+                            <!-- Itens do Carrossel 3 -->
+                            <div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div><div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div><div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div><div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div><div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div><div class="product">
+                                <div class="container1">
+                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                </div>
+                                <div class="product-text">
+                                    <h2 class="product-title">PC GAMER</h2>
+                              
+                                        <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                                        <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                                        <span class="installment">12x sem juros no cartão</span><br/>   
+                                        <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+             
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens conforme necessário -->
+                        </div>
+                    </div>
+                    <button class="scroll-button scroll-left scroll-left-3">&gt;</button>
+                </div>
+            </div>
+        </section>
+        <section class="displayflexhome">
+            <div class="divprod2">
+                <img class="anuncioProd2" src="Imagens/images.jfif">
+            </div>     
+            <div class="divprod2">
+                <img class="anuncioProd2" src="Imagens/lux.jpg">
+            </div>   
+        </section>
+    </div>
+    <section>
+        <div class="divprod3">
+            <img class="anuncioProd3" src="Imagens/teclado.jpg">
+        </div>
+        </section>
+        <br/>
+        <section class="displayflexhome2">
+        <div class="divprod4">
+            <img class="anuncioProd4" src="Imagens/mousepad.jpg">
+        </div>
+        <div class="divprod4">
+            <img class="anuncioProd4" src="Imagens/pcgamer.jpeg">
+        </div>
+        <br/>
+    </section>
+    <br/>
+    <h1 class="textolistadeprod">Nossos Produtos:</h1><br/>
+    <section>
+        <div class="divprodgeral"><br/>
+            <div class="items2">
+                <div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div><div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div><div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div><div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div><div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div>
+            </div>
+            <div class="items2">
+                <div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div><div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div><div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div><div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div><div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div><div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div><div class="product">
+                    <div class="container1">
+                        <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
+                        <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                    </div>
+                    <div class="product-text">
+                        <h2 class="product-title">PC GAMER</h2>
+                  
+                            <span class="original-price">De <s class="vermelho123"><b class="branco">R$ 69,69</b></s></span><br/>
+                            <span class="discounted-price">por <strong class="preco">R$ 66,66</strong></span><br/> 
+                            <span class="installment">12x sem juros no cartão</span><br/>   
+                            <span class="discount-info"><h4>15% de desconto no pix</h4></span>
+ 
+                    </div>
+                </div>
+            </div>
+         </div>
+        </div><br/>
+    </section>
+    <script src="assets/script/script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <ul>
+                <a th:href="@{/}" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
+                <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
+                <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
+                    <div class="redessocial">
+                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
+                        <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
+                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
+                    </div>
+            </ul>
+            <ul>
+               <h1 class="textofooter">Dúvidas:</h1><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+            </ul>
+            <ul> 
+               <h1 class="textofooter">Cliente:</h1><br/>
+               <li><a th:href="@{/Conta}" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+               <li><a th:href="@{/Conta}" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
+            </ul>
+            <ul>
+                <h1 class="textofooter">Ajuda:</h1><br/> 
+                <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+                <li><a th:href="@{/Politica-De-Privacidade}" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+                <li><a th:href="@{/teste}" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+            </ul>
+        </div>
+        <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

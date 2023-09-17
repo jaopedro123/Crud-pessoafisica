@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style-form.css">
+    <link rel="shortcut icon" href="imagens/logorapa.png">
+    <title>Cadastro Jurídico</title>
+</head>
+
+<body id="CorpoCadastro">
+
+    <!-- Conteiner -->
+    <div class="meudiv">
+            <form class="form" id="form">
+
+                <!-- Título h1 Cadastro -->
+                <div class="form-título">
+
+                    <div class="title">
+                        <h1 id="h1title">Cadastre-se</h1>
+                    </div>
+
+                    <!-- Botão Limpar e Link para o Login -->
+                    <div id="flex">
+
+                        <div class="login-button">
+                            <button id="ButtonReset" type="reset">Limpar</button>
+                        </div>
+
+                        <div class="login-button">
+                            <a id="linkpLogin" th:href="@{/Login}">Login</a>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Links para Pessoa Física/Jurídica -->
+                <div id="flex">
+                    <div class="botãoPessoa">
+                        <a id="botaofisi" th:href="@{/CadastroJurídico}">Pessoa Jurídica</a>
+                    </div>
+                    
+                    <div class="botãoPessoa2">
+                        <a id="botaofisi2" th:href="@{/Cadastro}">Pessoa Física</a>
+                    </div>
+                </div>
+
+                <!-- Conteiner dos Inputs -->
+                <div class="input-group">
+
+                    <div class="input-box">
+                        <label class="label" for="nomeFantasia">Nome Fantasia:</label>
+                        <input class="input" type="text" id="nomeFantasia" name="nomeFantasia" placeholder="Digite o Nome Fantasia" maxlength="55">
+                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
+                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error -->
+        
+                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error -->
+                    </div>
+
+                    <div class="input-box">
+                        <label class="label" for="razaosocial">Razão Social:</label>
+                        <input class="input" type="text" id="razaosocial" name="razaosocial" placeholder="Digite sua Razão Social" maxlength="50">
+                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
+                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error -->
+        
+                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error -->
+                    </div>
+                    
+                    <div class="input-box">
+                        <label class="label" for="inscricaoestadual">Inscrição Estadual:</label>
+                        <input class="input" type="text" id="inscricaoestadual" name="inscricaoestadual" placeholder="Digite a Inscrição Estadual" maxlength="14">
+                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
+                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error --> 
+        
+                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
+                        <!-- Opção de Não Costa IE -->
+                        <p id="NaoCosta">
+                            <input class="inputcheckbox" id="inputcheckboxnaoCosta" name="naoCostaIE" type="checkbox">
+                            <label for="naoCostaIE" id="spantermos">Não consta</label>
+                        </p>
+                    </div>
+
+                    <div class="input-box">
+                        <label class="label" for="cnpj">CNPJ:</label>
+                        <input class="input" type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" maxlength="17">
+                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
+                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error --> 
+        
+                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
+                    </div>
+
+                    <div class="input-box">
+                        <label class="label" for="email">Email:</label>
+                        <input class="input" type="email" id="email" name="email" placeholder="contato@gmail.com" maxlength="30">
+                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
+                        <i id="i"class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error -->
+        
+                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
+                    </div>
+
+                    <div class="input-box">
+                        <label class="label" for="telefone">Telefone de Contato:</label>
+                        <input class="input" type="tel" id="telefone" name="telefone" placeholder="(99) 9999-9999">
+                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
+                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error -->
+        
+                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
+                    </div>
+                    
+                    <div class="input-box">
+                        <label class="label" for="password">Senha:</label>
+                        <input class="input" type="password" id="password" name="password" placeholder="Digite sua senha" maxlength="30">
+                        <div id="icon" onclick="showHide()"></div> <!-- Script para Ocultar/Mostra Senha -->
+        
+                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
+                    </div>
+
+                    <div class="input-box">
+                        <label class="label" for="passwordtwo">Confirmar Senha:</label>
+                            <input class="input" type="password" id="passwordtwo" name="passwordtwo" placeholder="Digite a senha novamente" maxlength="30">
+                            <div id="icon2" onclick="showHide2()"></div> <!-- Script para Ocultar/Mostra Senha no Confirmar Senha -->
+        
+                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
+        
+                    </div>
+
+                    <div class="input-box">
+                        <!-- Opção de concordar com os termos-->
+                        <p><input class="inputcheckbox" id="inputcheckbox" name="inputcheckbox" type="checkbox">
+                        <label for="inputcheckbox" id="spantermos">Concordo com os <a link id="linktermos" href="Termos De Uso.html">Termos De Uso</a> e com a <a id="linktermos" link href="Politica De Privacidade.html">Política De Privacidade</a></label></p>
+                        <small class="small">Error Message</small>
+                    </div>
+                </div>
+
+                <!-- Botão Submit -->
+                <div class="continue-button">
+                    <button id="BotaoEnviar" type="submit">Criar Conta</button>
+                </div>
+
+            </form>
+    </div>
+    <!-- Ligação do Script das Máscaras e Validações do Formulário de Cadastro Pessoa Jurídica -->
+    <script src="assets/Javascript/main-mascara-two.js"></script>
+    <script src="assets/Javascript/validation-form-two.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style-form.css">
+    <link rel="shortcut icon" href="imagens/logorapa.png">
+    <title>Login</title>
+</head>
+
+<body id="CorpoCadastro">
+
+    <!-- Conteiner -->
+    <div class="meudivlogin">
+            <form action="/login" method="post">
+				<div class="form" id="form">
+                <!-- Imagem da Logo no Login -->
+                <div class="form-image">
+                    <img id="logorapaMother" src="imagens/logorapa.png" alt="Motherboard">
+                </div>
+                
+                <!-- Título h1 Login -->
+                <div class="form-título2">
+                    <div class="title">
+                        <h1 id="h1title">Login</h1>
+                    </div>
+                </div>
+                
+                <!-- Inputs Login -->
+                    <div class="input-box">
+                        <label class="label" for="email">E-mail:</label>
+                        <input class="input" type="email" id="email" name="email" placeholder="Digite seu e-mail" maxlength="30">
+                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
+                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error -->
+        
+                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error -->
+                    </div>
+
+                    <div class="input-box">
+                        <label class="label" for="password">Senha:</label>
+                            <input class="input" type="password"  id="password" name="senha" placeholder="Digite sua senha" maxlength="20">
+                            <div id="icon" onclick="showHide()"></div> <!-- Script para Ocultar/Mostra Senha -->
+        
+                        <small class="small">Error Message</small>
+                    </div>
+
+                <!-- Link para Esqueci a Senha -->
+                <a th:href="@{/Esqueci-a-Senha}" id="senha">Esqueceu a senha?</a> <br> <br>
+
+                <!-- Botão Submit -->
+                <div class="botaoAcessar">
+                    <button id="BotaoEnviar" type="submit">Acessar a Conta</button>
+                </div>
+
+        <!-- Link para o Cadastro e Logar com o Google -->
+        <div class="logarcom">
+            <label id="spantermos">Não tem conta? <a id="linktermos" th:href="@{/Cadastro}">Cadastre-se</a></label>
+            <h2 id="logarcom">Logar com</h2>
+        </div>
+
+        <div class="sociais">
+            <a link href="#"><img id="logoRedes" src="imagens/google.png" alt="Google"></a>
+        </div>
+    </div>
+    </div>
+</form>
+
+<!-- Ligação do Script de Validações do Formulário de Login -->
+<script src="assets/Javascript/validation-form-logon.js"></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Motherboard</title>
+    <link rel="stylesheet" href="assets/css/css.css" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="icones/logorapa.png">
+</head>
+
+<body>
+    <header class="header">
+
+        <!--Menu Lateral-->
+
+   <div class="pagina">
+
+       <!-- MENU LATERAL -->
+       <div class="left-sidebar" id="sidebar">
+
+         <!-- LOGO DO TOPO -->
+         <a class="menu-logo" href="#">
+           <img id="logoDoMenuLateral" src="icones/logorapa.png">
+         </a>
+         <!-- Botão de fechamento -->
+           <div id="closeBtn" class="close-button">X</div>
+
+         <!-- CONTEUDO DO CENTRO DO MENU -->
+         <div class="conteudo-sidebar">
+           
+           <a class="menu-item" href="#">
+             <img src="icones/cpu.png">
+             <p class="nomeDasCategorias">Hardware</p>
+           </a>
+   
+           <a class="menu-item" href="#">
+             <img src="icones/gaming-pc.png">
+             <p class="nomeDasCategorias">Computadores</p>
+           </a>
+   
+           <a class="menu-item" href="#">
+           <img src="icones/teclado-e-mouse.png">
+          <p class="nomeDasCategorias">Periféricos</p>
+           </a>
+   
+           <a class="menu-item" href="#">
+           <img src="icones/dispositivos-eletronicos.png">
+           <p class="nomeDasCategorias">Eletrônicos</p>
+           </a>
+   
+           <a class="menu-item" href="#">
+           <img src="icones/monitor.png">
+           <p class="nomeDasCategorias">Monitores</p>
+           </a>
+   
+           <a class="menu-item" href="#">
+           <img src="icones/jogos.png">
+           <p class="nomeDasCategorias">Espaço Gamer</p>
+           </a>
+   
+           <a class="menu-item bottom" href="Configurações.html">
+           <img src="icones/configuracoes-cog.png">
+           <p class="nomeConfiguraçoes">Configurações</p>
+           </a>
+
+         </div>  
+</div>
+       </div>
+       <!-- Botao hamburguer -->
+       <section>
+         <nav>      
+           <ul class="hamburguer"> 
+             <li class="hamburguertamanho">
+               <a id="menuBtn" class="active" href="#">
+                 <img src="icones/cardapio.png">     
+               </a>
+             </li>
+           </ul>
+         </nav>
+       </section>
+       <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
+       <div class="overlay hidden" id="overlay"></div>
+     <!--Final do Menu Lateral-->
+       <div class="logoheader">
+         <a href="index.html" > <img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
+       </div>
+       <!--Começo da Barra de pesquisa-->
+       <div class="barra">
+           <span class="search-icon">
+               <img src="icones/lupa.png">
+           </span>
+           <input type="text" placeholder="Pesquisar...">
+       </div>
+       <!--FIM da Barra de pesquisa-->
+       <div class="icone2">
+         <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
+           <label for="switch-flat"></label>
+           </div>
+           <div class="icone">
+               <a href="Favoritos.html" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
+               <a href="html.html" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
+               <a href="Conta.html" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
+           </div>
+       </header>
+
+    <div class="fundoFav">
+
+        <main>
+            <br />
+            <div class="fundoDofundoFav">
+                <br />
+                <div>
+                    <div class="favoritos-branco-que-fica-em-cima">
+                        <img src="icones/favoritos branco que fica em cima.png">
+                    </div>
+                    <div class="Nome-favoritos-branco-que-fica-em-cima">
+                        Favoritos
+                    </div>
+                </div>
+
+                <section class="teste">
+
+                    <div class="favoritos">
+                        <div class="cartao-produto">
+                            <img src="Imagens/playstation-5.jpg" alt="PlayStation 5" class="imagem-produto">
+                            <div class="detalhes-produto">
+                                <h3 class="titulo-produto">PlayStation 5</h3>
+
+                                <div src="icones/favoritos.png" alt="icone-favoritos" class="icone-favoritos"> </div>
+
+                                <p class="descricao-produto">Console de videogame de última geração</p>
+                                <p>
+                                <div> <!-- Div para o preço original -->
+                                    <s class="linhaFav">
+                                        <div class="preco-produto"><b>R$ 4499,99</b></div>
+                                    </s>
+                                </div>
+                                <div class="preco-produto-com-desconto"> <!-- Div para o preço com desconto -->
+                                    <b> R$ 2999,99</b>
+                                </div>
+                                <div class="dozexnocartao"> 12x no cartao SEM JUROS</div>
+                                </p>
+                                <a href="#" class="botao-comprar">Comprar</a>
+
+                                <div class="seta-expandir">
+                                    <p class="textodescricaoproduto">Descrição</p>
+                                </div>
+                                <div class="descricao-completa-produto">O <b>PlayStation 5</b> é o console de videogame
+                                    da Sony, lançado em 2020.</div>
+                            </div>
+                        </div>
+
+                        <div class="cartao-produto">
+                            <img src="Imagens/series-x.jpg" alt="Xbox Series X" class="imagem-produto">
+                            <div class="detalhes-produto">
+                                <h3 class="titulo-produto">Xbox Series X</h3>
+
+                                <div src="icones/favoritos.png" alt="Ícone de Favoritos" class="icone-favoritos"></div>
+
+                                <p class="descricao-produto">Console de videogame de última geração</p>
+                                <p>
+                                <div> <!-- Div para o preço original -->
+                                    <s class="linhaFav">
+                                        <div class="preco-produto"><b>R$ 4240,00</b></div>
+                                    </s>
+                                </div>
+                                <div class="preco-produto-com-desconto"> <!-- Div para o preço com desconto -->
+                                    <b> R$ 3100,00</b>
+                                </div>
+                                <div class="dozexnocartao"> 12x no cartao SEM JUROS</div>
+                                </p>
+                                <a href="#" class="botao-comprar">Comprar</a>
+                                <div class="seta-expandir">
+                                    <p class="textodescricaoproduto">Descrição</p>
+                                </div>
+                                <div class="descricao-completa-produto">O <b>Xbox Series X</b> é o console de videogame
+                                    da Microsoft, lançado em 2020.</div>
+                            </div>
+                        </div>
+
+                        <div class="cartao-produto">
+                            <img src="Imagens/pc gamer.png" alt="Pc gamer" class="imagem-produto">
+                            <div class="detalhes-produto">
+                                <h3 class="titulo-produto">PC Gamer Intel I5 LED 16 milhões de cores</h3>
+
+                                <div src="icones/favoritos.png" alt="Ícone de Favoritos" class="icone-favoritos"> </div>
+
+                                <p class="descricao-produto">Intel I3 de 4ª geração com placa integrada e 4 GB de RAM
+                                </p>
+                                <p>
+                                <div> <!-- Div para o preço original -->
+                                    <s class="linhaFav">
+                                        <div class="preco-produto"><b>R$ 1999,99</b></div>
+                                    </s>
+                                </div>
+                                <div class="preco-produto-com-desconto"> <!-- Div para o preço com desconto -->
+                                    <b> R$ 1900,00</b>
+                                </div>
+                                <div class="dozexnocartao"> 12x no cartao SEM JUROS</div>
+                                </p>
+                                <a href="#" class="botao-comprar">Comprar</a>
+                                <div class="seta-expandir">
+                                    <p class="textodescricaoproduto">Descrição</p>
+                                </div>
+                                <div class="descricao-completa-produto"><b>Esse PC não é gamer</b></div>
+                            </div>
+                        </div>
+
+                        <div class="cartao-produto">
+                            <img src="Imagens/Nintendo Switch.avif" alt="Nintendo Switch" class="imagem-produto">
+                            <div class="detalhes-produto">
+                                <h3 class="titulo-produto">Nintendo Switch OLED</h3>
+
+                                <div src="icones/favoritos.png" alt="Ícone de Favoritos" class="icone-favoritos"> </div>
+
+                                <p class="descricao-produto">32GB - AZUL E VERMELHO - NACIONAL</p>
+                                <p>
+                                <div> <!-- Div para o preço original -->
+                                    <s class="linhaFav">
+                                        <div class="preco-produto"><b>R$ 2500,00</b></div>
+                                    </s>
+                                </div>
+                                <div class="preco-produto-com-desconto"> <!-- Div para o preço com desconto -->
+                                    <b> R$ 1899,99</b>
+                                </div>
+                                <div class="dozexnocartao"> 12x no cartao SEM JUROS</div>
+                                </p>
+                                <a href="#" class="botao-comprar">Comprar</a>
+                                <div class="seta-expandir">
+                                    <p class="textodescricaoproduto">Descrição</p>
+                                </div>
+                                <div class="descricao-completa-produto"> <b>Saída de vídeo: </b>Até 1080p usando HDMI no
+                                    modo TV | Até 720p usando a tela integrada</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <div class="adicionarMaisProd"><a href="index.html"> <img src="Imagens/mais branco.png"> </a> </div>
+                <br />
+                <div class="nomeDeAdionarMaisProd">Adicione mais produtos ao seus FAVORITOS para uma futura compra.
+                </div>
+
+            </div>
+            <script src="assets/script/js.js"></script>
+
+        </main>
+
+    </div>
+
+    <script src="assets/script/script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <ul>
+                <a href="index.html" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
+                <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
+                <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
+                    <div class="redessocial">
+                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
+                        <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
+                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
+                    </div>
+            </ul>
+            <ul>
+               <h1 class="textofooter">Dúvidas:</h1><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+            </ul>
+            <ul> 
+               <h1 class="textofooter">Cliente:</h1><br/>
+               <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+               <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
+            </ul>
+            <ul>
+                <h1 class="textofooter">Ajuda:</h1><br/> 
+                <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+                <li><a href="Politica De Privacidade.html" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+                <li><a href="teste.html" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+            </ul>
+        </div>
+        <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

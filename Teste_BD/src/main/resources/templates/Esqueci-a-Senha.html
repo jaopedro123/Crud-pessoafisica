@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style-form.css">
+    <link rel="shortcut icon" href="imagens/logorapa.png">
+    <title>Esqueci a Senha</title>
+</head>
+
+<body id="CorpoCadastro">
+
+    <!-- Conteiner -->
+    <div class="meudivsenha">
+            <form class="form" id="form">
+
+                <!-- Imagem da Logo -->
+                <div class="form-image">
+                    <img id="logorapaMother" src="imagens/logorapa.png" alt="Motherboard">
+                </div>
+
+                <!-- Título h1 -->
+                <div class="form-títuloSenha">
+                    <h1 id="h1senha">Esqueceu sua Senha?</h1>
+                </div>
+                
+                 <!-- Inputs do Formulário "Esqueci a Senha" -->
+                    <div class="input-box">
+                        <label class="labelforgotpassword" for="emailtwo">Digite seu endereço de email para recuperar sua senha</label>
+                        <input class="inputforgotpassword" type="email" id="email" name="emailtwo" placeholder="Digite seu e-mail">
+                        <i id="i" class="img-success"> <img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
+                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error -->
+        
+                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error -->
+                    </div>
+                    
+                    <!-- Botão Submit -->
+                    <div class="botaoAcessar">
+                        <button id="BotaoEnviar" type="submit">Enviar</button>
+                    </div>
+                    <br>
+                </form>
+
+                <!-- Link para voltar para o Login -->
+                <a id="linktermos" th:href="@{/Login}">Voltar para o Login</a>
+    </div>
+    <!-- Ligação do Script de Validação do Formulário de "Esqueci a Senha" -->
+    <script src="assets/Javascript/validation-form-logon.js"></script>
+</body>
+</html>

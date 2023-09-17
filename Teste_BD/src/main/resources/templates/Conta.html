@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motherboard</title>
+    <link rel="stylesheet" href="assets/css/css.css" />
+    <script src="assets/script/c.js"></script>
+    <script src="assets/script/script.js"></script>
+    
+  </head>
+
+  <body>
+    <header class="header">
+
+      <!--Menu Lateral-->
+
+ <div class="pagina">
+
+     <!-- MENU LATERAL -->
+     <div class="left-sidebar" id="sidebar">
+
+       <!-- LOGO DO TOPO -->
+       <a class="menu-logo" href="#">
+         <img id="logoDoMenuLateral" src="icones/logorapa.png">
+       </a>
+       <!-- Botão de fechamento -->
+         <div id="closeBtn" class="close-button">X</div>
+
+       <!-- CONTEUDO DO CENTRO DO MENU -->
+       <div class="conteudo-sidebar">
+         
+         <a class="menu-item" href="#">
+           <img src="icones/cpu.png">
+           <p class="nomeDasCategorias">Hardware</p>
+         </a>
+ 
+         <a class="menu-item" href="#">
+           <img src="icones/gaming-pc.png">
+           <p class="nomeDasCategorias">Computadores</p>
+         </a>
+ 
+         <a class="menu-item" href="#">
+         <img src="icones/teclado-e-mouse.png">
+        <p class="nomeDasCategorias">Periféricos</p>
+         </a>
+ 
+         <a class="menu-item" href="#">
+         <img src="icones/dispositivos-eletronicos.png">
+         <p class="nomeDasCategorias">Eletrônicos</p>
+         </a>
+ 
+         <a class="menu-item" href="#">
+         <img src="icones/monitor.png">
+         <p class="nomeDasCategorias">Monitores</p>
+         </a>
+ 
+         <a class="menu-item" href="#">
+         <img src="icones/jogos.png">
+         <p class="nomeDasCategorias">Espaço Gamer</p>
+         </a>
+ 
+         <a class="menu-item bottom" href="Configurações.html">
+         <img src="icones/configuracoes-cog.png">
+         <p class="nomeConfiguraçoes">Configurações</p>
+         </a>
+
+       </div>  
+</div>
+     </div>
+     <!-- Botao hamburguer -->
+     <section>
+       <nav>      
+         <ul class="hamburguer"> 
+           <li class="hamburguertamanho">
+             <a id="menuBtn" class="active" href="#">
+               <img src="icones/cardapio.png">     
+             </a>
+           </li>
+         </ul>
+       </nav>
+     </section>
+     <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
+     <div class="overlay hidden" id="overlay"></div>
+   <!--Final do Menu Lateral-->
+     <div class="logoheader">
+       <a href="index.html" > <img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
+     </div>
+     <!--Começo da Barra de pesquisa-->
+     <div class="barra">
+         <span class="search-icon">
+             <img src="icones/lupa.png">
+         </span>
+         <input type="text" placeholder="Pesquisar...">
+     </div>
+     <!--FIM da Barra de pesquisa-->
+     <div class="icone2">
+       <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
+         <label for="switch-flat"></label>
+         </div>
+         <div class="icone">
+             <a href="Favoritos.html" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
+             <a href="html.html" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
+             <a href="Conta.html" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
+         </div>
+     </header>
+
+    <div class="minhaConta">
+      <div class="titulo-conta">
+        <img id="foto" src="icones/ico.png" />
+        <div class="titulo-texto-conta">
+          <h2 id="tituconta">Minha conta</h2>
+          <h5>Fernando da Silva Neves</h5>
+        </div>
+      </div>
+      <div class="botoes-minhaConta">
+        <div class="botoes">
+          <button class="botao-minhaConta" onclick="mostrarDiv('dados')">
+            Meus Dados
+          </button>
+          <button class="botao-minhaConta" onclick="mostrarDiv('pedidos')">
+            Meus Pedidos
+          </button>
+          <button class="botao-minhaConta" onclick="mostrarDiv('endereço')">
+            Meu Endereço
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="pedidos" class="conteudo pedidos">
+      <!-- Conteúdo dos pedidos -->
+      <div class="divUm">
+        <div class="titulo-pedidos">
+          <img id="imgTitulo" src="icones/lista.png" />
+          <h2>Meus pedidos</h2>
+        </div>
+        <div class="card">
+          <div class="cimaCard-pedidos">
+            <span class="spPed">
+              <h4>Pedido:</h4>
+              <p>69841257</p>
+            </span>
+            <div class="spDir">
+              <span class="spdata">
+                <h4>Data prevista:</h4>
+                <p>30/09/2022</p>
+              </span>
+              <span class="spValor">
+                <h4>Total:</h4>
+                <div>
+                  <div class="sV">
+                    <p id="ps">De</p>
+                    <s>
+                      <p id="antes">R$ 359,00</p>
+                    </s>
+                  </div>
+                  <div class="sV">
+                    <p id="ps">por</p>
+                    <p>R$ 159,99</p>
+                  </div>
+                </div>
+              </span>
+              <span class="spSat">
+                <h4>Status do pedido:</h4>
+                <p id="andamento">Em andamento</p>
+              </span>
+            </div>
+          </div>
+
+          <div class="divInforPedido">
+            <div class="titulo-inform-pedidos">
+              <img
+                class="img-tituloInform"
+                src="imagens/ssd-husky-gaming-512gb-m-2.jpg"
+              />
+              <span class="spInform-pedido">
+                <h4>SSD 512 GB Husky Gaming</h4>
+                <p class="spInform-p">
+                  M.2 NVMe, Leitura: 2200 MB/s e Gravação: 1600 MB/s
+                </p>
+              </span>
+            </div>
+            <div class="baixoCard-pedidos">
+              <button class="BtnDet-pedidos">Ver detalhes</button>
+              <div class="detalhes">
+                <div class="titulo-descricao-pedidos">
+                  <img src="icones/lista2.png" />
+                  <h5>DESCRIÇÃO DO PRODUTO</h5>
+                </div>
+                <h5>SSD Husky Gaming M.2 NVME - 512 GB</h5>
+                <p class="p-detalhes">
+                  Alcance o próximo nível em desempenho no seu PC gamer com o
+                  SSD Husky Gaming! Desempenho rápido de NVMe, com velocidade de
+                  leitura de 2200 MB/s, velocidade de gravação de 1600MB/s e
+                  capacidade de armazenamento de 512 GB.
+                </p>
+                <h5>O desempenho que seu PC precisa!</h5>
+                <p class="p-detalhes">
+                  O SSD Husky Gaming dará vida ao seu computador, com excelente
+                  desempenho, ótima capacidade e uma velocidade até quatro vezes
+                  mais rápida que SSDs comuns.
+                </p>
+                <h5>Formato Projetado para Eficiência</h5>
+                <p class="p-detalhes">
+                  O formato compacto M.2 é de fácil instalação e ocupa pouco
+                  espaço. Seu baixo consumo de energia ajuda a prolongar a vida
+                  útil da bateria de notebooks, e seu consumo de 4 W em operação
+                  entrega máxima eficiência ao usuário.
+                </p>
+                <h5 class="h5-detalhes">
+                  Obrigado por escolher comprar na Motherboard!
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cimaCard-pedidos">
+            <span class="spPed">
+              <h4>Pedido:</h4>
+              <p>52245645</p>
+            </span>
+            <div class="spDir">
+              <span class="spdata">
+                <h4>Data prevista:</h4>
+                <p>13/09/2022</p>
+              </span>
+              <span class="spValor">
+                <h4>Total:</h4>
+                <div>
+                  <div class="sV">
+                    <p id="ps">De</p>
+                    <s>
+                      <p id="antes">R$ 459,27</p>
+                    </s>
+                  </div>
+                  <div class="sV">
+                    <p id="ps">por</p>
+                    <p>R$ 123,00</p>
+                  </div>
+                </div>
+              </span>
+              <span class="spSat">
+                <h4>Status do pedido:</h4>
+                <p>Entregue</p>
+              </span>
+            </div>
+          </div>
+
+          <div class="titulo-inform-pedidos">
+            <img class="img-tituloInform" src="imagens/memoria-rise.jpg" />
+            <span class="spInform-pedido">
+              <h4>Memória Rise Mode Z</h4>
+              <p class="spInform-p">
+                8GB, 3200MHz, DDR4, CL16, Branco - RM-D4-8G-3200ZW
+              </p>
+            </span>
+          </div>
+          <div class="baixoCard-pedidos">
+            <button class="BtnDet-pedidos">Ver detalhes</button>
+            <div class="detalhes">
+              <div class="titulo-descricao-pedidos">
+                <img src="icones/lista2.png" />
+                <h5>DESCRIÇÃO DO PRODUTO</h5>
+              </div>
+              <h5>Entendendo a memória RAM</h5>
+              <p class="p-detalhes">
+                Uma das peças mais importante para deixar seu computador rápido.
+                a Memória Ram Rise Mode Z é o que você precisa para não ter seu
+                Pc travando enquanto você usa seus programas favoritos.
+              </p>
+              <h5>Para um bom desempenho, você precisa do espaço certo!</h5>
+              <p class="p-detalhes">
+                Para ter acesso aos arquivos de forma rápida, invista na memória
+                RAM da Rise Mode que deixa o acesso mais rápido. Com 4GB de
+                capacidade, a Memória RAM Rise Mode é ótima para ajudar seu
+                computador a trabalhar rápido para acessar redes sociais, editar
+                textos e fazer planilhas, por exemplo.
+              </p>
+              <h5>Velocidade no dia a dia</h5>
+              <p class="p-detalhes">
+                Em modelo DDR4 mais aprimorada que a DDR3, a Memória RAM opera
+                com o padrão de até 3200MHz, indicando mais velocidade de
+                transferência em um mesmo intervalo de tempo.
+              </p>
+              <h5 class="h5-detalhes">
+                Obrigado por escolher comprar na Motherboard!
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dados" class="conteudo conteudo-dados">
+      <!-- Conteúdo dos dados -->
+      <p>Aqui estão seus dados.</p>
+    </div>
+    <div id="endereço" class="conteudo conteudo-dados">
+      <div class="dados">
+        <h2 class="titulo">Informações do seu endereço</h2>
+        <label for="cep" class="label">CEP:</label>
+        <input
+          type="number"
+          id="cep"
+          name="cep"
+          class="input"
+          placeholder="Digite seu CEP"
+          required
+        />
+        <br />
+        <button id="buscar-cep" class="botao">Buscar</button>
+        <label for="endereco" class="label">Endereço:</label>
+        <input
+          type="text"
+          id="endereco"
+          name="endereco"
+          class="input"
+          placeholder="Digite seu endereço"
+          required
+        />
+        <label for="cidade" class="label">Cidade:</label>
+        <input
+          type="text"
+          id="cidade"
+          name="cidade"
+          class="input"
+          placeholder="Digite sua cidade"
+          required
+        />
+        <label for="estado" class="label">Estado:</label>
+        <input
+          type="text"
+          id="estado"
+          name="estado"
+          class="input"
+          placeholder="Digite seu estado"
+          required
+        />
+
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="numero" class="label">Número:</label>
+            <input
+              type="number"
+              id="numero"
+              name="numero"
+              class="input"
+              placeholder="Número"
+              required
+            />
+          </div>
+          &nbsp&nbsp&nbsp&nbsp&nbsp
+          <div class="campo">
+            <label for="complemento" class="label">Complemento:</label>
+            <input
+              type="text"
+              id="complemento"
+              name="complemento"
+              class="input"
+              placeholder="Complemento"
+            />
+          </div>
+          &nbsp&nbsp&nbsp&nbsp&nbsp
+          <div class="campo">
+            <label for="referencia" class="label">Referência:</label>
+            <input
+              type="text"
+              id="referencia"
+              name="referencia"
+              class="input"
+              placeholder="Referência"
+            />
+          </div>
+        </div>
+        <br />
+        <button id="confirmar-endereco" class="botao">
+          Confirmar Endereço
+        </button>
+        <button id="apagar-endereco" class="botao">Apagar Endereço</button>
+      </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <footer class="footer">
+      <div class="container">
+          <ul>
+              <a href="index.html" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
+              <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
+              <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
+                  <div class="redessocial">
+                      <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
+                      <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
+                      <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
+                  </div>
+          </ul>
+          <ul>
+             <h1 class="textofooter">Dúvidas:</h1><br/>
+             <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+             <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+             <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+          </ul>
+          <ul> 
+             <h1 class="textofooter">Cliente:</h1><br/>
+             <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+             <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+             <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
+          </ul>
+          <ul>
+              <h1 class="textofooter">Ajuda:</h1><br/> 
+              <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+              <li><a href="Politica De Privacidade.html" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+              <li><a href="teste.html" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+          </ul>
+      </div>
+      <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
+  </footer>
+  </body>
+</html>

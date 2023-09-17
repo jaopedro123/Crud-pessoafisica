@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motherboard</title>
+    <link rel="stylesheet" href="assets/css/css.css" type="text/css">
+    <script defer src="assets/script/script.js"></script>
+    <script defer src="assets/script/aa2.js"></script>
+    <link rel="shortcut icon" href="icones/logorapa.png">
+    <!--DEFER É PRA INICIAR DEPOIS DO HTML-->
+</head>
+
+<body>
+
+    <header class="header">
+
+        <!--Menu Lateral-->
+
+   <div class="pagina">
+
+       <!-- MENU LATERAL -->
+       <div class="left-sidebar" id="sidebar">
+
+         <!-- LOGO DO TOPO -->
+         <a class="menu-logo" href="#">
+           <img id="logoDoMenuLateral" src="icones/logorapa.png">
+         </a>
+         <!-- Botão de fechamento -->
+           <div id="closeBtn" class="close-button">X</div>
+
+         <!-- CONTEUDO DO CENTRO DO MENU -->
+         <div class="conteudo-sidebar">
+           
+           <a class="menu-item" href="#">
+             <img src="icones/cpu.png">
+             <p class="nomeDasCategorias">Hardware</p>
+           </a>
+   
+           <a class="menu-item" href="#">
+             <img src="icones/gaming-pc.png">
+             <p class="nomeDasCategorias">Computadores</p>
+           </a>
+   
+           <a class="menu-item" href="#">
+           <img src="icones/teclado-e-mouse.png">
+          <p class="nomeDasCategorias">Periféricos</p>
+           </a>
+   
+           <a class="menu-item" href="#">
+           <img src="icones/dispositivos-eletronicos.png">
+           <p class="nomeDasCategorias">Eletrônicos</p>
+           </a>
+   
+           <a class="menu-item" href="#">
+           <img src="icones/monitor.png">
+           <p class="nomeDasCategorias">Monitores</p>
+           </a>
+   
+           <a class="menu-item" href="#">
+           <img src="icones/jogos.png">
+           <p class="nomeDasCategorias">Espaço Gamer</p>
+           </a>
+   
+           <a class="menu-item bottom" href="Configurações.html">
+           <img src="icones/configuracoes-cog.png">
+           <p class="nomeConfiguraçoes">Configurações</p>
+           </a>
+
+         </div>  
+</div>
+       </div>
+       <!-- Botao hamburguer -->
+       <section>
+         <nav>      
+           <ul class="hamburguer"> 
+             <li class="hamburguertamanho">
+               <a id="menuBtn" class="active" href="#">
+                 <img src="icones/cardapio.png">     
+               </a>
+             </li>
+           </ul>
+         </nav>
+       </section>
+       <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
+       <div class="overlay hidden" id="overlay"></div>
+     <!--Final do Menu Lateral-->
+       <div class="logoheader">
+         <a href="index.html" > <img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
+       </div>
+       <!--Começo da Barra de pesquisa-->
+       <div class="barra">
+           <span class="search-icon">
+               <img src="icones/lupa.png">
+           </span>
+           <input type="text" placeholder="Pesquisar...">
+       </div>
+       <!--FIM da Barra de pesquisa-->
+       <div class="icone2">
+         <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
+           <label for="switch-flat"></label>
+           </div>
+           <div class="icone">
+               <a href="Favoritos.html" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
+               <a href="html.html" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
+               <a href="Conta.html" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
+           </div>
+       </header>
+
+
+    <div class="cont">
+        <section class="secUm">
+            <div class="titulo">
+                <h2>Bem-vindo ao atendimento ao cliente</h2>
+            </div>
+            <p id="textp">Tire suas dúvidas perguntando ao nosso chat de atendimento</p>
+            <div class="inputper">
+                <input type="text" name="Perchat" id="inputPer" placeholder="Faça sua pergunta">
+                <button><img src="icones/enviar.png"></button>
+            </div>
+
+            <p id="dAssunto">Ou se prefirir... veja os tópicos mais abaixo ou use o acesso rápido</p>
+
+            <section class="acessoRapido">
+                <div class="cards">
+                    <div class="imgCard"><a href="#estorno"><img src="icones/pagMaior.png"></a></div>
+                    <div class="txtCard">Pagamento e Estorno</div>
+                </div>
+                <div class="cards">
+                    <div class="imgCard"><a href="#pedido"><img src="icones/compra.png"></a></div>
+                    <div class="txtCard">Fases da compra</div>
+                </div>
+                <div class="cards">
+                    <div class="imgCard"><a href="#garantia"><img src="icones/garantia.png"></a></div>
+                    <div class="txtCard">Garantia da compra</div>
+                </div>
+                <div class="cards">
+                    <div class="imgCard"><a href="#retirar"><img src="icones/endereço.png"></a></div>
+                    <div class="txtCard">Retirar na loja</div>
+                </div>
+            </section> <!--Fechamento do acesso rapido-->
+        </section> <!--Fechamento da Section Um-->
+
+        <section class="secDois">
+            <div class="div2">
+                <div class="text">
+                    <div class="per">
+                        <p>Perguntas frequentes</p>
+                    </div>
+                    <p id="texto">Encontre aqui respostas para dúvidas que tiver sobre a Motherboard! Confira nossas
+                        perguntas frequentes sobre cadastro, compra, garantia e outros assuntos, e se não encontrar o
+                        que estava procurando, você também pode entrar em contato com nossos ninjas do atendimento por
+                        chat ou telefone.</p>
+                </div>
+                <section class="mother">
+                    <div class="motherText">
+                        <a href="#">
+                            <p>Fale conosco</p>
+                        </a>
+                    </div>
+                    <div class="motherText">
+                        <a href="Termos De Uso.html">
+                            <p>Termos de privacidade</p>
+                        </a>
+                    </div>
+                    <div class="motherText">
+                        <a href="Politica De Privacidade.html">
+                            <p>Política de Privacidade</p>
+                        </a>
+                    </div>
+                </section>
+            </div> <!--Fechamento da div 2-->
+
+            <div class="div3">
+                <div class="txtPerg">
+                    <a name="garantia">
+                        <h3>Garantia ou Arrependimento</h3>
+                    </a>
+                </div>
+                <div class="lista">
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Preciso acionar a garantia de um produto. Como proceder?
+                            <img src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <ol>
+                                <li>Faça o login em nosso site, usando seu e-mail e senha;</li>
+                                <br>
+                                <li>Entre em minha conta e em seguida meus pedidos</li>
+                                <br>
+                                <li>Depois, você irá localizar o pedido referente ao item que deseja acionar a garantia; selecione 'Detalhes do pedido'.</li>
+                                <br>
+                                <li>Busque o produto que deseja solicitar garantia, clique em 'Garantia' e, depois em 'Continuar';</li>
+                                <br>
+                                <li>Selecione a etiqueta/número de série do produto e clique em 'Garantia';</li>
+                                <br>
+                                <li>Preencha o formulário e conclua a solicitação.</li>
+                            </ol>
+                            <br>
+                            <p>Pronto! Após ter aberto este protocolo, somente terá que aguardar o retorno de nosso departamento responsável em até 3 dias úteis. Você receberá uma notificação em seu e-mail de cadastro, então, é importante que acompanhe sua caixa de entrada, caixa de spam ou lixo eletrônico!</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Como acionar  o Direito de Arrependimento?
+                            <img src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>O Direito de Arrependimento só pode ser acionado após o recebimento da compra em sua casa, no prazo de até 7 dias corridos. Nesse caso, siga o passo a passo abaixo: </p>
+                            <br>
+                            <ol>
+                                <li>Faça o login em nosso site, usando seu e-mail e senha;</li>
+                                <br>
+                                <li>Entre em minha conta e em seguida meus pedidos</li>
+                                <br>
+                                <li>Depois, você irá localizar o pedido referente ao item que deseja acionar o direito de arrependimento e deverá selecionar 'Detalhes do pedido'.</li>
+                                <br>
+                                <li>Busque o produto que deseja solicitar o arrependimento e, em seguida, selecione 'Arrependimento' e depois em 'Continuar';</li>
+                                <br>
+                                <li>Selecione a etiqueta/número de série do produto e clique em 'Arrependimento';</li>
+                                <br>
+                                <li>Preencha o formulário e conclua a solicitação.</li>
+                            </ol>
+                            <br>
+                            <p>Após ter aberto este protocolo, somente terá de aguardar o retorno de nosso departamento responsável em até 3 dias úteis. Você receberá uma notificação em seu e-mail de cadastro, então, é importante que acompanhe sua caixa de entrada, caixa de spam ou lixo eletrônico!</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Como cancelar meu pedido?
+                            <img src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Pedido em rota de entrega: Não conseguimos cancelar pedidos que já estão em rota de entrega, será necessário recusar, não havendo outra forma.
+                            <br> <br>
+                            Pedido aguardando aprovação da compra cartão de crédito: O KaBuM! realiza tentativas de aprovação do pedido, junto a administradora do cartão, durante 48 horas, em vários momentos do dia. Após esse prazo, caso a aprovação não ocorra é só aguardar, pois o pedido será cancelado de forma automática, não havendo novas tentativas.</p>
+                        </div>
+                    </div>
+
+                <div class="txtPerg">
+                    <a name="pedido">
+                        <h3>Pedido</h3>
+                    </a>
+                </div>
+                <div class="lista">
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Dúvidas sobre o status do meu pedido
+                            <img src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Para verificar o status do seu pedido, acesse sua conta e clique no pedido que deseja ter
+                                informações. Logo abaixo do item, você visualizará uma barra de status que mostrará em
+                                que momento seu pedido está. Essa barra é atualizada conforme o pedido for avançando no
+                                processo de aprovação da compra ou entrega, caso ocorra algum problema com o seu pedido,
+                                entraremos em contato para notificar e levar a melhor solução. Fique de atento ao seu
+                                e-mail, nossa comunicação acontece por este canal.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Quais são as fases de compra?
+                            <img src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Aqui no Motherboard, seu pedido de compra tem as seguintes fases:</p>
+                            <br>
+                            <ol>
+                                <li>Pendente / Análise. Significa que foi gerado um pedido de compra no site porém ainda
+                                    não foi detectado o pagamento. Essa etapa leva 48h úteis, tanto para compras por
+                                    boleto quanto por cartão de crédito.
+                                    <br> <br>
+                                    Para compras por boleto, significa que a transação está em processamento pelo banco.
+                                    Para compras por cartão de crédito, significa que a Seguradora contratada pela
+                                    Pichau está fazendo a análise do seu pagamento e dados para proteção dos clientes.
+                                </li>
+                                <br>
+                                <li>Aprovado . É quando foi identificado seu pagamento pelo sistema.</li>
+                                <br>
+                                <li>Produção . Significa que seu pedido já está sendo separado.</li>
+                                <br>
+                                <li>Expedição . É quando seu computador ou peça está sendo embalado, emitido a nota fiscal e aguardando coleta pela transportadora.</li>
+                                <br>
+                                <li>Enviado . O envio é a fase final da sua compra, quando sua compra deixou a Pichau e já está com a Transportadora/Correios.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Como rastrear meu pedido?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Acesse o MINHA CONTA no site ou através do APP, selecione o pedido que deseja acompanhar,
+                                observe que terá uma barra que mostrará a evolução da sua entrega e, caso queira,
+                                consultar direto com o transportador parceiro, escolhido para a entrega no ato da
+                                compra, é só acessar o site do parceiro, incluir o número da nota fiscal e consultar o
+                                status do pedido.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Posso alterar o endereço de entrega com objeto em transporte?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Quando seu pedido já estiver em transporte, infelizmente não será possível alterar o
+                                endereço de entrega. No entanto, você poderá nos contatar para verificar a possibilidade
+                                de solicitarmos o retorno do pedido ao KaBuM!, para assim efetuarmos a alteração do
+                                endereço.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="txtPerg">
+                    <a name="estorno">
+                        <h3>Pagamento e Estorno</h3>
+                    </a>
+                </div>
+                <div class="lista">
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Fiz a compra com o cartão, apareceu aprovado, mas o pedido foi cancelado. Por quê?
+                            <img src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Para segurança dos nossos clientes o KaBuM! possui um serviço de anti-fraude que faz toda
+                                a investigação dos dados das compras para garantir que tudo vai ocorrer de acordo com o
+                                esperado. Caso o pedido não seja aprovado por data divergente, limite ou outros, a
+                                reserva do seu limite será liberada em até 48 horas após o cancelamento oficial.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Dúvidas sobre estorno
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>O prazo para o estorno no cartão de crédito é feito de imediato pelo KaBuM! Quando o
+                                pedido é cancelado, no entanto, pode variar de acordo com o fechamento da sua fatura,
+                                podendo ser visualizado em até duas faturas subsequentes à data da solicitação. Por
+                                isso, pedimos que aguarde e acompanhe sua fatura. Já para o estorno em conta bancária,
+                                se já nos passou os dados, basta aguardar que te informaremos em seu e-mail de cadastro
+                                quando for dado andamento, o prazo para conclusão do estorno após essa informação é de
+                                até 3 dias úteis.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Qual é o prazo para a confirmação de pagamento?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Pagamentos efetuados via Boleto Bancário e Cartão de Crédito têm um prazo de 1 a 2 dias
+                                úteis para confirmação; já para pagamentos via PIX, o prazo de confirmação é de até 30
+                                minutos. Se esse período for expirado e o pagamento de seu pedido permanecer indicado
+                                como pendente, será necessário entrar em contato com o nosso Atendimento.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Como comprar pelo PIX?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>O PIX é a melhor opção de pagamento para suas compras à vista. Com ele, você garante até
+                                15% de desconto. Além disso, essa modalidade oferece toda agilidade e praticidade que
+                                você precisa. Ao finalizar a sua compra pelo PC, um QR Code será gerado na tela de
+                                conclusão do seu pedido.
+
+                                1. Abra o aplicativo do seu banco pelo smartphone.
+                                2. siga até a opção PIX e escolha o pagamento por QR Code
+
+                                Já pelo smartphone, você deverá copiar o código Pix Copia e Cola, clicando no botão
+                                Copiar Código. Sobre as novas regras do PIX, que começaram a valer no dia 04/10/2021,
+                                elas foram criadas pelo Banco Central para garantir mais segurança em suas transações
+                                financeiras. Agora, entre as 20h e as 06h, o limite de pagamento é de até R$ 1.000. Se
+                                preferir, você pode ampliar o seu limite para aproveitar todas as ofertas com
+                                tranquilidade. Entre em contato com a Central de Atendimento do seu Banco ou acesse a
+                                opção de limites no APP da instituição. O prazo para liberação pode levar até 48h.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="txtPerg">
+                    <a name="retirar">
+                        <h3>Retirada de Produtos</h3>
+                    </a>
+                </div>
+                <div class="lista">
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Onde retiro meu produto?
+                            <img src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Atualmente, as lojas físicas em que a opção 'Retirar seu Produto' (no caso, comprado no
+                                KaBuM!), podem estar disponíveis, conforme anúncio do item. Consulte através do seu CEP
+                                para visualizar a loja mais próxima disponível.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Quem pode retirar?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Apenas o titular da compra ou pessoa indicada no site do KaBuM!, no momento da compra,
+                                desde que maior de 18 anos, poderão retirar o produto, mediante a apresentação de um
+                                documento com foto contendo N° do CPF.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Todos os produtos podem ser retirados?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>É possível retirar pessoalmente nas lojas Parceiras apenas os produtos que são vendidos e
+                                entregues pelo Motherboard!. Você pode identificá-los ao acessar a página do item que
+                                deseja, na frase “Vendido e entregue por: Motherboard! | Em estoque”, que está logo
+                                acima do preço</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Como saber se posso retirar o meu produto?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Você receberá em seu e-mail e/ou no aplicativo do Motherboard! uma notificação informando
+                                que o produto está disponível para retirada na loja física escolhida.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Como acompanho a chegada do pedido nas lojas Parceiras?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Após o recebimento da informação para retirada (enviada por e-mail e/ou notificação no
+                                APP), você deve se direcionar à loja escolhida no momento da compra, dentro do horário
+                                de operação, e apresentar documento com foto, contendo o número do CPF. Após a
+                                apresentação dos produtos pelo atendente, você deverá assinar o comprovante de
+                                recebimento, evidenciando a retirada.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Como retirar o pedido na loja?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>O prazo para retirada do produto é de 7 dias , após a notificação de chegada do pedido na
+                                loja.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Qual é o prazo para retirada?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Qual é o horário para retirada?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>A retirada deve ocorrer durante o horário de operação da loja.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Quais são as regras para que outra pessoa possa reitrar o produto no meu lugar?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Você deve indicar o nome e número do CPF da pessoa no momento da compra. Para retirada do
+                                produto, a pessoa indicada deve apresentar um documento com foto e número do CPF (CNH ou
+                                RG).</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Após retirada, posso devolver o produto na loja?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Não, após a retirada do seu produto na loja e assinatura registrada, você deve seguir o
+                                processo de arrependimento e garantia, conforme política padrão do Motherboard!.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Se um dos produtos do meu pedido não puder ser retirado preciso fazer dois pedidos?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Se a modalidade de entrega “Retirar na loja” estiver disponível apenas para um dos
+                                produtos do pedido, essa informação aparecerá no momento da escolha da modalidade de
+                                entrega. <br> <br>Caso a composição do pedido, pelos produtos escolhidos, não permita
+                                essa modalidade de entrega, não será possível escolher o Retirar na loja.</p>
+                        </div>
+                    </div>
+
+                    <div class="perguntas">
+                        <button class="btnPerguntas">
+                            Os produtos para retirar na loja podem ser embalados para presente?
+                            <img class="seta" src="icones/setinha.png">
+                        </button>
+                        <div class="painel">
+                            <p>Não existe a possibilidade do produto ser embalado para presente.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div> <!--Fechamento da div 3-->
+
+        </section> <!--Fechamento da Section Um-->
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <ul>
+                <a href="index.html" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
+                <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
+                <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
+                    <div class="redessocial">
+                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
+                        <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
+                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
+                    </div>
+            </ul>
+            <ul>
+               <h1 class="textofooter">Dúvidas:</h1><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+            </ul>
+            <ul> 
+               <h1 class="textofooter">Cliente:</h1><br/>
+               <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+               <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
+            </ul>
+            <ul>
+                <h1 class="textofooter">Ajuda:</h1><br/> 
+                <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+                <li><a href="Politica De Privacidade.html" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+                <li><a href="teste.html" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+            </ul>
+        </div>
+        <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
