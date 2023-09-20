@@ -11,8 +11,6 @@ import com.Ecommerce.modelo.PessoaFisica;
 
 public class CustomUserDetails implements UserDetails{
 
-	private static final long serialVersionUID = 1L;
-	
 	private PessoaFisica pessoaFisica;
 
 	public CustomUserDetails(PessoaFisica pessoaFisica) {

@@ -13,7 +13,7 @@ import com.Ecommerce.modelo.PessoaFisica;
 import com.Ecommerce.repositorio.PessoaFisicaRepositorio;
 
 @Controller
-@RequestMapping("/user/")
+@RequestMapping("/user")
 public class UsuarioControlador {
 	
 	@Autowired
@@ -22,9 +22,9 @@ public class UsuarioControlador {
 	@ModelAttribute
 	private void userDetails(Model m, Principal p) {
 		String email = p.getName();
-		PessoaFisica user = pessoaFisicaRepositorio.findByEmail(email);
+		PessoaFisica pessoaFisica = pessoaFisicaRepositorio.findByEmail(email);
 
-		m.addAttribute("user", user);
+		m.addAttribute("user", pessoaFisica);
 
 	}
 	
@@ -32,4 +32,5 @@ public class UsuarioControlador {
 	public String home() {
 		return "user/home";
 	}
+	
 }

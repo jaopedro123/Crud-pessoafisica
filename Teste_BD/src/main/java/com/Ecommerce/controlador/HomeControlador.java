@@ -75,7 +75,7 @@ public class HomeControlador {
 
 	@GetMapping("/signin")
 	public String login() {
-		return "Login";
+		return "login";
 	}
 
 	@GetMapping("/Esqueci-a-Senha")
@@ -83,7 +83,7 @@ public class HomeControlador {
 		return "Esqueci-a-Senha";
 	}
 	
-	//BANCO DE DADOS
+	//CADASTRO
 
 	
 	@PostMapping("/createUser")
@@ -106,7 +106,7 @@ public class HomeControlador {
 			}
 			
 		}
-		return "redirect:/user";
+		return "redirect:/Cadastro";
 	}
 
 }

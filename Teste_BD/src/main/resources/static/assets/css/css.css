@@ -2095,3 +2095,104 @@ input[type=number] {
   background-color: #cc0000;
 }
 
+/*Meus dados */
+
+.conteudo-dados {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 500px;
+}
+.conteudo-dados h2 {
+  color: #ff69b4;
+}
+.conteudo-dados label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ccc;
+}
+
+.conteudo-dados input[type="text"],
+.conteudo-dados input[type="email"],
+.conteudo-dados input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #fff; 
+}
+.conteudo-dados button[type="submit"] {
+  background-color: #800080;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.conteudo-dados button[type="submit"]:hover {
+  background-color: rgb(111, 70, 185); 
+  transition: 1.0s;
+}
+.edit-icon {
+  color: rgb(133, 71, 184);
+  margin-left: 20px;
+  cursor: pointer;
+}
+.input-container {
+  position: relative;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.input-wrapper i {
+  margin-right: 20px;
+}
+
+.input-wrapper input[type="text"],
+.input-wrapper input[type="email"],
+.input-wrapper input[type="tel"] {
+  flex-grow: 1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  background-color: #444; 
+  color: #fff; 
+}
+
+.conteudo-dados .delete-button {
+  background-color: rgb(108, 0, 0); 
+  color: #fff; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 340px;
+}
+
+.conteudo-dados .delete-button:hover {
+  background-color: #ff3333;
+  transition: background-color 0.5s; 
+}
+
+.conteudo-dados .logout-button {
+  background-color: transparent; 
+  color: #fff; 
+  padding: 10px 20px;
+  border: 2px solid rgb(97, 39, 31);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.5s, border-color 0.5s; 
+}
+
+.conteudo-dados .logout-button:hover {
+  background-color: rgb(97, 39, 31); 
+  border-color: rgb(222, 86, 86); 
+}
