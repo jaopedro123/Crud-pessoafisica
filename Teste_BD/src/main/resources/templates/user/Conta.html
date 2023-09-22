@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Motherboard</title>
-    <link rel="stylesheet" href="assets/css/css.css" />
+     <link th:href="@{/assets/css/css.css}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="assets/script/c.js"></script>
-    <script src="assets/script/script.js"></script>
+    
+     <script type="text/javascript" th:src="@{/assets/script/script.js}"></script>
+    <script type="text/javascript"  th:src="@{/assets/script/c.js}"></script>
     
   </head>
 
@@ -110,8 +111,7 @@
         <div class="titulo-conta">
             <img id="foto" src="icones/ico.png" />
             <div class="titulo-texto-conta">
-                <h2 id="tituconta">Minha conta</h2>
-                <h5 th:text="${user.nomeCompleto}"></h5>
+            <p>Email do usuário: <span th:text="${user.nomeCompleto}"></span></p>
             </div>
         </div>
       <div class="botoes-minhaConta">
@@ -139,7 +139,7 @@
                 <div class="input-container">
                     <label for="nome">Nome:</label>
                     <div class="input-wrapper">
-                        <input type="text" id="nome" name="nomeCompleto" th:value="${user.nomeCompleto}" required />
+                         <p>Email do usuário: <span th:text="${user.nomeCompleto}"></span></p>
                         <i class="fas fa-pencil-alt edit-icon"></i>
                     </div>
                 </div>
@@ -147,7 +147,7 @@
                   <div class="input-container">
                     <label for="cpf">CPF:</label>
                     <div class="input-wrapper">
-                        <input type="text" id="cpf" name="cpf" th:value="${user.cpf}" required />
+    <p>Email do usuário: <span th:text="${user.cpf}"></span></p>
                         <i class="fas fa-pencil-alt edit-icon"></i>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                 <div class="input-container">
                     <label for="email">Email:</label>
                     <div class="input-wrapper">
-                        <input type="email" id="email" name="email" th:value="${user.email}" required />
+                          <p>Email do usuário: <span th:text="${user.email}"></span></p>
                         <i class="fas fa-pencil-alt edit-icon"></i>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                 <div class="input-container">
                     <label for="telefone">Telefone:</label>
                     <div class="input-wrapper">
-                        <input type="tel" id="telefone" name="telefone" th:value="${user.telefone}" required />
+                        <p>Email do usuário: <span th:text="${user.telefone}"></span></p>
                         <i class="fas fa-pencil-alt edit-icon"></i>
                     </div>
                 </div>

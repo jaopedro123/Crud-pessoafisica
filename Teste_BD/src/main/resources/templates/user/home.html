@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
+    <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Motherboard</title>
-         <link rel="stylesheet" href="assets/css/css.css" type="text/css">
+        <link th:href="@{/assets/css/css.css}" rel="stylesheet" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="icones/logorapa.png">
@@ -19,7 +19,7 @@
 
           <!-- LOGO DO TOPO -->
           <a class="menu-logo" href="#">
-            <img id="logoDoMenuLateral" src="icones/logorapa.png">
+            <img id="logoDoMenuLateral" th:src="@{/icones/logorapa.png}"/>
           </a>
           <!-- Botão de fechamento -->
             <div id="closeBtn" class="close-button">X</div>
@@ -98,7 +98,7 @@
             <div class="icone">
                 <a th:href="@{/Favoritos}" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
                 <a th:href="@{/html}" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
-                <a th:href="@{/Conta}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
+                <a th:href="@{/user/Conta}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
             </div>
         </header>
 
@@ -648,7 +648,7 @@
          </div>
         </div><br/>
     </section>
-    <script src="assets/script/script.js"></script>
+    <script type="text/javascript" th:src="@{/assets/script/script.js}"></script>
     <footer class="footer">
         <div class="container">
             <ul>

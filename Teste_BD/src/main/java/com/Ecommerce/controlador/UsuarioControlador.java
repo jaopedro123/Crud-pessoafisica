@@ -23,10 +23,14 @@ public class UsuarioControlador {
 	private void userDetails(Model m, Principal p) {
 		String email = p.getName();
 		PessoaFisica pessoaFisica = pessoaFisicaRepositorio.findByEmail(email);
-
 		m.addAttribute("user", pessoaFisica);
-
 	}
+	
+	@GetMapping("/Conta")
+	public String conta() {
+		return "user/Conta";
+	}
+
 	
 	@GetMapping("/") 
 	public String home() {

@@ -28,11 +28,6 @@ public class HomeControlador {
 		return "Config";
 	}
 
-	@GetMapping("/Conta")
-	public String conta() {
-		return "Conta";
-	}
-
 	@GetMapping("/Favoritos")
 	public String favoritos() {
 		return "Favoritos";
