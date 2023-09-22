@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.Ecommerce.modelo.PessoaFisica;
@@ -31,7 +32,20 @@ public class UsuarioControlador {
 		return "user/Conta";
 	}
 
+	@GetMapping("/Conta/edit")
+	public String editarConta(Model model, Principal principal) {
+	    String email = principal.getName();
+	    PessoaFisica pessoaFisica = pessoaFisicaRepositorio.findByEmail(email);
+	    model.addAttribute("user", pessoaFisica);
+	    return "user/editarConta";
+	}
 	
+	@PostMapping("/Conta/edit")
+	public String atualizarConta(@ModelAttribute("user") PessoaFisica pessoaFisica) {
+	    pessoaFisicaRepositorio.save(pessoaFisica);
+	    return "redirect:";
+	}
+
 	@GetMapping("/") 
 	public String home() {
 		return "user/home";

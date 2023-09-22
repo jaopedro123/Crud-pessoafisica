@@ -2103,7 +2103,7 @@ input[type=number] {
   padding: 20px;
   border-radius: 10px;
   max-width: 600px;
-  max-height: 500px;
+  max-height: 600px;
 }
 .conteudo-dados h2 {
   color: #ff69b4;
@@ -2196,3 +2196,10 @@ input[type=number] {
   background-color: rgb(97, 39, 31); 
   border-color: rgb(222, 86, 86); 
 }
+
+.placeholderMinhaConta{
+    font-size: 20px; 
+    font-style: italic;
+	
+}
+
