@@ -6,8 +6,10 @@
     <title>Motherboard</title>
      <link th:href="@{/assets/css/css.css}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-     <script type="text/javascript" th:src="@{/assets/script/script.js}"></script>
+      
+       <link rel="shortcut icon" th:href="@{/icones/logorapa.png}">
+       
+
     <script type="text/javascript"  th:src="@{/assets/script/c.js}"></script>
     
   </head>
@@ -24,7 +26,7 @@
 
        <!-- LOGO DO TOPO -->
        <a class="menu-logo" href="#">
-         <img id="logoDoMenuLateral" src="icones/logorapa.png">
+         <img id="logoDoMenuLateral" th:src="@{/icones/logorapa.png}">
        </a>
        <!-- Botão de fechamento -->
          <div id="closeBtn" class="close-button">X</div>
@@ -33,37 +35,37 @@
        <div class="conteudo-sidebar">
          
          <a class="menu-item" href="#">
-           <img src="icones/cpu.png">
+           <img th:src="@{/icones/cpu.png}">
            <p class="nomeDasCategorias">Hardware</p>
          </a>
  
          <a class="menu-item" href="#">
-           <img src="icones/gaming-pc.png">
+           <img th:src="@{/icones/gaming-pc.png}">
            <p class="nomeDasCategorias">Computadores</p>
          </a>
  
          <a class="menu-item" href="#">
-         <img src="icones/teclado-e-mouse.png">
+         <img th:src="@{/icones/teclado-e-mouse.png}">
         <p class="nomeDasCategorias">Periféricos</p>
          </a>
  
          <a class="menu-item" href="#">
-         <img src="icones/dispositivos-eletronicos.png">
+         <img th:src="@{/icones/dispositivos-eletronicos.png}">
          <p class="nomeDasCategorias">Eletrônicos</p>
          </a>
  
          <a class="menu-item" href="#">
-         <img src="icones/monitor.png">
+         <img th:src="@{/icones/monitor.png}">
          <p class="nomeDasCategorias">Monitores</p>
          </a>
  
          <a class="menu-item" href="#">
-         <img src="icones/jogos.png">
+         <img th:src="@{/icones/jogos.png}">
          <p class="nomeDasCategorias">Espaço Gamer</p>
          </a>
  
          <a class="menu-item bottom" href="Configurações.html">
-         <img src="icones/configuracoes-cog.png">
+         <img th:src="@{/icones/configuracoes-cog.png}">
          <p class="nomeConfiguraçoes">Configurações</p>
          </a>
 
@@ -76,7 +78,7 @@
          <ul class="hamburguer"> 
            <li class="hamburguertamanho">
              <a id="menuBtn" class="active" href="#">
-               <img src="icones/cardapio.png">     
+               <img th:src="@{/icones/cardapio.png}">     
              </a>
            </li>
          </ul>
@@ -86,12 +88,12 @@
      <div class="overlay hidden" id="overlay"></div>
    <!--Final do Menu Lateral-->
      <div class="logoheader">
-       <a href="index.html" > <img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
+       <a th:href="@{/user/}" > <img class="logoimagemheader" th:src="@{/icones/image-light.png}" data-theme="light" alt="Imagem"></a>
      </div>
      <!--Começo da Barra de pesquisa-->
      <div class="barra">
          <span class="search-icon">
-             <img src="icones/lupa.png">
+             <img th:src="@{/icones/lupa.png}">
          </span>
          <input type="text" placeholder="Pesquisar...">
      </div>
@@ -101,17 +103,17 @@
          <label for="switch-flat"></label>
          </div>
          <div class="icone">
-             <a href="Favoritos.html" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
-             <a href="html.html" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
-             <a href="Conta.html" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
+             <a th:href="@{/Favoritos}" > <img th:src="@{/icones/favoritos (1).png}" alt="favoritos"></a>
+             <a th:href="@{/teste}" > <img th:src="@{/icones/carrinho-de-compras (2).png}" alt="carrinho de compras"></a>
+             <a th:href="@{/user/Conta}" ><img th:src="@{/icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png}" alt="configurações de usuario"></a>
          </div>
      </header>
 
 	<div class="minhaConta">
         <div class="titulo-conta">
-            <img id="foto" src="icones/ico.png" />
+            <img id="foto" th:src="@{/icones/ico.png}" />
             <div class="titulo-texto-conta">
-            <p>Email do usuário: <span th:text="${user.nomeCompleto}"></span></p>
+            <p>Nome do usuário: <span th:text="${user.nomeCompleto}"></span></p>
             </div>
         </div>
       <div class="botoes-minhaConta">
@@ -129,7 +131,7 @@
       </div>
     </div>
     
-    
+
 <!-- Conteúdo dos dados -->
 <div id="dados" class="conteudo conteudo-dados">
     <h2>Meus Dados</h2>
@@ -139,15 +141,15 @@
             <div class="input-container">
                 <label for="nome">Nome:</label>
                 <div class="input-wrapper">
-<input type="text" id="cpf" name="nomeCompleto" th:placeholder="${user.nomeCompleto}" required class="placeholderMinhaConta">
+<input type="text" id="nomeCompleto" name="nomeCompleto" th:placeholder="${user.nomeCompleto}" required class="placeholderMinhaConta">
 	  </div>
             </div>
-            <div class="input-container">
-                <label for="cpf">CPF:</label>
-                <div class="input-wrapper">
-<input type="text" id="cpf" name="cpf" th:placeholder="${user.cpf}" required class="placeholderMinhaConta">
-               </div>
-            </div>
+	           <div class="input-container">
+    <label for="cpf">CPF:</label>
+    <div class="input-wrapper">
+        <input type="text" id="cpf" name="cpf" th:placeholder="${user.cpf}" required class="placeholderMinhaConta">
+    </div>
+</div>
             <div class="input-container">
                 <label for="email">Email:</label>
                 <div class="input-wrapper">
@@ -162,22 +164,27 @@
                 </div>
             </div>
             <br />
-            <button type="submit">Atualizar Dados</button>
+            <button class="atualizaDados" type="submit">Atualizar Dados</button>
         </div>
     </form>
     <br />  <br />  <br />  <br />  <br />
-      <a href="/logout" class="logout-button">Sair</a>
+     
+       <a href="/logout" class="logout-button">Sair</a>
       
-      
-    <button type="button" class="delete-button">Deletar Usuário</button>
+    <form method="post" action="/user/Conta/delete">
+		
+    <button type="submit" class="delete-button">Deletar Usuário</button>
+</form>
+
 </div>
 
+<script type="text/javascript" th:src="@{/assets/script/ValidaMyConta.js}"></script>
 
     <div id="pedidos" class="conteudo pedidos">
       <!-- Conteúdo dos pedidos -->
       <div class="divUm">
         <div class="titulo-pedidos">
-          <img id="imgTitulo" src="icones/lista.png" />
+          <img id="imgTitulo" th:src="@{/icones/lista.png}" />
           <h2>Meus pedidos</h2>
         </div>
         <div class="card">
@@ -217,7 +224,7 @@
             <div class="titulo-inform-pedidos">
               <img
                 class="img-tituloInform"
-                src="imagens/ssd-husky-gaming-512gb-m-2.jpg"
+                th:src="@{/imagens/ssd-husky-gaming-512gb-m-2.jpg}"
               />
               <span class="spInform-pedido">
                 <h4>SSD 512 GB Husky Gaming</h4>
@@ -230,7 +237,7 @@
               <button class="BtnDet-pedidos">Ver detalhes</button>
               <div class="detalhes">
                 <div class="titulo-descricao-pedidos">
-                  <img src="icones/lista2.png" />
+                  <img th:src="@{/icones/lista2.png}" />
                   <h5>DESCRIÇÃO DO PRODUTO</h5>
                 </div>
                 <h5>SSD Husky Gaming M.2 NVME - 512 GB</h5>
@@ -295,7 +302,7 @@
           </div>
 
           <div class="titulo-inform-pedidos">
-            <img class="img-tituloInform" src="imagens/memoria-rise.jpg" />
+            <img class="img-tituloInform" th:src="@{/imagens/memoria-rise.jpg}" />
             <span class="spInform-pedido">
               <h4>Memória Rise Mode Z</h4>
               <p class="spInform-p">
@@ -307,7 +314,7 @@
             <button class="BtnDet-pedidos">Ver detalhes</button>
             <div class="detalhes">
               <div class="titulo-descricao-pedidos">
-                <img src="icones/lista2.png" />
+                <img th:src="@{/icones/lista2.png}" />
                 <h5>DESCRIÇÃO DO PRODUTO</h5>
               </div>
               <h5>Entendendo a memória RAM</h5>
@@ -428,16 +435,17 @@
       </div>
     </div>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <script type="text/javascript" th:src="@{/assets/script/script.js}"></script>
     <footer class="footer">
         <div class="container">
             <ul>
-                <a th:href="@{/}" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
+                <a th:href="@{/user/}" > <img class="logofooter" th:src="@{/icones/image-light.png}"><br/><br/></a>
                 <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
                 <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
                     <div class="redessocial">
-                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
-                        <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
-                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
+                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" th:src="@{/icones/insta.png}"></a>
+                        <a href="https://twitter.com/Motherboardtec"><img class="redes" th:src="@{/icones/twitter.png}"></a>
+                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" th:src="@{/icones/yt.png}"></a>
                     </div>
             </ul>
             <ul>

@@ -2124,16 +2124,17 @@ input[type=number] {
   border-radius: 5px;
   color: #fff; 
 }
-.conteudo-dados button[type="submit"] {
-  background-color: #800080;
+.atualizaDados {
+  background-color: rgb(64, 0, 128);
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  border: 2px solid rgb(87, 62, 102);
 }
-.conteudo-dados button[type="submit"]:hover {
-  background-color: rgb(111, 70, 185); 
+.atualizaDados:hover {
+  background-color: rgb(128, 255, 128); 
   transition: 1.0s;
 }
 .edit-icon {
@@ -2165,34 +2166,38 @@ input[type=number] {
   color: #fff; 
 }
 
-.conteudo-dados .delete-button {
-  background-color: rgb(108, 0, 0); 
+.delete-button {
+ background-color: rgb(125, 0, 0);
   color: #fff; 
   padding: 10px 20px;
-  border: none;
+  border: 2px solid rgb(255, 255, 0);
+  margin-left: 400px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
-  margin-left: 340px;
+  margin-top: -250px;
+  transition: background 0.5s, border-color 0.5s; 
+  text-decoration: none;
 }
 
-.conteudo-dados .delete-button:hover {
+.delete-button:hover {
   background-color: #ff3333;
   transition: background-color 0.5s; 
 }
 
-.conteudo-dados .logout-button {
+.logout-button {
   background-color: transparent; 
   color: #fff; 
   padding: 10px 20px;
   border: 2px solid rgb(97, 39, 31);
+  margin-right: 400px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
   transition: background 0.5s, border-color 0.5s; 
+  text-decoration: none;
 }
 
-.conteudo-dados .logout-button:hover {
+.logout-button:hover {
   background-color: rgb(97, 39, 31); 
   border-color: rgb(222, 86, 86); 
 }
@@ -2200,6 +2205,5 @@ input[type=number] {
 .placeholderMinhaConta{
     font-size: 20px; 
     font-style: italic;
-	
 }
 

@@ -45,6 +45,15 @@ public class UsuarioControlador {
 	    pessoaFisicaRepositorio.save(pessoaFisica);
 	    return "redirect:";
 	}
+	
+	@PostMapping("/Conta/delete")
+	public String excluirConta(Principal principal) {
+	    String email = principal.getName();
+	    PessoaFisica pessoaFisica = pessoaFisicaRepositorio.findByEmail(email);
+	    pessoaFisicaRepositorio.delete(pessoaFisica);
+	    return "redirect:/logout"; 
+	}
+
 
 	@GetMapping("/") 
 	public String home() {
