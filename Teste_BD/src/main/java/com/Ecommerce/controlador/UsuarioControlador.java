@@ -46,6 +46,10 @@ public class UsuarioControlador {
 	    return "redirect:";
 	}
 	
+	//Deleçao do usuario
+	
+	//JAVA
+/*	
 	@PostMapping("/Conta/delete")
 	public String excluirConta(Principal principal) {
 	    String email = principal.getName();
@@ -53,7 +57,13 @@ public class UsuarioControlador {
 	    pessoaFisicaRepositorio.delete(pessoaFisica);
 	    return "redirect:/logout"; 
 	}
-
+	*/
+	//HTML
+	/*
+<form method="post" action="/user/Conta/delete">	
+    <button type="submit" class="delete-button">Deletar Usuário</button>
+</form>
+*/
 
 	@GetMapping("/") 
 	public String home() {

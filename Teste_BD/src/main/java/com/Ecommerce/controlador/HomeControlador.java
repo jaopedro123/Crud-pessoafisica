@@ -101,7 +101,7 @@ public class HomeControlador {
 			}
 			
 		}
-		return "redirect:/Cadastro";
+		return "redirect:/signin";
 	}
 
 }

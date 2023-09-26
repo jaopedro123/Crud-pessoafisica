@@ -2202,8 +2202,23 @@ input[type=number] {
   border-color: rgb(222, 86, 86); 
 }
 
-.placeholderMinhaConta{
-    font-size: 20px; 
-    font-style: italic;
+/* Estilo para o botão "Atualizar" */
+.atualizaCampo {
+    background-color: rgb(0, 128, 128); 
+    color: #fff;
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    margin-left: 25px; 
+}
+
+.atualizaCampo:hover {
+    background-color: rgb(64, 128, 128);
+}
+.atualizaCampo:active {
+    background-color: #003f80; 
+}
+.nomeMinhaConta{
+	margin-right: 550px;
 }
 
