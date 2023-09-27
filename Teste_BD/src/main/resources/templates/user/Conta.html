@@ -132,16 +132,16 @@
 
 <!-- Conteúdo dos dados -->
 <div id="dados" class="conteudo conteudo-dados">
-    <h2>Meus Dados</h2>
+    <h2>Meus Dados:</h2>
     <br />
-    <form method="post" action="/user/Conta/edit"> <!-- Use o método POST para enviar os dados -->
+    <form method="post" action="/user/Conta/edit">
         <div id="dadosForm">
 				
       <div class="input-container">	<br />
     <label class="nomeMinhaConta" for="nome">Nome:</label> 
     <div class="input-wrapper">
-        <input type="text" id="nomeCompleto" name="nomeCompleto" th:field="*{user.nomeCompleto}" required >
-        <button type="button" class="atualizaCampo" data-target="nomeCompleto">Atualizar</button>
+        <input type="text" id="nomeCompleto" name="nomeCompleto" th:field="*{user.nomeCompleto}" maxlength="30" required >
+        <button type="submit" class="atualizaCampoNome" data-target="nomeCompleto">Atualizar</button>
     </div>
 </div>
 
@@ -149,33 +149,10 @@
 <div class="input-container">
     <label class="nomeMinhaConta" for="telefone">Telefone:</label>
     <div class="input-wrapper">
-        <input type="tel" id="telefone" name="telefone" th:field="*{user.telefone}" required>
-        <button type="button" class="atualizaCampo" data-target="telefone" >Atualizar</button>
+        <input type="tel" id="telefone" name="telefone" th:field="*{user.telefone}"  required>
+        <button type="submit" class="atualizaCampo" data-target="telefone" >Atualizar</button>
     </div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    var telefoneInput = document.getElementById("telefone");
-    telefoneInput.addEventListener("input", function () {
-        var telefone = this.value.replace(/\D/g, ""); 
-        var maxLength = 11;       
-        if (telefone.length > maxLength) {
-            telefone = telefone.slice(0, maxLength); 
-        } 
-        if (telefone.length <= 10) {
-            telefone = telefone.replace(/(\d{2})(\d{0,4})(\d{0,4})/, "($1) $2-$3");
-        } 
-        else {
-            telefone = telefone.replace(/(\d{2})(\d{0,5})(\d{0,4})/, "($1) $2-$3");
-        }
-        this.value = telefone; 
-    });
-});
-</script>
-
-
-
 
 <div class="input-container"> <br />
     <label class="nomeMinhaConta" for="cpf">CPF:</label>  
@@ -191,13 +168,18 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 </div>
             <br />
-            <button class="atualizaDados" type="submit">Atualizar Todos os Dados</button>
+            
         </div>
     </form>
     <br />  <br />  <br />  <br />  <br />
      
        <a href="/logout" class="logout-button">Sair</a>
-    
+	       
+	    <form action="/user/Conta/inativar" method="post">
+	 <button type="submit" class="inativarConta">Inativar Minha Conta</button>
+	    </form>
+
+      
 </div>
 
 <script type="text/javascript" th:src="@{/assets/script/ValidaMyConta.js}"></script>

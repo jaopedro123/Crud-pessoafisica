@@ -46,24 +46,14 @@ public class UsuarioControlador {
 	    return "redirect:";
 	}
 	
-	//Deleçao do usuario
-	
-	//JAVA
-/*	
-	@PostMapping("/Conta/delete")
-	public String excluirConta(Principal principal) {
+	@PostMapping("/Conta/inativar")
+	public String inativarConta(Model model, Principal principal) {
 	    String email = principal.getName();
 	    PessoaFisica pessoaFisica = pessoaFisicaRepositorio.findByEmail(email);
-	    pessoaFisicaRepositorio.delete(pessoaFisica);
-	    return "redirect:/logout"; 
+	    pessoaFisica.setEmail("Invalido");
+	    pessoaFisicaRepositorio.save(pessoaFisica);
+	    return "redirect:/logout";
 	}
-	*/
-	//HTML
-	/*
-<form method="post" action="/user/Conta/delete">	
-    <button type="submit" class="delete-button">Deletar Usuário</button>
-</form>
-*/
 
 	@GetMapping("/") 
 	public String home() {
@@ -71,3 +61,22 @@ public class UsuarioControlador {
 	}
 	
 }
+
+//Deleçao do usuario
+
+//JAVA
+/*	
+@PostMapping("/Conta/delete")
+public String excluirConta(Principal principal) {
+    String email = principal.getName();
+    PessoaFisica pessoaFisica = pessoaFisicaRepositorio.findByEmail(email);
+    pessoaFisicaRepositorio.delete(pessoaFisica);
+    return "redirect:/logout"; 
+}
+*/
+//HTML
+/*
+<form method="post" action="/user/Conta/delete">	
+<button type="submit" class="delete-button">Deletar Usuário</button>
+</form>
+*/

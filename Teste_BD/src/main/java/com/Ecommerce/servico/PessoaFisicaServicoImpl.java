@@ -18,11 +18,11 @@ public class PessoaFisicaServicoImpl implements PessoaFisicaServico{
 	
 	@Override
 	public PessoaFisica createUser(PessoaFisica pessoaFisica) {
-		
 		pessoaFisica.setSenha(passwordEncoder.encode(pessoaFisica.getSenha()));
 		pessoaFisica.setRole("ATIVO");
 		return pessoaFRepo.save(pessoaFisica);
 	}
+	
 
 	@Override
 	public boolean checkEmail(String email) {
