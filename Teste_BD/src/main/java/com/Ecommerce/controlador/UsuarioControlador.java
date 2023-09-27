@@ -50,7 +50,7 @@ public class UsuarioControlador {
 	public String inativarConta(Model model, Principal principal) {
 	    String email = principal.getName();
 	    PessoaFisica pessoaFisica = pessoaFisicaRepositorio.findByEmail(email);
-	    pessoaFisica.setEmail("Invalido");
+	    pessoaFisica.setSenha("Invalido");
 	    pessoaFisicaRepositorio.save(pessoaFisica);
 	    return "redirect:/logout";
 	}
