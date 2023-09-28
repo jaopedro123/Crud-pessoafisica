@@ -2236,4 +2236,21 @@ input[type=number] {
 	 background-color: #003f80;
 }
 
+.inativarConta{
+  background-color: #cc0000;
+  color: #fff; 
+  padding: 10px 20px;
+  border: 2px solid rgb(97, 39, 31);
+  margin-left: 400px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: -40px;
+  transition: background 0.5s, border-color 0.5s; 
+  text-decoration: none;
+}
+.inativarConta:hover{
+background-color: rgb(97, 39, 31); 
+  border-color: rgb(222, 86, 86); 
+}
+
 

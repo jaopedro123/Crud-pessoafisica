@@ -27,6 +27,17 @@
                     </div>
                 </div>
                 
+            <div th:if="${param.error}" class="alerta-erro-no-Login">
+    E-mail ou Senha Inválido</div>
+			
+
+<div th:if="${param.logout}" class="Alerta-de-sucesso-logout">
+    Logout Feito com Sucesso</div><br />
+
+
+
+
+                
                 <!-- Inputs Login -->
                     <div class="input-box">
                         <label class="label" for="email">E-mail:</label>

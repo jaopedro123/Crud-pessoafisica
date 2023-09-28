@@ -13,9 +13,9 @@
     
     <!-- Conteiner -->
     <div class="meudiv">
-            <form action="createUser" method="post"> 
+            <form th:action="createUser" method="post" > 
 				<div class="form" id="form">
-
+	
             <!-- Título h1 Cadastro -->
             <div class="form-título">
 
@@ -47,6 +47,10 @@
                     </div>
                 </div>
                 
+                <th:block th:if="${session.msg}">
+							<p class="email-ja-cadastrado">[[${session.msg}]]</p>
+							<th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+						</th:block>
            
 
                 <!-- Conteiner dos Inputs -->

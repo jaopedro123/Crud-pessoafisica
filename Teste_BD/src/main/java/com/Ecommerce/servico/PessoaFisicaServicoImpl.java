@@ -19,7 +19,7 @@ public class PessoaFisicaServicoImpl implements PessoaFisicaServico{
 	@Override
 	public PessoaFisica createUser(PessoaFisica pessoaFisica) {
 		pessoaFisica.setSenha(passwordEncoder.encode(pessoaFisica.getSenha()));
-		pessoaFisica.setRole("ATIVO");
+		pessoaFisica.setRole("PessoaFisica");
 		return pessoaFRepo.save(pessoaFisica);
 	}
 	

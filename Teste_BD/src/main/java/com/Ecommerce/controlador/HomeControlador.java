@@ -90,15 +90,10 @@ public class HomeControlador {
 		
 		if(f) {
 			session.setAttribute("msg", "E-mail já Cadastrado");
+			return "redirect:/Cadastro";
 		}
 		else {
-			PessoaFisica Usuario = pessoaFisicaServico.createUser(pessoaFisica);
-			if(Usuario != null) {
-				session.setAttribute("msg", "Cadastro Completado com SUCESSO!");
-			}
-			else {
-				session.setAttribute("msg", "Erro ao completar o Cadastro");
-			}
+			pessoaFisica = pessoaFisicaServico.createUser(pessoaFisica);
 			
 		}
 		return "redirect:/signin";
