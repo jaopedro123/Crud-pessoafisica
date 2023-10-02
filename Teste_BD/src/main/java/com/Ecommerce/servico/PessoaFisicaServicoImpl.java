@@ -30,4 +30,11 @@ public class PessoaFisicaServicoImpl implements PessoaFisicaServico{
 		return pessoaFRepo.existsByEmail(email);
 	}
 
+
+	@Override
+	public boolean checkCpf(String cpf) {
+	    return pessoaFRepo.existsByCpf(cpf);
+	}
+
+
 }

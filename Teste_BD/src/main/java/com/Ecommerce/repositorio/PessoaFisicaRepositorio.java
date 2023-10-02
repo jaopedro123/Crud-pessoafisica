@@ -10,4 +10,6 @@ public interface PessoaFisicaRepositorio extends JpaRepository<PessoaFisica, Lon
 
 	public PessoaFisica findByEmail(String email);
 	
+	boolean existsByCpf(String cpf);
+	
 }

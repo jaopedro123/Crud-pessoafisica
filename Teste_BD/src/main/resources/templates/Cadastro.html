@@ -13,8 +13,8 @@
     
     <!-- Conteiner -->
     <div class="meudiv">
-            <form th:action="createUser" method="post" > 
-				<div class="form" id="form">
+            <form id="form1" th:action="createUser" method="post" > 
+				<div class="form2" >
 	
             <!-- Título h1 Cadastro -->
             <div class="form-título">
@@ -47,11 +47,11 @@
                     </div>
                 </div>
                 
-                <th:block th:if="${session.msg}">
-							<p class="email-ja-cadastrado">[[${session.msg}]]</p>
-							<th:block th:text="${#session.removeAttribute('msg')}"></th:block>
-						</th:block>
-           
+               <th:block th:if="${session.msg}">
+    <p class="email-ja-cadastrado" th:if="${session.msg == 'E-mail já Cadastrado'}">[[${session.msg}]]</p>
+    <p class="cpf-ja-cadastrado" th:if="${session.msg == 'CPF já Cadastrado'}">[[${session.msg}]]</p>
+    <th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+</th:block>
 
                 <!-- Conteiner dos Inputs -->
                 <div class="input-group">

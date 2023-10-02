@@ -1,115 +1,116 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
+    <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Motherboard</title>
-        <link rel="stylesheet" href="assets/css/css.css" type="text/css">
+        <link th:href="@{/assets/css/css.css}" rel="stylesheet" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="UTF-8">
-        <link rel="shortcut icon" href="icones/logorapa.png">
+               <link rel="shortcut icon" th:href="@{/icones/logorapa.png}">
     </head>
 <body>
     <header class="header">
 
-         <!--Menu Lateral-->
+      <!--Menu Lateral-->
 
-    <div class="pagina">
+ <div class="pagina">
 
-        <!-- MENU LATERAL -->
-        <div class="left-sidebar" id="sidebar">
+     <!-- MENU LATERAL -->
+     <div class="left-sidebar" id="sidebar">
 
-          <!-- LOGO DO TOPO -->
-          <a class="menu-logo" href="#">
-            <img id="logoDoMenuLateral" src="icones/logorapa.png">
-          </a>
-          <!-- Botão de fechamento -->
-            <div id="closeBtn" class="close-button">X</div>
+       <!-- LOGO DO TOPO -->
+       <a class="menu-logo" href="#">
+         <img id="logoDoMenuLateral" th:src="@{/icones/logorapa.png}">
+       </a>
+       <!-- Botão de fechamento -->
+         <div id="closeBtn" class="close-button">X</div>
 
-          <!-- CONTEUDO DO CENTRO DO MENU -->
-          <div class="conteudo-sidebar">
-            
-            <a class="menu-item" href="#">
-              <img src="icones/cpu.png">
-              <p class="nomeDasCategorias">Hardware</p>
-            </a>
-    
-            <a class="menu-item" href="#">
-              <img src="icones/gaming-pc.png">
-              <p class="nomeDasCategorias">Computadores</p>
-            </a>
-    
-            <a class="menu-item" href="#">
-            <img src="icones/teclado-e-mouse.png">
-           <p class="nomeDasCategorias">Periféricos</p>
-            </a>
-    
-            <a class="menu-item" href="#">
-            <img src="icones/dispositivos-eletronicos.png">
-            <p class="nomeDasCategorias">Eletrônicos</p>
-            </a>
-    
-            <a class="menu-item" href="#">
-            <img src="icones/monitor.png">
-            <p class="nomeDasCategorias">Monitores</p>
-            </a>
-    
-            <a class="menu-item" href="#">
-            <img src="icones/jogos.png">
-            <p class="nomeDasCategorias">Espaço Gamer</p>
-            </a>
-    
-            <a class="menu-item bottom" th:href="@{/Config}">
-            <img src="icones/configuracoes-cog.png">
-            <p class="nomeConfiguraçoes">Configurações</p>
-            </a>
+       <!-- CONTEUDO DO CENTRO DO MENU -->
+       <div class="conteudo-sidebar">
+         
+         <a class="menu-item" href="#">
+           <img th:src="@{/icones/cpu.png}">
+           <p class="nomeDasCategorias">Hardware</p>
+         </a>
+ 
+         <a class="menu-item" href="#">
+           <img th:src="@{/icones/gaming-pc.png}">
+           <p class="nomeDasCategorias">Computadores</p>
+         </a>
+ 
+         <a class="menu-item" href="#">
+         <img th:src="@{/icones/teclado-e-mouse.png}">
+        <p class="nomeDasCategorias">Periféricos</p>
+         </a>
+ 
+         <a class="menu-item" href="#">
+         <img th:src="@{/icones/dispositivos-eletronicos.png}">
+         <p class="nomeDasCategorias">Eletrônicos</p>
+         </a>
+ 
+         <a class="menu-item" href="#">
+         <img th:src="@{/icones/monitor.png}">
+         <p class="nomeDasCategorias">Monitores</p>
+         </a>
+ 
+         <a class="menu-item" href="#">
+         <img th:src="@{/icones/jogos.png}">
+         <p class="nomeDasCategorias">Espaço Gamer</p>
+         </a>
+ 
+         <a class="menu-item bottom" href="Configurações.html">
+         <img th:src="@{/icones/configuracoes-cog.png}">
+         <p class="nomeConfiguraçoes">Configurações</p>
+         </a>
 
-          </div>  
+       </div>  
 </div>
-        </div>
-        <!-- Botao hamburguer -->
-        <section>
-          <nav>      
-            <ul class="hamburguer"> 
-              <li class="hamburguertamanho">
-                <a id="menuBtn" class="active" href="#">
-                  <img src="icones/cardapio.png">     
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </section>
-        <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
-        <div class="overlay hidden" id="overlay"></div>
-      <!--Final do Menu Lateral-->
-        <div class="logoheader">
-          <a th:href="@{/}"> <img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
-        </div>
-        <!--Começo da Barra de pesquisa-->
-        <div class="barra">
-            <span class="search-icon">
-                <img src="icones/lupa.png">
-            </span>
-            <input type="text" placeholder="Pesquisar...">
-        </div>
-        <!--FIM da Barra de pesquisa-->
-        <div class="icone2">
-          <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
-            <label for="switch-flat"></label>
-            </div>
-            <div class="icone">
-                <a th:href="@{/Favoritos}" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
-                <a th:href="@{/html}" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
-                <a th:href="@{/Cadastro}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
-            </div>
-        </header>
+     </div>
+     <!-- Botao hamburguer -->
+     <section>
+       <nav>      
+         <ul class="hamburguer"> 
+           <li class="hamburguertamanho">
+             <a id="menuBtn" class="active" href="#">
+               <img th:src="@{/icones/cardapio.png}">     
+             </a>
+           </li>
+         </ul>
+       </nav>
+     </section>
+     <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
+     <div class="overlay hidden" id="overlay"></div>
+   <!--Final do Menu Lateral-->
+     <div class="logoheader">
+       <a th:href="@{/user/}" > <img class="logoimagemheader" th:src="@{/icones/image-light.png}" data-theme="light" alt="Imagem"></a>
+     </div>
+     <!--Começo da Barra de pesquisa-->
+     <div class="barra">
+         <span class="search-icon">
+             <img th:src="@{/icones/lupa.png}">
+         </span>
+         <input type="text" placeholder="Pesquisar...">
+     </div>
+     <!--FIM da Barra de pesquisa-->
+     <div class="icone2">
+       <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
+         <label for="switch-flat"></label>
+         </div>
+         <div class="icone">
+             <a th:href="@{/Favoritos}" > <img th:src="@{/icones/favoritos (1).png}" alt="favoritos"></a>
+             <a th:href="@{/teste}" > <img th:src="@{/icones/carrinho-de-compras (2).png}" alt="carrinho de compras"></a>
+             <a th:href="@{/Cadastro}" ><img th:src="@{/icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png}" alt="configurações de usuario"></a>
+         </div>
+     </header>
+
 
 <!--slideshow-->
 <BR/><BR/>
     <div class="slideshow-container">
     <div class="my-slides fade">
-        <img src="Imagens/o-melhor-headset.webp" >
+        <img th:src="@{/Imagens/o-melhor-headset.webp}" >
     </div>
     <div class="my-slides fade">
-        <img src="Imagens/headesetGaming.png" >
+        <img th:src="@{/Imagens/headesetGaming.png}" >
     </div>
 
 <!-- Adicione mais imagens conforme necessário -->
@@ -132,8 +133,8 @@
                             <!-- Itens do Carrossel 1 -->
                             <div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" src="Imagens/kabum.jpg" alt="Imagem">
-                                    <a href="carrinho.html"><img class="iconeaea" src="icones/icons8-fast-cart-64.png" alt="Ícone"></a>
+                                    <img class="imagemeae" th:src="@{/Imagens/kabum.jpg}" alt="Imagem">
+                                    <a href="carrinho.html"><img class="iconeaea" th:src="@{/icones/icons8-fast-cart-64.png}" alt="Ícone"></a>
                                 </div>
                                 <div class="product-text">
                                     <h2 class="product-title">PC GAMER</h2>
@@ -648,17 +649,17 @@
          </div>
         </div><br/>
     </section>
-    <script src="assets/script/script.js"></script>
-    <footer class="footer">
+    <script type="text/javascript" th:src="@{/assets/script/script.js}"></script>
+   <footer class="footer">
         <div class="container">
             <ul>
-                <a th:href="@{/}" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
+                <a th:href="@{/user/}" > <img class="logofooter" th:src="@{/icones/image-light.png}"><br/><br/></a>
                 <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
                 <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
                     <div class="redessocial">
-                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
-                        <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
-                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
+                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" th:src="@{/icones/insta.png}"></a>
+                        <a href="https://twitter.com/Motherboardtec"><img class="redes" th:src="@{/icones/twitter.png}"></a>
+                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" th:src="@{/icones/yt.png}"></a>
                     </div>
             </ul>
             <ul>

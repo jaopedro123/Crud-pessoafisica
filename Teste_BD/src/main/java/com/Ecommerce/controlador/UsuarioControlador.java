@@ -62,9 +62,10 @@ public class UsuarioControlador {
 	
 }
 
-//Deleçao do usuario
+//Deleçao do usuario do BD
 
 //JAVA
+
 /*	
 @PostMapping("/Conta/delete")
 public String excluirConta(Principal principal) {
@@ -74,9 +75,27 @@ public String excluirConta(Principal principal) {
     return "redirect:/logout"; 
 }
 */
+
 //HTML
+
 /*
 <form method="post" action="/user/Conta/delete">	
 <button type="submit" class="delete-button">Deletar Usuário</button>
 </form>
 */
+
+
+
+//JAVASCRIPT
+
+/*
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButton = document.querySelector(".delete-button");
+        deleteButton.addEventListener("click", function (event) {
+            const confirmDelete = confirm('Tem certeza que deseja excluir sua conta?');
+            if (!confirmDelete) {
+                event.preventDefault(); // Prevent form submission if not confirmed
+            }
+        });
+    });
+ */

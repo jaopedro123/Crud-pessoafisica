@@ -87,14 +87,18 @@ public class HomeControlador {
 		//System.out.println(pessoaFisica);
 		
 		boolean f = pessoaFisicaServico.checkEmail(pessoaFisica.getEmail());
-		
+		boolean f1 = pessoaFisicaServico.checkCpf(pessoaFisica.getCpf());
+				
 		if(f) {
 			session.setAttribute("msg", "E-mail já Cadastrado");
 			return "redirect:/Cadastro";
 		}
+		if(f1) {
+			session.setAttribute("msg", "CPF já Cadastrado");
+			return "redirect:/Cadastro";
+		}
 		else {
-			pessoaFisica = pessoaFisicaServico.createUser(pessoaFisica);
-			
+			pessoaFisica = pessoaFisicaServico.createUser(pessoaFisica);	
 		}
 		return "redirect:/signin";
 	}

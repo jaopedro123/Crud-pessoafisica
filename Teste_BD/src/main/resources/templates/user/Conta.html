@@ -132,53 +132,58 @@
 
 <!-- Conteúdo dos dados -->
 <div id="dados" class="conteudo conteudo-dados">
-    <h2>Meus Dados:</h2>
+    <h2 class="meusdados">Meus Dados:</h2>
     <br />
     <form method="post" action="/user/Conta/edit">
         <div id="dadosForm">
 				
-      <div class="input-container">	<br />
+     <div class="input-container">
+    <br /><br />
+         <div id="erroNomeCompleto" class="erro-mensagem-nome"></div> <br />
     <label class="nomeMinhaConta" for="nome">Nome:</label> 
-    <div class="input-wrapper">
-        <input type="text" id="nomeCompleto" name="nomeCompleto" th:field="*{user.nomeCompleto}" maxlength="30" required >
-        <button type="submit" class="atualizaCampoNome" data-target="nomeCompleto">Atualizar</button>
+    <div class="input-wrapper">		
+        <input type="text" id="nomeCompleto" name="nomeCompleto" th:field="*{user.nomeCompleto}" maxlength="30" required>
+       
     </div>
 </div>
 
-
 <div class="input-container">
-    <label class="nomeMinhaConta" for="telefone">Telefone:</label>
+<div id="erroTelefone" class="erro-mensagem-telefone"></div><br />
+    <label class="nomeMinhaContatelefone" for="telefone">Telefone celular:</label> 
     <div class="input-wrapper">
-        <input type="tel" id="telefone" name="telefone" th:field="*{user.telefone}"  required>
-        <button type="submit" class="atualizaCampo" data-target="telefone" >Atualizar</button>
+        <input type="tel" id="telefone" name="telefone" th:field="*{user.telefone}" required>
     </div>
 </div>
 
 <div class="input-container"> <br />
     <label class="nomeMinhaConta" for="cpf">CPF:</label>  
-    <div class="input-wrapper">
+    <div class="input-wrapper-cpf-email">
         <input type="text" id="cpf" name="cpf" th:field="*{user.cpf}" disabled>
     </div>
 </div>
 
 <div class="input-container">  <br />
     <label class="nomeMinhaConta" for="email">Email:</label>
-    <div class="input-wrapper">
-        <input type="email" id="email" name="email" th:field="*{user.email}" disabled>
+    <div class="input-wrapper-cpf-email">
+        <input type="text" id="email" name="email" th:field="*{user.email}" disabled>
     </div>
 </div>
             <br />
             
         </div>
+        
+          <button class="atualizaDados" type="submit">Atualizar Todos os Dados</button>
     </form>
-    <br />  <br />  <br />  <br />  <br />
-     
+    <br />  <br />  <br /> <br />  <br />  <br />
+    
+        <div>
        <a href="/logout" class="logout-button">Sair</a>
-	       
+      
+	    
 	    <form action="/user/Conta/inativar" method="post">
 	 <button type="submit" class="inativarConta" onclick="return confirm('Você tem certeza de que deseja desativar sua conta?')">Inativar Minha Conta</button>
 	    </form>
-
+	       </div>
       
 </div>
 

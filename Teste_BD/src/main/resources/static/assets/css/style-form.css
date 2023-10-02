@@ -657,7 +657,7 @@
         width: 90%;
     }
 
-    .form{
+    .form2{
         height: 92vh;
     }
 
@@ -718,7 +718,21 @@
 .Alerta-de-sucesso-logout:hover {
   background-color: #45a049; /* Cor de fundo mais escura ao passar o mouse */
 }
-
+.Alerta-de-sucesso-inativacao{
+  background-color: #f44336; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  font-size: 16px; 
+  text-align: center; 
+  font-weight: bold;
+  margin-bottom: 20px; 
+}
+.Alerta-de-sucesso-inativacao:hover{
+  background-color: #ff5733; 
+  cursor: pointer; 
+}
 
 
 .email-ja-cadastrado {
@@ -735,3 +749,19 @@
   transform: scale(1.1); 
   transition: transform 0.5s ease; 
 }
+
+.cpf-ja-cadastrado {
+  background-color: #ffcccc; 
+  color: #ff0000; 
+  padding: 10px; 
+  border: 2px solid #ff0000;
+  border-radius: 5px; 
+  font-size: 16px; 
+  text-align: center; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.cpf-ja-cadastrado:hover{
+  transform: scale(1.1); 
+  transition: transform 0.5s ease; 
+}
+

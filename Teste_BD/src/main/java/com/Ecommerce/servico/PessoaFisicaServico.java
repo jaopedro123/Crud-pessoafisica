@@ -8,6 +8,8 @@ public interface PessoaFisicaServico {
 	
 	public boolean checkEmail(String email);
 	
+	public boolean checkCpf(String cpf);
+	
 	
 
 }
