@@ -3015,12 +3015,13 @@ input[type=number] {
 
 .conteudo-dados input[type="text"],
 .conteudo-dados input[type="tel"] {
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  color: #fff; 
+  background-color: #444;
+  color: #fff;
 }
 .atualizaDados {
   background-color: rgb(128, 128, 192);
