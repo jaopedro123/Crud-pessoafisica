@@ -1,14 +1,4 @@
-const form = document.getElementById('form')
-const nomeFantasia = document.getElementById('nomeFantasia')
-const razaosocial = document.getElementById('razaosocial')
-const inscricaoestadual = document.getElementById('inscricaoestadual')
-const cnpj = document.getElementById('cnpj')
-const telefone = document.getElementById('telefone')
-const email = document.getElementById('email')
-const password = document.getElementById('password')
-const passwordtwo = document.getElementById('passwordtwo')
-const inputcheckbox = document.getElementById("inputcheckbox");
-
+const formvalidationtwo = document.getElementById('formvalidationtwo')
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -22,7 +12,6 @@ form.addEventListener('submit', (e) => {
     checkPasswordtwo()
     checkCheckbox()
 })
-
 // Adicione eventos de entrada (input) para todos os campos
 nomeFantasia.addEventListener('input', checkNomeFantasia);
 razaosocial.addEventListener('input', checkRazaosocial);
@@ -37,8 +26,6 @@ inputcheckbox.addEventListener('input', checkCheckbox);
 function checkNomeFantasia() {
     const nomeFantasiaValue = nomeFantasia.value.trim()
     if(nomeFantasiaValue === '') {
-        // mostrar erro
-        // add classe
         setErrorFor(nomeFantasia, 'Preencha esse campo')
     }else if (nomeFantasiaValue.length < 3) {
         setErrorFor(nomeFantasia, 'O campo deve ter no mínimo 3 caracteres');
@@ -95,7 +82,7 @@ function checkTelefone() {
         // add classe
         setErrorFor(telefone, 'Preencha esse campo')
     }else if (!isTel(telefoneValue)) {
-        setErrorFor(telefone, 'Telefone de Contato inválido')
+        setErrorFor(telefone, 'Telefone inválido')
     } else {
         // adicionar a classe de sucesso
         setSuccessFor(telefone)
@@ -154,6 +141,8 @@ function checkPasswordtwo() {
 }
 
 function checkCheckbox() {
+    const inputcheckbox = document.getElementById("inputcheckbox");
+    const small = document.querySelector('small');
     if (!inputcheckbox.checked) {
         setErrorFor(inputcheckbox.parentElement, 'Você deve concordar com os Termos de Uso e a Política de Privacidade');
     } else {
@@ -161,14 +150,18 @@ function checkCheckbox() {
     }
 }
 
+
 // Função da Validação do Formulário de Cadastro Jurídico
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small')
-
     small.innerText = message
-
     formControl.className = 'input-box error'
+}
+function clearErrorFor(inputcheckbox) {
+    const small = document.querySelector('small');
+    const formControl = inputcheckbox.parentElement;
+    formControl.className = 'input-box success'; // Define a classe de sucesso
 }
 
 function setSuccessFor(input) {
@@ -176,6 +169,7 @@ function setSuccessFor(input) {
 
     formControl.className = 'input-box success'
 }
+
 
 // Função de Validação do E-mail
 function isEmail(email) {
@@ -185,9 +179,63 @@ function isEmail(email) {
 function isCnpj(cnpj) {
     return /^\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}$/.test(cnpj);
 }
-// Função de Validação do Telefone de Contato
+function isCnpj(cnpj) {
+ 
+    cnpj = cnpj.replace(/[^\d]+/g,'');
+ 
+    if(cnpj == '') return false;
+     
+    if (cnpj.length != 14)
+        return false;
+ 
+    // Elimina CNPJs invalidos conhecidos
+    if (cnpj == "00000000000000" || 
+        cnpj == "11111111111111" || 
+        cnpj == "22222222222222" || 
+        cnpj == "33333333333333" || 
+        cnpj == "44444444444444" || 
+        cnpj == "55555555555555" || 
+        cnpj == "66666666666666" || 
+        cnpj == "77777777777777" || 
+        cnpj == "88888888888888" || 
+        cnpj == "99999999999999")
+        return false;
+         
+    // Valida DVs
+    tamanho = cnpj.length - 2
+    numeros = cnpj.substring(0,tamanho);
+    digitos = cnpj.substring(tamanho);
+    soma = 0;
+    pos = tamanho - 7;
+    for (i = tamanho; i >= 1; i--) {
+      soma += numeros.charAt(tamanho - i) * pos--;
+      if (pos < 2)
+            pos = 9;
+    }
+    resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+    if (resultado != digitos.charAt(0))
+        return false;
+         
+    tamanho = tamanho + 1;
+    numeros = cnpj.substring(0,tamanho);
+    soma = 0;
+    pos = tamanho - 7;
+    for (i = tamanho; i >= 1; i--) {
+      soma += numeros.charAt(tamanho - i) * pos--;
+      if (pos < 2)
+            pos = 9;
+    }
+    resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+    if (resultado != digitos.charAt(1))
+          return false;
+           
+    return true;
+    
+}
+
+// Função de Validação do Telefone
 function isTel(telefone) {
-    return /^\(\d{2}\) \d{4,5}-\d{4}$/.test(telefone);
+    return /^\(\d{2}\) \d{4,5}-\d{4}$|^\(\d{2}\) \d{4}-\d{4}$/.test(telefone);
 }
 // Funções de Validações da Senha
 function containsUpperCase(str) {
@@ -203,27 +251,55 @@ function containsNumber(str) {
 }
 
 
-// Obtém o elemento do checkbox e o input de inscrição estadual
-var checkboxNaoCostaIE = document.getElementById('inputcheckboxnaoCosta');
+// Script para Validar o Checkbox Não Costa do Input Inscrição Estadual
+// Adiciona um evento de alteração ao checkbox
+var inputcheckboxnaoCosta = document.getElementById('inputcheckboxnaoCosta');
 var inputInscricaoEstadual = document.getElementById('inscricaoestadual');
+var mensagemErro = document.querySelector('#small');
+var mensagemSucesso = document.querySelector('#success-message');
+var imgError = document.querySelector('#img-errorIE');
+var imgSuccess = document.querySelector('#img-successIE');
+var inputBox = document.querySelector('.input-box'); // Elemento que contém o campo de entrada
+
+function mostrarMensagemDeErro(mensagem) {
+    console.log(mensagem);
+}
 
 // Adiciona um evento de alteração ao checkbox
-checkboxNaoCostaIE.addEventListener('change', function () {
-    if (checkboxNaoCostaIE.checked) {
-        // Se o checkbox estiver marcado, desativa o input, remove qualquer valor e classes de estilo
+inputcheckboxnaoCosta.addEventListener('change', function () {
+    if (inputcheckboxnaoCosta.checked) {
+        // Se o checkbox estiver marcado, desativa o input, remove qualquer valor,
+        // oculta as mensagens de erro e sucesso e os ícones de erro e sucesso
         inputInscricaoEstadual.disabled = true;
         inputInscricaoEstadual.value = ""; // Limpa o valor
-        inputInscricaoEstadual.classList.remove('disabled-input');
-        // Remova a mensagem de erro, se houver
-        var errorSmall = document.querySelector('.small');
-        if (errorSmall) {
-            errorSmall.style.display = 'none';
-        }
+        ocultarMensagemDeErro();
+        ocultarIconeDeErro();
+        ocultarIconeDeSucesso();
+        removerCorDaBorda();
     } else {
-        // Se o checkbox estiver desmarcado, ativa o input
+        // Se o checkbox estiver desmarcado, ativa o input e adiciona novamente a classe "error"
         inputInscricaoEstadual.disabled = false;
+        inputBox.classList.add('.error'); // Adiciona a classe "error"
     }
 });
+
+function ocultarMensagemDeErro() {
+    mensagemErro.style.display = "none";
+}
+
+function ocultarIconeDeErro() {
+    imgError.style.display = "none";
+}
+
+function ocultarIconeDeSucesso() {
+    imgSuccess.style.display = "none";
+}
+
+function removerCorDaBorda() {
+    inputBox.classList.remove('.success'); // Remove a classe "success"
+    inputBox.classList.remove('.error'); // Remove a classe "error"
+}
+
 
 
 /* Sistema de Ocultar/Mostar Senha*/

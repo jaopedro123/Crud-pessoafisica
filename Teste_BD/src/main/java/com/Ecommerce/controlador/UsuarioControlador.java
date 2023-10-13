@@ -94,7 +94,7 @@ public String excluirConta(Principal principal) {
         deleteButton.addEventListener("click", function (event) {
             const confirmDelete = confirm('Tem certeza que deseja excluir sua conta?');
             if (!confirmDelete) {
-                event.preventDefault(); // Prevent form submission if not confirmed
+                event.preventDefault();
             }
         });
     });
