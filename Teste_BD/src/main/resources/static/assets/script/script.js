@@ -1,5 +1,4 @@
-
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Seu código JavaScript aqui
 
 
@@ -50,7 +49,7 @@
         const vRamFilter = getElementByIdSafely("vram");
         const pvFilter = getElementByIdSafely("pv");
         const armazenamentoFilter = getElementByIdSafely("armazenamento");
-        const precessadorFilter = getElementByIdSafely("precessador");
+        const precessadorFilter = getElementByIdSafely("processador");
         const priceFilter = getElementByIdSafely("price-filter");
         const priceValue = getElementByIdSafely("price-value");
         const productGrid = getElementByIdSafely("product-grid");
@@ -116,108 +115,119 @@
         const items2 = document.querySelector(".divprod:nth-child(2) .items");
         const items3 = document.querySelector(".divprod:nth-child(3) .items");
         const itemWidth = 500; // Largura de cada item, incluindo margens
-    
+        let isAnimating1 = false;
+        let isAnimating2 = false;
+        let isAnimating3 = false;
+        
         carousel1.addEventListener("click", function () {
-            // Move os itens do Carrossel 1 para a esquerda
-            items1.style.transform = `translateX(-${itemWidth}px)`;
-            items1.style.transition = "transform 0.3s ease-in-out";
-            // Remove o primeiro item e o adiciona no final
-            setTimeout(() => {
-                items1.appendChild(items1.firstElementChild);
-                items1.style.transition = "none";
-                items1.style.transform = "translateX(0)";
-            }, 300); // Tempo igual à duração da transição
+            if (!isAnimating1) {
+                isAnimating1 = true;
+                // Mova os itens do Carrossel 1 para a esquerda
+                items1.style.transition = "transform 0.3s ease-in-out";
+                items1.style.transform = `translateX(-${itemWidth}px)`;
+                // Após a transição, reorganize os itens
+                items1.addEventListener("transitionend", function () {
+                    items1.style.transition = "none";
+                    items1.style.transform = "translateX(0)";
+                    items1.appendChild(items1.firstElementChild);
+                    isAnimating1 = false;
+                }, { once: true });
+            }
         });
-    
+        
         carousel2.addEventListener("click", function () {
-            // Move os itens do Carrossel 2 para a esquerda
-            items2.style.transform = `translateX(-${itemWidth}px)`;
-            items2.style.transition = "transform 0.3s ease-in-out";
-            // Remove o primeiro item e o adiciona no final
-            setTimeout(() => {
-                items2.appendChild(items2.firstElementChild);
-                items2.style.transition = "none";
-                items2.style.transform = "translateX(0)";
-            }, 300); // Tempo igual à duração da transição
+            if (!isAnimating2) {
+                isAnimating2 = true;
+                // Mova os itens do Carrossel 2 para a esquerda
+                items2.style.transition = "transform 0.3s ease-in-out";
+                items2.style.transform = `translateX(-${itemWidth}px)`;
+                // Após a transição, reorganize os itens
+                items2.addEventListener("transitionend", function () {
+                    items2.style.transition = "none";
+                    items2.style.transform = "translateX(0)";
+                    items2.appendChild(items2.firstElementChild);
+                    isAnimating2 = false;
+                }, { once: true });
+            }
         });
-    
+        
         carousel3.addEventListener("click", function () {
-            // Move os itens do Carrossel 3 para a esquerda
-            items3.style.transform = `translateX(-${itemWidth}px)`;
-            items3.style.transition = "transform 0.3s ease-in-out";
-            // Remove o primeiro item e o adiciona no final
-            setTimeout(() => {
-                items3.appendChild(items3.firstElementChild);
-                items3.style.transition = "none";
-                items3.style.transform = "translateX(0)";
-            }, 300); // Tempo igual à duração da transição
+            if (!isAnimating3) {
+                isAnimating3 = true;
+                // Mova os itens do Carrossel 3 para a esquerda
+                items3.style.transition = "transform 0.3s ease-in-out";
+                items3.style.transform = `translateX(-${itemWidth}px)`;
+                // Após a transição, reorganize os itens
+                items3.addEventListener("transitionend", function () {
+                    items3.style.transition = "none";
+                    items3.style.transform = "translateX(0)";
+                    items3.appendChild(items3.firstElementChild);
+                    isAnimating3 = false;
+                }, { once: true });
+            }
         });
-    
+        
         const carouselRight1 = document.querySelector(".scroll-right-1");
         const carouselRight2 = document.querySelector(".scroll-right-2");
         const carouselRight3 = document.querySelector(".scroll-right-3");
-    
+        
         carouselRight1.addEventListener("click", function () {
-            // Move os itens do Carrossel 1 para a direita
-            items1.insertBefore(items1.lastElementChild, items1.firstElementChild);
-            items1.style.transition = "none";
-            items1.style.transform = `translateX(-${itemWidth}px)`;
-            setTimeout(() => {
+            if (!isAnimating1) {
+                isAnimating1 = true;
+                // Mova os itens do Carrossel 1 para a direita
+                items1.style.transition = "none";
+                items1.insertBefore(items1.lastElementChild, items1.firstElementChild);
+                items1.style.transform = `translateX(-${itemWidth}px)`;
+                // Force uma reflow antes de aplicar a transição
+                void items1.offsetWidth;
                 items1.style.transition = "transform 0.3s ease-in-out";
                 items1.style.transform = "translateX(0)";
-            }, 50);
+                // Após a transição, reorganize os itens
+                items1.addEventListener("transitionend", function () {
+                    isAnimating1 = false;
+                }, { once: true });
+            }
         });
-    
+        
         carouselRight2.addEventListener("click", function () {
-            // Move os itens do Carrossel 2 para a direita
-            items2.insertBefore(items2.lastElementChild, items2.firstElementChild);
-            items2.style.transition = "none";
-            items2.style.transform = `translateX(-${itemWidth}px)`;
-            setTimeout(() => {
+            if (!isAnimating2) {
+                isAnimating2 = true;
+                // Mova os itens do Carrossel 2 para a direita
+                items2.style.transition = "none";
+                items2.insertBefore(items2.lastElementChild, items2.firstElementChild);
+                items2.style.transform = `translateX(-${itemWidth}px)`;
+                // Force uma reflow antes de aplicar a transição
+                void items2.offsetWidth;
                 items2.style.transition = "transform 0.3s ease-in-out";
                 items2.style.transform = "translateX(0)";
-            }, 50);
+                // Após a transição, reorganize os itens
+                items2.addEventListener("transitionend", function () {
+                    isAnimating2 = false;
+                }, { once: true });
+            }
         });
-    
+        
         carouselRight3.addEventListener("click", function () {
-            // Move os itens do Carrossel 3 para a direita
-            items3.insertBefore(items3.lastElementChild, items3.firstElementChild);
-            items3.style.transition = "none";
-            items3.style.transform = `translateX(-${itemWidth}px)`;
-            setTimeout(() => {
+            if (!isAnimating3) {
+                isAnimating3 = true;
+                // Mova os itens do Carrossel 3 para a direita
+                items3.style.transition = "none";
+                items3.insertBefore(items3.lastElementChild, items3.firstElementChild);
+                items3.style.transform = `translateX(-${itemWidth}px)`;
+                // Force uma reflow antes de aplicar a transição
+                void items3.offsetWidth;
                 items3.style.transition = "transform 0.3s ease-in-out";
                 items3.style.transform = "translateX(0)";
-            }, 50);
+                // Após a transição, reorganize os itens
+                items3.addEventListener("transitionend", function () {
+                    isAnimating3 = false;
+                }, { once: true });
+            }
         });
+        
     });
   
-/*SLIDESHOW ABAIXO*/
-let slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
 
 
 

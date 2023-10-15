@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <title>Motherboard</title>
+    <title>Favoritos</title>
     <link rel="stylesheet" href="assets/css/css.css" type="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
@@ -230,7 +230,7 @@
         <div class="search-container">
        
             <input type="text" class="search-bar" name="q" placeholder="Pesquisar oque você procura..."> 
-            <i class="fas fa-search search-icon"></i>
+           <i class="search-icon"><img src="icones/lupa.png" class="lupadobarra"></i>
         </div>
         <!--FIM da Barra de pesquisa-->
         <div class="icone2">
@@ -239,11 +239,10 @@
             </div>
             <div class="icone">
                 <a th:href="@{/Favoritos}" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
-                <a th:href="@{/html}" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
+                <a th:href="@{/Carrinho}" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
                 <a th:href="@{/Cadastro}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
             </div>
         </header>
-
     <div class="fundoFav">
 
         <main>
@@ -263,36 +262,35 @@
 
                     <div class="favoritos">
                         <div class="cartao-produto">
-                            <img src="Imagens/playstation-5.jpg" alt="PlayStation 5" class="imagem-produto">
+                            <img src="Imagens/playstation-5-removebg-preview.png" alt="PlayStation 5" class="imagem-produto">
                             <div class="detalhes-produto">
                                 <h3 class="titulo-produto">PlayStation 5</h3>
 
-                                <div src="icones/favoritos.png" alt="icone-favoritos" class="icone-favoritos"> </div>
+                                <div src="icones/favorito.png" alt="icone-favoritos" class="icone-favoritos"> </div>
 
                                 <p class="descricao-produto">Console de videogame de última geração</p>
                                 <p>
                                 <div> <!-- Div para o preço original -->
                                     <s class="linhaFav">
-                                        <div class="preco-produto"><b>R$ 4499,99</b></div>
+                                        <div class="preco-produto"><b>R$ 3999,90</b></div>
                                     </s>
                                 </div>
                                 <div class="preco-produto-com-desconto"> <!-- Div para o preço com desconto -->
-                                    <b> R$ 2999,99</b>
+                                    <b> R$ 3500.00</b>
                                 </div>
-                                <div class="dozexnocartao"> 12x no cartao SEM JUROS</div>
+                                <div class="dozexnocartao"> 10x no cartao SEM JUROS</div>
                                 </p>
                                 <a href="#" class="botao-comprar">Comprar</a>
 
                                 <div class="seta-expandir">
                                     <p class="textodescricaoproduto">Descrição</p>
                                 </div>
-                                <div class="descricao-completa-produto">O <b>PlayStation 5</b> é o console de videogame
-                                    da Sony, lançado em 2020.</div>
+                                <div class="descricao-completa-produto">Desfrute do carregamento do seu PS5, extremamente rápido com o SSD de altíssima velocidade, uma imersão mais profunda com suporte a feedback tátil, gatilhos adaptáveis e áudio 3D, além de uma geração inédita de jogos incríveis para PlayStation.</div>
                             </div>
                         </div>
 
                         <div class="cartao-produto">
-                            <img src="Imagens/series-x.jpg" alt="Xbox Series X" class="imagem-produto">
+                            <img src="Imagens/series-x-removebg-preview.png" alt="Xbox Series X" class="imagem-produto">
                             <div class="detalhes-produto">
                                 <h3 class="titulo-produto">Xbox Series X</h3>
 
@@ -302,11 +300,11 @@
                                 <p>
                                 <div> <!-- Div para o preço original -->
                                     <s class="linhaFav">
-                                        <div class="preco-produto"><b>R$ 4240,00</b></div>
+                                        <div class="preco-produto"><b>R$ 3240,00</b></div>
                                     </s>
                                 </div>
                                 <div class="preco-produto-com-desconto"> <!-- Div para o preço com desconto -->
-                                    <b> R$ 3100,00</b>
+                                    <b> R$ 3100.00</b>
                                 </div>
                                 <div class="dozexnocartao"> 12x no cartao SEM JUROS</div>
                                 </p>
@@ -314,15 +312,14 @@
                                 <div class="seta-expandir">
                                     <p class="textodescricaoproduto">Descrição</p>
                                 </div>
-                                <div class="descricao-completa-produto">O <b>Xbox Series X</b> é o console de videogame
-                                    da Microsoft, lançado em 2020.</div>
+                                <div class="descricao-completa-produto">Apresentamos o Xbox series x, nosso console mais rápido e poderoso de todos os tempos, com software integrado para diminuir significativamente os tempos de carregamento dentro e fora do jogo.</div>
                             </div>
                         </div>
 
                         <div class="cartao-produto">
                             <img src="Imagens/pc gamer.png" alt="Pc gamer" class="imagem-produto">
                             <div class="detalhes-produto">
-                                <h3 class="titulo-produto">PC Gamer Intel I5 LED 16 milhões de cores</h3>
+                                <h3 class="titulo-produto">PC Gamer Intel I5</h3>
 
                                 <div src="icones/favoritos.png" alt="Ícone de Favoritos" class="icone-favoritos"> </div>
 
@@ -335,7 +332,7 @@
                                     </s>
                                 </div>
                                 <div class="preco-produto-com-desconto"> <!-- Div para o preço com desconto -->
-                                    <b> R$ 1900,00</b>
+                                    <b> R$ 1900.00</b>
                                 </div>
                                 <div class="dozexnocartao"> 12x no cartao SEM JUROS</div>
                                 </p>
@@ -343,18 +340,18 @@
                                 <div class="seta-expandir">
                                     <p class="textodescricaoproduto">Descrição</p>
                                 </div>
-                                <div class="descricao-completa-produto"><b>Esse PC não é gamer</b></div>
+                                <div class="descricao-completa-produto">Monitor LED 20" com 75Hz de taxa de atualização Gabinete Gamer com 3 LED Fans RGB e controle remoto para gerenciar as cores e efeitos. Pronto para rodar diversos jogos como: Valorant, Call of Duty, GTA, Minecraft, League of Legends e outros Garantia total de 1 ano</div>
                             </div>
                         </div>
 
                         <div class="cartao-produto">
-                            <img src="Imagens/Nintendo Switch.avif" alt="Nintendo Switch" class="imagem-produto">
+                            <img src="Imagens/NintendoSwitch-removebg-preview.png" alt="Nintendo Switch" class="imagem-produto">
                             <div class="detalhes-produto">
                                 <h3 class="titulo-produto">Nintendo Switch OLED</h3>
 
                                 <div src="icones/favoritos.png" alt="Ícone de Favoritos" class="icone-favoritos"> </div>
 
-                                <p class="descricao-produto">32GB - AZUL E VERMELHO - NACIONAL</p>
+                                <p class="descricao-produto">32GB - PRETO E BRANCO - NACIONAL</p>
                                 <p>
                                 <div> <!-- Div para o preço original -->
                                     <s class="linhaFav">
@@ -362,7 +359,7 @@
                                     </s>
                                 </div>
                                 <div class="preco-produto-com-desconto"> <!-- Div para o preço com desconto -->
-                                    <b> R$ 1899,99</b>
+                                    <b> R$ 1899.99</b>
                                 </div>
                                 <div class="dozexnocartao"> 12x no cartao SEM JUROS</div>
                                 </p>
@@ -370,8 +367,7 @@
                                 <div class="seta-expandir">
                                     <p class="textodescricaoproduto">Descrição</p>
                                 </div>
-                                <div class="descricao-completa-produto"> <b>Saída de vídeo: </b>Até 1080p usando HDMI no
-                                    modo TV | Até 720p usando a tela integrada</div>
+                                <div class="descricao-completa-produto">PRODUTO IMPORTADO. Produto de região livre, portanto, independente da versão do console, poderão ser utilizados jogos físicos e digitais de qualquer região. A configuração do console poderá ser feita em diversos idiomas.</div>
                             </div>
                         </div>
 
@@ -380,7 +376,7 @@
                 </section>
 
 
-                <div class="adicionarMaisProd"><a th:href="@{/}"> <img src="Imagens/mais branco.png"> </a> </div>
+                <div class="adicionarMaisProd"><a th:href="@{/}"> <img class="imgAdicionarMaisProd" src="Imagens/mais branco.png"> </a> </div>
                 <br />
                 <div class="nomeDeAdionarMaisProd">Adicione mais produtos ao seus FAVORITOS para uma futura compra.
                 </div>
@@ -393,35 +389,35 @@
     </div>
 
     <script src="assets/script/script.js"></script>
-     <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <ul>
-                <a th:href="@{/}" > <img class="logofooter" th:src="@{/icones/image-light.png}"><br/><br/></a>
+                <a href="index.html" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
                 <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
                 <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
                     <div class="redessocial">
-                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" th:src="@{/icones/insta.png}"></a>
-                        <a href="https://twitter.com/Motherboardtec"><img class="redes" th:src="@{/icones/twitter.png}"></a>
-                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" th:src="@{/icones/yt.png}"></a>
+                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
+                        <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
+                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
                     </div>
             </ul>
             <ul>
                <h1 class="textofooter">Dúvidas:</h1><br/>
-               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
-               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
-               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
             </ul>
             <ul> 
                <h1 class="textofooter">Cliente:</h1><br/>
-               <li><a th:href="@{/Conta}" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
-               <li><a th:href="@{/Conta}" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
-               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
+               <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+               <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
             </ul>
             <ul>
                 <h1 class="textofooter">Ajuda:</h1><br/> 
-                <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
-                <li><a th:href="@{/Politica-De-Privacidade}" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
-                <li><a th:href="@{/teste}" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+                <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+                <li><a href="Politica De Privacidade.html" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+                <li><a href="teste.html" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
             </ul>
         </div>
         <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>

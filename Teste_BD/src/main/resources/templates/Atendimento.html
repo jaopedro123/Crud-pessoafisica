@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motherboard</title>
+    <title>Atendimento ao cliente</title>
+    <script defer src="assets/script/lk.js"></script>
+
     <link rel="stylesheet" href="assets/css/css.css" type="text/css">
     <script defer src="assets/script/script.js"></script>
     <script defer src="assets/script/aa2.js"></script>
@@ -243,39 +245,43 @@
             </div>
             <div class="icone">
                 <a th:href="@{/Favoritos}" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
-                <a th:href="@{/html}" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
+                <a th:href="@{/Carrinho}"><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
                 <a th:href="@{/Cadastro}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
             </div>
         </header>
 
-
+<!--comeco-->
+<br/><br/><br/>
     <div class="cont">
         <section class="secUm">
-            <div class="titulo">
+            <div class="tituloAten">
                 <h2>Bem-vindo ao atendimento ao cliente</h2>
             </div>
             <p id="textp">Tire suas dúvidas perguntando ao nosso chat de atendimento</p>
-            <div class="inputper">
-                <input type="text" name="Perchat" id="inputPer" placeholder="Faça sua pergunta">
-                <button><img src="icones/enviar.png"></button>
+            <div class="BarraPergunta">
+                <div class="btneBarra">
+                    <input type="text" name="Perchat" id="inputPer" placeholder="Faça sua pergunta">
+                    <a class="btnPerguntaPes" href="">
+                    </a>
+                </div>
             </div>
 
             <p id="dAssunto">Ou se prefirir... veja os tópicos mais abaixo ou use o acesso rápido</p>
 
             <section class="acessoRapido">
-                <div class="cards">
+                <div class="cardsAten">
                     <div class="imgCard"><a href="#estorno"><img src="icones/pagMaior.png"></a></div>
                     <div class="txtCard">Pagamento e Estorno</div>
                 </div>
-                <div class="cards">
+                <div class="cardsAten">
                     <div class="imgCard"><a href="#pedido"><img src="icones/compra.png"></a></div>
                     <div class="txtCard">Fases da compra</div>
                 </div>
-                <div class="cards">
+                <div class="cardsAten">
                     <div class="imgCard"><a href="#garantia"><img src="icones/garantia.png"></a></div>
                     <div class="txtCard">Garantia da compra</div>
                 </div>
-                <div class="cards">
+                <div class="cardsAten">
                     <div class="imgCard"><a href="#retirar"><img src="icones/endereço.png"></a></div>
                     <div class="txtCard">Retirar na loja</div>
                 </div>
@@ -284,20 +290,19 @@
 
         <section class="secDois">
             <div class="div2">
-                
                 <section class="mother">
                     <div class="motherText">
-                        <a href="#">
+                        <a th:href="@{/FaleConosco}">
                             <p>Fale conosco</p>
                         </a>
                     </div>
                     <div class="motherText">
-                        <a href="Termos De Uso.html">
-                            <p>Termos de privacidade</p>
+                        <a th:href="@{/Politica-De-Privacidade}">
+                            <p>Política de Cookies</p>
                         </a>
                     </div>
                     <div class="motherText">
-                        <a href="Politica De Privacidade.html">
+                        <a th:href="@{/Politica-De-Privacidade}">
                             <p>Política de Privacidade</p>
                         </a>
                     </div>
@@ -671,44 +676,44 @@
 
                 </div>
 
-            </div> <!--Fechamento da div 3-->
+            </div> 
+            </div><!--Fechamento da div 3-->
 
-        </section> <!--Fechamento da Section Um-->
-    </div>
-
-   <footer class="footer">
+        </section>
+    <footer class="footer">
         <div class="container">
             <ul>
-                <a th:href="@{/user/}" > <img class="logofooter" th:src="@{/icones/image-light.png}"><br/><br/></a>
+                <a href="index.html" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
                 <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
                 <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
                     <div class="redessocial">
-                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" th:src="@{/icones/insta.png}"></a>
-                        <a href="https://twitter.com/Motherboardtec"><img class="redes" th:src="@{/icones/twitter.png}"></a>
-                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" th:src="@{/icones/yt.png}"></a>
+                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
+                        <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
+                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
                     </div>
             </ul>
             <ul>
                <h1 class="textofooter">Dúvidas:</h1><br/>
-               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
-               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
-               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+               <li><a href class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+               <li><a href class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+               <li><a href class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
             </ul>
             <ul> 
                <h1 class="textofooter">Cliente:</h1><br/>
-               <li><a th:href="@{/Conta}" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
-               <li><a th:href="@{/Conta}" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
-               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
+               <li><a href class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+               <li><a href class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
             </ul>
             <ul>
                 <h1 class="textofooter">Ajuda:</h1><br/> 
-                <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
-                <li><a th:href="@{/Politica-De-Privacidade}" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
-                <li><a th:href="@{/teste}" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+                <li><a href class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+                <li><a href class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+                <li><a href="teste.html" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
             </ul>
         </div>
         <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
     </footer>
+
 </body>
 
 </html>

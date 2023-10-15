@@ -22,6 +22,11 @@ public class HomeControlador {
 	public String atendimento() {
 		return "Atendimento";
 	}
+	
+	@GetMapping("/FaleConosco")
+	public String faleConosco() {
+		return "FaleConosco";
+	}
 
 	@GetMapping("/Config")
 	public String config() {
@@ -33,9 +38,14 @@ public class HomeControlador {
 		return "Favoritos";
 	}
 
-	@GetMapping("/html")
-	public String html() {
-		return "html";
+	@GetMapping("/Carrinho")
+	public String carrinho() {
+		return "Carrinho";
+	}
+	
+	@GetMapping("/Pagamento")
+	public String pagamento() {
+		return "Pagamento";
 	}
 
 	@GetMapping("/")
@@ -53,9 +63,9 @@ public class HomeControlador {
 		return "TermosDeUso";
 	}
 
-	@GetMapping("/teste")
-	public String teste() {
-		return "teste";
+	@GetMapping("/SobreNos")
+	public String sobreNos() {
+		return "SobreNos";
 	}
 
 	@GetMapping("/Cadastro")

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="suave"  lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,108 +8,260 @@
     <link rel="stylesheet" href="assets/CSS/css.css"> 
     <title>Política De Privacidade</title>
 </head>
-<body id="CorpoTermos">
-    <header class="header">
+<body class="largpc">
+     <header class="header">
 
-        <!--Menu Lateral-->
+         <!-- MENU LATERAL -->
+         <div class="left-sidebar" id="sidebar">
 
-   <div class="pagina">
+            <!-- LOGO DO TOPO -->
+            <div class="LateralLinhaLogo">
+                <a class="menu-logo" href="#">
+                    <img id="logoDoMenuLateral" th:src="@{/icones/logorapa.png}">
+                </a>
+            </div>
+            <!-- Botão de fechamento -->
+            <div id="closeBtn" class="close-button">X</div>
 
-       <!-- MENU LATERAL -->
-       <div class="left-sidebar" id="sidebar">
+            <!-- CONTEUDO DO CENTRO DO MENU -->
+            <div class="conteudo-sidebar">
+                <ul>
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                <img th:src="@{/icones/cpu.png}">
+                                <p class="nomeDasCategorias">Hardware</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/processador-32.png}">
+                                    <p class="pCategoriasDropDown">Processadores</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/placa-mãe-32.png}">
+                                    <p class="pCategoriasDropDown">Placa mãe</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/ram.png}">
+                                    <p class="pCategoriasDropDown">Pentes de Memória</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/hdd-32.png}">
+                                    <p class="pCategoriasDropDown">Disco Rígido interno (HD)</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-         <!-- LOGO DO TOPO -->
-         <a class="menu-logo" href="#">
-           <img id="logoDoMenuLateral" src="icones/logorapa.png">
-         </a>
-         <!-- Botão de fechamento -->
-           <div id="closeBtn" class="close-button">X</div>
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                 <img th:src="@{/icones/gaming-pc.png}">
+                                <p class="nomeDasCategorias">Computadores</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/compGamer.png}">
+                                    <p class="pCategoriasDropDown">Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/mac-pro-32.png}">
+                                    <p class="pCategoriasDropDown">Workstation</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/pc.png}">
+                                    <p class="pCategoriasDropDown">Home Office</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-         <!-- CONTEUDO DO CENTRO DO MENU -->
-         <div class="conteudo-sidebar">
-           
-           <a class="menu-item" href="#">
-             <img src="icones/cpu.png">
-             <p class="nomeDasCategorias">Hardware</p>
-           </a>
-   
-           <a class="menu-item" href="#">
-             <img src="icones/gaming-pc.png">
-             <p class="nomeDasCategorias">Computadores</p>
-           </a>
-   
-           <a class="menu-item" href="#">
-           <img src="icones/teclado-e-mouse.png">
-          <p class="nomeDasCategorias">Periféricos</p>
-           </a>
-   
-           <a class="menu-item" href="#">
-           <img src="icones/dispositivos-eletronicos.png">
-           <p class="nomeDasCategorias">Eletrônicos</p>
-           </a>
-   
-           <a class="menu-item" href="#">
-           <img src="icones/monitor.png">
-           <p class="nomeDasCategorias">Monitores</p>
-           </a>
-   
-           <a class="menu-item" href="#">
-           <img src="icones/jogos.png">
-           <p class="nomeDasCategorias">Espaço Gamer</p>
-           </a>
-   
-           <a class="menu-item bottom" href="Configurações.html">
-           <img src="icones/configuracoes-cog.png">
-           <p class="nomeConfiguraçoes">Configurações</p>
-           </a>
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                 <img th:src="@{/icones/teclado-e-mouse.png}">
+                                <p class="nomeDasCategorias">Periféricos</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/teclado-32.png}">
+                                    <p class="pCategoriasDropDown">Teclado</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/mouse.png}">
+                                    <p class="pCategoriasDropDown">Mouse</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/fones-de-ouvido-32.png}">
+                                    <p class="pCategoriasDropDown">Fones de Ouvido</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-         </div>  
-</div>
-       </div>
-       <!-- Botao hamburguer -->
-       <section>
-         <nav>      
-           <ul class="hamburguer"> 
-             <li class="hamburguertamanho">
-               <a id="menuBtn" class="active" href="#">
-                 <img src="icones/cardapio.png">     
-               </a>
-             </li>
-           </ul>
-         </nav>
-       </section>
-       <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
-       <div class="overlay hidden" id="overlay"></div>
-     <!--Final do Menu Lateral-->
-       <div class="logoheader">
-         <a href="index.html" > <img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
-       </div>
-       <!--Começo da Barra de pesquisa-->
-       <div class="barra">
-           <span class="search-icon">
-               <img src="icones/lupa.png">
-           </span>
-           <input type="text" placeholder="Pesquisar...">
-       </div>
-       <!--FIM da Barra de pesquisa-->
-       <div class="icone2">
-         <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
-           <label for="switch-flat"></label>
-           </div>
-           <div class="icone">
-               <a href="Favoritos.html" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
-               <a href="html.html" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
-               <a href="Conta.html" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
-           </div>
-       </header>
-    <div class="h1-header">
-    <h1 id="Vem"><i>Política De Privacidade</i> </h1>  
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                <img th:src="@{/icones/dispositivos-eletronicos.png}">
+                                <p class="nomeDasCategorias">Eletrônicos</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/notebook-32.png}">
+                                    <p class="pCategoriasDropDown">Notebooks</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/NotGamer.png}">
+                                    <p class="pCategoriasDropDown">Notebooks Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/celular-32.png}">
+                                    <p class="pCategoriasDropDown">Celulares</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                <img th:src="@{/icones/monitor.png}">
+                                <p class="nomeDasCategorias">Monitores</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitorGamer.png}">
+                                    <p class="pCategoriasDropDown">Monitores Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitor-32.png}">
+                                    <p class="pCategoriasDropDown">Monitores Home Office</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitor1.png}">
+                                    <p class="pCategoriasDropDown">Suporte Monitor</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                             <img th:src="@{/icones/jogos.png}">
+                                <p class="nomeDasCategorias">Espaço Gamer</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/office-chair-32.png}">
+                                    <p class="pCategoriasDropDown">Cadeira Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/pc-de-mesa-32.png}">
+                                    <p class="pCategoriasDropDown">Mesa Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/controle-gamer.png}">
+                                    <p class="pCategoriasDropDown">Kits Gamer</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    
+
+                </ul>
+
+                <div class="LateralLinhaConfig">
+                    <a class="LateralconfigCategorias" href="Configurações.html">
+                        <img th:src="@{/icones/configuracoes-cog.png}">
+                        <p class="nomeConfiguraçoes">Configurações</p>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Botao hamburguer -->
+    <section>
+        <nav>
+            <ul class="hamburguer">
+                <li class="hamburguertamanho">
+                    <a id="menuBtn" class="active" href="#">
+                       <img th:src="@{/icones/cardapio.png}"> 
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
+    <div class="overlay hidden" id="overlay"></div>
+    <!--Final do Menu Lateral-->
+        <div class="logoheader">
+          <a th:href="@{/}" ><img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
+        </div>
+        <!--Começo da Barra de pesquisa-->
+        <div class="search-container">
+       
+            <input type="text" class="search-bar" name="q" placeholder="Pesquisar oque você procura..."> 
+           <i class="search-icon"><img src="icones/lupa.png" class="lupadobarra"></i>
+        </div>
+        <!--FIM da Barra de pesquisa-->
+        <div class="icone2">
+          <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
+            <label for="switch-flat"></label>
+            </div>
+            <div class="icone">
+                <a th:href="@{/Favoritos}" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
+               <a th:href="@{/Carrinho}"><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
+                <a th:href="@{/Cadastro}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
+            </div>
+        </header>
+    <div class="h1-header">
+    <h1 id="Vem">Política De Privacidade</h1>  
+    </div>
+
+    <div id="container-figurastermos">
+        <div class="separacao-icons"><a id="a"  href="#parte1"> <img class="mini" src="Imagens/cadastro.png"></a><pre><h1>Cadastro</pre></h1></div>
+        <div class="separacao-icons"><a id="a"  href="#parte2"><img class="mini" src="Imagens/compartilhar-banco-de-dados.png"></a><pre><h1>Dados</pre></h1></div>
+        <div class="separacao-icons"><a id="a"  href="#parte3"><img class="mini" src="Imagens/gerenciamento-de-tempo.png"></a><pre><h1>Tratar</pre></h1></div>
+        <div class="separacao-icons"><a id="a"  href="#parte4"><img class="mini" src="Imagens/transferencia-de-dados.png"></a><pre><h1>Transferir</pre></h1></div>
+        <div class="separacao-icons"><a id="a"  href="#parte5"><img class="mini" src="Imagens/web-cookies.png"></a><pre><h1>Cookies</pre></h1></div>
+        <div class="separacao-icons"><a id="a"  href="#parte6"><img class="mini" src="Imagens/seguranca-de-dados.png"></a><pre><h1>Segurança</pre></h1></div>
+        <div class="separacao-icons"><a id="a"  href="#parte7"><img class="mini" src="Imagens/dados-pessoais.png"></a><pre><h1>Direitos</pre></h1></div>
+        
+    </div>
+
 
 <br>
 <p id="TextPoli">
     A Motherboard tem compromisso firmado com a segurança dos seus dados. Quando você acessa o nosso site e quando faz uma compra com a Motherboard, você nos fornece alguns dados pessoais com o objetivo de viabilizar a sua operação.
-    Somos a  Ltda, Motherboard Informática, inscrita no CNPJ 00,000.000/00 com sede em São Paulo Brooklin, 123 na cidade de São Paulo - SP e seremos a controladora das suas informações, ou seja, somos os responsáveis pelo que acontece com os seus dados e pela proteção deles, conforme definição da Lei Geral de Proteção de Dados “LGPD” (Lei Federal nº 13.709.2018).
+    Somos a Ltda, Motherboard Informática, inscrita no CNPJ 00,000.000/00 com sede em São Paulo Brooklin, 123 na cidade de São Paulo - SP e seremos a controladora das suas informações, ou seja, somos os responsáveis pelo que acontece com os seus dados e pela proteção deles, conforme definição da Lei Geral de Proteção de Dados “LGPD” (Lei Federal nº 13.709.2018).
     Este documento é dedicado a te explicar como os seus dados pessoais serão tratados pela Motherboard Informática e quais são as medidas que aplicamos para mantê-los seguros.
     
     Para facilitar a compreensão desta política:
@@ -120,30 +272,54 @@
     Todas as vezes que ler “usuário”, “você”, “titular”, “cliente”, “seu” ou “sua”, nos referimos a você, nosso cliente ou usuário do nosso site, o titular dos dados.
     O consentimento é a autorização clara e objetiva que você dá para o tratamento de seus dados pessoais, com a finalidade destacada neste consentimento. </p> <br> <br>
 
-    <h2 id="Polih2"> <em>QUAIS DADOS SÃO COLETADOS PELA MOTHERBOARD INFORMÁTICA?</em></h2> <br>
-    
-    <p id="TextPoli">Durante sua navegação no nosso site, diferentes tipos de dados pessoais poderão ser coletados, de forma automática ou fornecidas diretamente por você, como por exemplo para a realização de seu cadastro.
-        <br><br>
-     <em id="em"> 1. Dados pessoais que nós podemos coletar</em>
-     <br><br>
-    No momento do cadastro:
-    
-    Pessoa física:
-    
-    Nome completo;
-    CPF;
-    E-mail;
-    Número de celular;
-    Data de nascimento;
-    Endereço;
-    Pessoa jurídica:
-    
-    RG do responsável;
-    CNPJ;
-    Razão Social;
-    Inscrição Estadual. <br><br>
-    <br>
-    <em id="em"> 2. Com quem seus dados pessoais são compartilhados ?</em>
+     
+<a name="parte1">   
+<p id="TextPoli"> 
+<em id="em"> 1. Dados Cadastrais Que Podemos Coletar</em>
+<pre id="TextPoli">
+    <table class="TabelaPoli">
+        <thead>
+        <tr>
+            <th>Pessoa Física:</th>
+            <th>Pessoa Jurídica:</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Nome Completo</td>
+            <td>Nome Fantasia</td>
+        </tr>
+        <tr>
+            <td>CPF</td>
+            <td>CNPJ</td>
+        </tr>
+        <tr>
+            <td>Telefone Celular</td>
+            <td>Telefone</td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td>E-mail</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Inscrição Estadual</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Razão Social</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</pre>
+   
+ 
+</p>
+<a name="parte2">
+<p id="TextPoli">
+    <em id="em"> 2. Com Quem Seus Dados Pessoais São Compartilhados ?</em>
     <br><br>
 Poderemos compartilhar os seus dados pessoais com:
 Nossos parceiros, prestadores de serviços e fornecedores. Para a consecução de nossas atividades, mantemos relacionamento e contratamos diversos parceiros, prestadores de serviços e fornecedores, que são essenciais para os nossos negócios. Alguns desses parceiros, prestadores de serviços e fornecedores podem precisar ter acesso aos dados pessoais que coletamos para exercer suas funções, como prestadores de serviços de tecnologia da informação, serviços de hospedagem de dados, serviços de recrutamento e seleção, serviços de gerenciamento e promoção de eventos, provedores de softwares de produtividade, provedores de softwares de gestão de contatos, auditores, correspondentes, tradutores, entre outros prestadores de serviços, casos nos quais poderemos compartilhar seus dados pessoais com eles. 
@@ -151,16 +327,19 @@ Autoridades Governamentais. Podemos compartilhar os seus dados pessoais com toda
 Com terceiros interessados na combinação ou aquisição de nossos negócios. Podemos compartilhar os seus dados pessoais com terceiros interessados na combinação ou aquisição de nossos negócios, com os quais estivermos tratando sobre potenciais operações de fusão, aquisição ou incorporação.
 Para terceiros indicados por você. Podemos compartilhar seus dados pessoais com terceiros que tenham sido indicados por você, mediante a sua solicitação.
 <br><br>
-   <em id="em">3. Por quanto tempo seus dados são tratados ?</em> 
+<a name="parte3">
+   <em id="em">3. Por Quanto Tempo Seus Dados São Tratados ?</em> 
    <br><br>
 A Motherboard Informática tem o compromisso de tratar os seus dados pessoais somente pelo período que for necessário para alcançar as finalidades específicas de cada tratamento, com a retenção dos dados pela menor duração possível, levando em consideração todas as obrigações legais e regulatórias existentes.
 Nesse sentido, os prazos de retenção de cada categoria de dados pessoais são definidos pela Motherboard Informática de acordo com as características específicas de cada tratamento, incluindo a natureza dos dados, as finalidades para o tratamento, as obrigações legais ou regulatórias existentes, entre outros critérios relevantes para essa definição.
 Em determinados casos, temos obrigações legais que determinam a guarda dos dados pessoais por períodos específicos, a exemplo dos dados de seu endereço IP, hora e data de cada acesso ao nosso site, que precisam ser retidos pelo menos por 6 meses, em observância ao artigo 15 do Marco Civil da Internet.
 <br><br>
+<a name="parte4">
 <em id="em"> 4. Transferências Internacionais de Dados </em>
 <br><br>
 Em certas circunstâncias, como quando utilizarmos serviços de hospedagem em nuvem localizados em outros países ou quando necessitarmos proceder com a transferência de dados para outros países, adotaremos as medidas exigidas por lei para assegurar que seus dados pessoais continuem protegidos, e que essa transferência seja realizada de acordo com um dos mecanismos de transferência previstos na LGPD.
 <br><br>
+<a name="parte5">
 <em id="em">5. Cookies</em>
 <br><br>
 Cookies são pequenos arquivos de texto que ficam armazenados em seu navegador ou em seu dispositivo e que são disparados quando você acessa grande parte dos sites disponíveis na internet, inclusive o nosso. Eles servem, entre outras finalidades, para permitir que suas preferências sejam reconhecidas e que o nosso site seja mostrado para você de acordo com essas preferências, a exemplo da língua em que ele é disponibilizado. Além disso, cookies podem ser utilizados para avaliar métricas de performance, identificar problemas de uso, permitir o funcionamento correto do site e coletar informações sobre o comportamento do usuário.
@@ -175,7 +354,15 @@ Como remover cookies no Mozilla Firefox
 Como remover cookies no Internet Explorer
 Como remover cookies no Safari.
 <br><br>
-<em id="em">6. Seus Direitos como Titular de Dados</em>
+<a name="parte6">
+<em id="em">6. Segurança Dos Dados Pessoais Armazenados</em>
+<br><br>
+A plataforma se compromete a aplicar as medidas técnicas e organizativas aptas a proteger os dados pessoais de acessos não autorizados e de situações de destruição, perda, alteração, comunicação ou difusão de tais dados.
+A plataforma não se exime de responsabilidade por culpa exclusiva de terceiros, como em caso de ataque de hackers ou crackers, ou culpa exclusiva do usuário, como no caso em que ele mesmo transfere seus dados a terceiros. O site se compromete a comunicar o usuário em caso de alguma violação de segurança dos seus dados pessoais.
+Os dados pessoais armazenados são tratados com confidencialidade, dentro dos limites legais. No entanto, podemos divulgar suas informações pessoais caso sejamos obrigados pela lei para fazê-lo ou se você violar nossos Termos de Uso.
+<br><br>
+<a name="parte7">
+<em id="em"> 7. Seus Direitos Como Titular de Dados</em>
 <br><br>
 Você possui uma série de direitos em relação aos seus dados pessoais e estamos comprometidos em respeitar esses direitos, garantindo que você possa exercê-los a qualquer tempo.
 Entre os direitos disponíveis a você, estão os seguintes:
@@ -193,13 +380,7 @@ Realizar uma reclamação, perante a Autoridade Nacional de Proteção de Dados.
 Todos esses direitos podem ser exercidos por você a qualquer tempo, de modo gratuito, salvo se a cobrança de uma taxa eventualmente for permitida de acordo com a legislação ou regulamentação vigente, e nós nos comprometemos a envidar seus melhores esforços para atender às suas solicitações de forma transparente e célere.
 Para garantir que os direitos estão sendo exercidos por você ou por seu representante legal devidamente constituído, a Motherboard Informática poderá solicitar informações ou comprovações necessárias acerca da sua identidade, no sentido de evitar fraudes e garantir a sua privacidade, para que seus dados pessoais não sejam compartilhados com quem não tenha autorização para tanto.
 Atenderemos às suas solicitações dentro de um prazo razoável, em conformidade com a legislação aplicável, lembrando que somente poderemos responder a algumas solicitações depois de recebermos as confirmações previstas acima.
-<br><br>
-<em id="em">7. Segurança dos Dados Pessoais armazenados</em>
-<br><br>
-A plataforma se compromete a aplicar as medidas técnicas e organizativas aptas a proteger os dados pessoais de acessos não autorizados e de situações de destruição, perda, alteração, comunicação ou difusão de tais dados.
-A plataforma não se exime de responsabilidade por culpa exclusiva de terceiros, como em caso de ataque de hackers ou crackers, ou culpa exclusiva do usuário, como no caso em que ele mesmo transfere seus dados a terceiros. O site se compromete a comunicar o usuário em caso de alguma violação de segurança dos seus dados pessoais.
-Os dados pessoais armazenados são tratados com confidencialidade, dentro dos limites legais. No entanto, podemos divulgar suas informações pessoais caso sejamos obrigados pela lei para fazê-lo ou se você violar nossos Termos de Uso.
-
+ 
 </p>  <br>
 <footer class="footer">
     <div class="container">
@@ -215,25 +396,27 @@ Os dados pessoais armazenados são tratados com confidencialidade, dentro dos li
         </ul>
         <ul>
            <h1 class="textofooter">Dúvidas:</h1><br/>
-           <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
-           <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
-           <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+           <li><a href class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+           <li><a href class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+           <li><a href class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
         </ul>
         <ul> 
            <h1 class="textofooter">Cliente:</h1><br/>
-           <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
-           <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+           <li><a href class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+           <li><a href class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
            <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
         </ul>
         <ul>
             <h1 class="textofooter">Ajuda:</h1><br/> 
-            <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
-            <li><a href="Politica De Privacidade.html" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+            <li><a href class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+            <li><a href class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
             <li><a href="teste.html" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
         </ul>
     </div>
     <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
 </footer>
+<script src="assets/script/script.js"></script>
+<script src="assets/script/slideshow.js"></script>
     
 </body>
 </html>

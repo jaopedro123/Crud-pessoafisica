@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/CSS/style-form.css">
-    <link rel="shortcut icon" href="imagens/logorapa.png">
-    <title>Cadastro Jurídico</title>
+    <link rel="stylesheet" href="assets/css/css.css">
+    <link rel="shortcut icon" href="icones/logorapa.png">
+    <title>Loja de Eletrônicos - Carrinho</title>
 </head>
-
-<body class="CorpoCadastro">
-      <header class="header">
+<body>
+    <header class="header">
 
          <!-- MENU LATERAL -->
          <div class="left-sidebar" id="sidebar">
@@ -244,176 +241,205 @@
                 <a th:href="@{/Cadastro}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
             </div>
         </header>
-    
-
-    <!-- Conteiner -->
-    <div class="meudiv">
-        
-            <form class="form" id="form">
-
-                <!-- Título h1 Cadastro -->
-                <div class="form-título">
-
-                    <div class="title">
-                        <h1 id="h1title">Cadastre-se</h1>
-                    </div>
-
-                    <!-- Botão Limpar e Link para o Login -->
-                    <div id="flex">
-
-                        <div class="login-button">
-                        <button id="ButtonReset" type="reset">Limpar</button>
-                    </div>
-
-                    <div class="login-button">
-                        <a id="linkpLogin" th:href="@{/signin}">Login</a>
-                    </div>
-
-                    </div>
+    <main class="maindocarrinho">
+        <div class="branquinhoeae2">
+            <h2 id="Prod-Carrinhoeae">Meu Carrinho</h2><img id="imgshopcard" src="icones/shopping-cart.png">
+          <div class="produtoeae">
+            <img src="Imagens/SamsungBook.jpg" alt="produtoeae 1">
+            <div class="info-produto">
+            <pre><h2 class="h2eae">Samsung Book</h2></pre>
+                <p id="preco-compraprod">R$ 2300,00</p>
+                <p class="comentario">Excelente  produto para profissionais!</p>
+                <div class="parcelamento">
+                    <p>Parcelamento em até </p>
+                    <p class="valor-parcela"> &nbsp 12x de R$ 230,25</p>
                 </div>
-                
-                <!-- Links para Pessoa Física/Jurídica -->
-                <div id="flex">
-                    <div class="botãoPessoa">
-                        <a id="botaofisi" th:href="@{/CadastroJurídico}">Pessoa Jurídica</a>
-                    </div>
-                    
-                    <div class="botãoPessoa2">
-                        <a id="botaofisi2" th:href="@{/Cadastro}">Pessoa Física</a>
-                    </div>
-                </div>
-
-                <!-- Conteiner dos Inputs -->
-                <div class="input-group">
-
-                    <div class="input-box">
-                        <label class="label" for="nomeFantasia">Nome Fantasia:</label>
-                        <input class="input" type="text" id="nomeFantasia" name="nomeFantasia" placeholder="Digite o Nome Fantasia" maxlength="55">
-                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
-                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error -->
-        
-                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error -->
-                    </div>
-
-                    <div class="input-box">
-                        <label class="label" for="razaosocial">Razão Social:</label>
-                        <input class="input" type="text" id="razaosocial" name="razaosocial" placeholder="Digite sua Razão Social" maxlength="50">
-                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
-                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error -->
-        
-                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error -->
-                    </div>
-                    
-                    <div class="input-box">
-                        <label class="label" for="inscricaoestadual">Inscrição Estadual:</label>
-                        <input class="input" type="text" id="inscricaoestadual" name="inscricaoestadual" placeholder="Digite a Inscrição Estadual" maxlength="14">
-                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
-                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error --> 
-        
-                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
-                        <!-- Opção de Não Costa IE -->
-                        <p id="NaoCosta">
-                            <input class="inputcheckbox" id="inputcheckboxnaoCosta" name="naoCostaIE" type="checkbox">
-                            <label for="naoCostaIE" id="spantermos">Não consta</label>
-                        </p>
-                    </div>
-
-                    <div class="input-box">
-                        <label class="label" for="cnpj">CNPJ:</label>
-                        <input class="input" type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" maxlength="17">
-                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
-                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error --> 
-        
-                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
-                    </div>
-
-                    <div class="input-box">
-                        <label class="label" for="email">Email:</label>
-                        <input class="input" type="email" id="email" name="email" placeholder="contato@gmail.com" maxlength="30">
-                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
-                        <i id="i"class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error -->
-        
-                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
-                    </div>
-
-                    <div class="input-box">
-                        <label class="label" for="telefone">Telefone de Contato:</label>
-                        <input class="input" type="tel" id="telefone" name="telefone" placeholder="(99) 9999-9999">
-                        <i id="i" class="img-success"><img src="imagens/success-icon.svg" alt=""></i> <!-- Icone de Sucesso -->
-                        <i id="i" class="img-error"><img src="imagens/error-icon.svg" alt=""></i> <!-- Icone de Error -->
-        
-                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
-                    </div>
-                    
-                    <div class="input-box">
-                        <label class="label" for="password">Senha:</label>
-                        <input class="input" type="password" id="password" name="password" placeholder="Digite sua senha" maxlength="30">
-                        <div id="icon" onclick="showHide()"></div> <!-- Script para Ocultar/Mostra Senha -->
-        
-                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
-                    </div>
-
-                    <div class="input-box">
-                        <label class="label" for="passwordtwo">Confirmar Senha:</label>
-                            <input class="input" type="password" id="passwordtwo" name="passwordtwo" placeholder="Digite a senha novamente" maxlength="30">
-                            <div id="icon2" onclick="showHide2()"></div> <!-- Script para Ocultar/Mostra Senha no Confirmar Senha -->
-        
-                        <small class="small">Error Message</small> <!-- Tag para Aparecer a Mensagem de Error --> 
-        
-                    </div>
-
-                    <div class="input-box">
-                        <!-- Opção de concordar com os termos-->
-                        <p><input class="inputcheckbox" id="inputcheckbox" name="inputcheckbox" type="checkbox">
-                        <label for="inputcheckbox" id="spantermos">Concordo com os <a link id="linktermos" href="Termos De Uso.html">Termos De Uso</a> e com a <a id="linktermos" link href="Politica De Privacidade.html">Política De Privacidade</a></label></p>
-                        <small class="small">Error Message</small>
-                    </div>
-                </div>
-
-                <!-- Botão Submit -->
-                <div class="continue-button">
-                    <button id="BotaoEnviar" type="submit">Criar Conta</button>
-                </div>
-
-            </form>
-    </div>
-    
-    <footer class="footer">
-        <div class="container">
-            <ul>
-                <a href="index.html" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
-                <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
-                <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
-                    <div class="redessocial">
-                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
-                        <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
-                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
-                    </div>
-            </ul>
-            <ul>
-               <h1 class="textofooter">Dúvidas:</h1><br/>
-               <li><a href class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
-               <li><a href class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
-               <li><a href class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
-            </ul>
-            <ul> 
-               <h1 class="textofooter">Cliente:</h1><br/>
-               <li><a href class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
-               <li><a href class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
-               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
-            </ul>
-            <ul>
-                <h1 class="textofooter">Ajuda:</h1><br/> 
-                <li><a href class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
-                <li><a href class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
-                <li><a href="teste.html" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
-            </ul>
+                <label for="quantity-1">Quantidade:</label>
+                <select id="quantity-1" name="quantity-1" onchange="atualizarTotal(1)">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <!-- Adicione mais opções conforme necessário -->
+              </select>
+              <div class="total">
+                <p>Total de: <span class="mostrarpreco" id="total-price-1" data-total="2300.00" data-preco="2300.00" data-quantidade="1">R$ 2300.00</span></p>
+            </div>
+              
+            </div>
+            <button class="removerdoProd"><img id="imglixeiracompra" src="icones/lixeira-de-reciclagem.png"></button>
+            
         </div>
-        <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
-    </footer>
-    <!-- Ligação do Script das Máscaras e Validações do Formulário de Cadastro Pessoa Jurídica -->
-    <script src="assets/script/script.js"></script>
-    <script src="assets/Javascript/main-mascara-two.js"></script>
-    <script src="assets/Javascript/validation-form-two.js"></script>
+        
+        <div class="produtoeae">
+          <img src="Imagens/headset.jpg" alt="produtoeae 2">
+          <div class="info-produto">
+        <pre><h2 class="h2eae">Fone de Ouvido Sem Fio</h2></pre>
+            
+              <p id="preco-compraprod" data-preco="80.00">R$ 80,00</p>
+              <p class="comentario">O melhor fone de ouvido!</p>
+              <div class="parcelamento">
+                  <p>Parcelamento em até</p>
+                  <p class="valor-parcela">&nbsp 12x de R$ <span id="valor-parcela-1">7,08</span></p>
+              </div>
+              <label for="quantity-2">Quantidade:</label>
+              <select id="quantity-2" name="quantity-2" onchange="atualizarTotal(2)">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <!-- Adicione mais opções conforme necessário -->
+              </select>
+              <div class="total">
+                  <p>Total de: <span class="mostrarpreco" id="total-price-2">R$ 80.00</span></p>
+              </div>
+          </div>
+          <button class="removerdoProd"><img id="imglixeiracompra" src="icones/lixeira-de-reciclagem.png"></button>
+      </div>
+           
+      <div class="produtoeae">
+        <img src="Imagens/DellMonitor.jpg" alt="produtoeae 2">
+        <div class="info-produto">
+        <pre><h2 class="h2eae">Monitor Dell 4K</h2></pre>
+          
+            <p id="preco-compraprod" data-preco="970.00">R$ 970,00</p>
+            <p class="comentario">A melhor imagem que você vai ver! </p>
+            <div class="parcelamento">
+                <p>Parcelamento em até</p>
+                <p class="valor-parcela">&nbsp 12x de R$ <span id="valor-parcela-1">87,30</span></p>
+            </div>
+            <label for="quantity-2">Quantidade:</label>
+            <select id="quantity-2" name="quantity-2" onchange="atualizarTotal(2)">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+            <div class="total">
+                <p>Total de: <span class="mostrarpreco" id="total-price-2">R$ 970.00</span></p>
+            </div>
+        </div>
+        <button class="removerdoProd"><img id="imglixeiracompra" src="icones/lixeira-de-reciclagem.png"></button>
+    </div>
+
+    <div class="produtoeae">
+        <img src="Imagens/Corei9.jpeg" alt="produtoeae 2">
+        <div class="info-produto">
+            <pre><h2 class="h2eae">Processador Intel Core I9</h2></pre>
+          
+            <p id="preco-compraprod" data-preco="1580.00">R$ 1580,00</p>
+            <p class="comentario">Vale o Investimento!</p>
+            <div class="parcelamento">
+                <p>Parcelamento em até</p>
+                <p class="valor-parcela">&nbsp 12x de R$ <span id="valor-parcela-1">152,08</span></p>
+            </div>
+            <label for="quantity-2">Quantidade:</label>
+            <select id="quantity-2" name="quantity-2" onchange="atualizarTotal(2)">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+            <div class="total">
+                <p>Total de: <span class="mostrarpreco" id="total-price-2">R$ 1580.00</span></p>
+            </div>
+        </div>
+        <button class="removerdoProd"><img id="imglixeiracompra" src="icones/lixeira-de-reciclagem.png"></button>
+    </div>
+              
+        </div>
+        
+        <!-- Adicione mais produtos aqui -->
+            <div class="dados-Carrinho">
+              <h2 id="Prod-Carrinhoeae">Informações da Entrega</h2><img id="imgshopcard" src="icones/endereço.png">
+              <pre><label id="tamanho-titulo" for="cep">CEP:</label></pre>
+              <input type="number" id="cep" name="cep" maxlength="8"  placeholder="Digite seu CEP" required>
+              <button id="buscar-cep">Buscar</button>
+              <pre><label id="tamanho-titulo" for="endereco">Endereço:</label></pre>
+              <input type="text" id="endereco" name="endereco" maxlength="40" placeholder="Digite seu endereço" required>
+              <pre><label id="tamanho-titulo" for="cidade">Cidade:</label></pre>
+              <input type="text" id="cidade" name="cidade" maxlength="30" placeholder="Digite sua cidade" required>
+              <pre><label id="tamanho-titulo" for="estado">Estado:</label></pre>
+              <input type="text" id="estado" name="estado" maxlength="15" placeholder="Digite seu estado" required>
+          
+              <div class="campo-grupoCarrinho">
+                  <div class="campo-carrinho">
+                <pre><label for="numero" id="tamanho-titulo" class="label">Número:</label></pre>
+                      <input type="number" id="numero" maxlength="7" name="numero" class="inputeae" placeholder="Número" required>
+                  </div>
+                  <div class="campo-carrinho">
+                      <pre><label for="complemento" id="tamanho-titulo" class="label">Complemento:</label></pre>
+                      <input type="text" id="complemento" maxlength="40" name="complemento" class="inputeae" placeholder="Complemento">
+                  </div>
+                  <div class="campo-carrinho">
+                      <pre><label for="referencia" id="tamanho-titulo" class="label">Referência:</label></pre>
+                      <input type="text" id="referencia" maxlength="25" name="referencia" class="inputeae" placeholder="Referência">
+                  </div>
+              </div>
+              <br/> 
+              <button id="adicionar-endereco">Adicionar Endereço</button>
+              <button id="modificar-endereco" style="display: none;">Modificar Endereço</button>
+              <br/> <br/>
+          
+
+     <h2 id="tamanho-h2" >Opções de Frete</h2>
+        <select class="frete" name="frete">
+            <option value="0">Selecione Uma Opção</option>
+            <option value="10">Entrega Expressa - R$ 10,00</option>
+            <option value="5">Entrega Padrão - R$ 5,00</option>
+            <option value="0">Retirada na Loja - Grátis</option>
+        </select>
+        <br/>
+        <br/>
+        
+        <h2 id="tamanho-h2" >Cupom de Desconto</h2>
+        <pre><label id="tamanho-titulo" for="cupom">Adicione Seu Cupom:</label></pre>
+        <input type="text" id="cupom" name="cupom" maxlength="15" placeholder="Digite Seu Cupom">
+        <button id="aplicar-cupom">Aplicar</button>
+        <div class="botoes">
+            <a th:href="@{/}" class="botao-continuar">Continuar<br> Comprando</a>&nbsp;&nbsp;&nbsp;
+            <a th:href="@{/Pagamento}" class="botao-pagamento">Ir para o<br> Pagamento</a>
+        </div>
+       
+        <br/>
+        <div class="total">
+          <p>Total a Pagar: <span id="valor-total">R$ 4880.00</span></p>
+      </div>
+    </div>
+</div>
+</main>
+<script src="assets/script/script.js"></script>
+<script src="assets/script/cep.js"></script>
+<footer class="footer">
+  <div class="container">
+      <ul>
+          <a href="index.html" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
+          <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
+          <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
+              <div class="redessocial">
+                  <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
+                  <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
+                  <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
+              </div>
+      </ul>
+      <ul>
+         <h1 class="textofooter">Dúvidas:</h1><br/>
+         <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+         <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+         <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+      </ul>
+      <ul> 
+         <h1 class="textofooter">Cliente:</h1><br/>
+         <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+         <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+         <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
+      </ul>
+      <ul>
+          <h1 class="textofooter">Ajuda:</h1><br/> 
+          <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+          <li><a href="Politica De Privacidade.html" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+          <li><a href="teste.html" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+      </ul>
+  </div>
+  <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
+</footer>
 </body>
 </html>

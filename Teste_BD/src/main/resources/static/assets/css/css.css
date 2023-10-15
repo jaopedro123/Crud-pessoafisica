@@ -4215,3 +4215,180 @@ margin-left: 45px;
 	transform: scale(1.1);
     transition: transform 0.5s ease;
 }
+
+/*Meus dados */
+
+.conteudo-dados {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  height: 700px;
+}
+.meusdados {
+  color: rgb(255, 255, 255);
+}
+
+
+.conteudo-dados input[type="text"],
+.conteudo-dados input[type="tel"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+.atualizaDados {
+  background-color: rgb(128, 128, 192);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid rgb(128, 128, 255);
+}
+.atualizaDados:hover {
+  background-color: rgb(128, 128, 255); 
+  transition: 2.0s;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+
+.input-wrapper input[type="text"],
+.input-wrapper input[type="tel"] {
+  flex-grow: 1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  background-color: rgb(61, 74, 78); 
+  color: #fff; 
+}
+
+.input-wrapper-cpf-email {
+  display: flex;
+  align-items: center;
+}
+.input-wrapper-cpf-email input[type="text"]{
+  flex-grow: 1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  background-color: #444; 
+  color: rgb(192, 192, 192); 
+}
+
+.logout-button {
+  background-color: transparent; 
+  color: #fff; 
+  padding: 10px 20px;
+  border: 2px solid rgb(97, 39, 31);
+  float: left;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.5s, border-color 0.5s; 
+  text-decoration: none;
+}
+
+.logout-button:hover {
+  background-color: rgb(97, 39, 31); 
+  border-color: rgb(222, 86, 86); 
+}
+
+.inativarConta{
+  background-color: #cc0000;
+  color: #fff; 
+  padding: 10px 20px;
+  border: 2px solid rgb(97, 39, 31);
+  float: right;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.5s, border-color 0.5s; 
+  text-decoration: none;
+}
+.inativarConta:hover{
+  background-color: rgb(97, 39, 31); 
+  border-color: rgb(222, 86, 86); 
+}
+
+/* Estilo para o botão "Atualizar" */
+.atualizaCampo {
+    background-color: rgb(0, 128, 128); 
+    color: #fff;
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    margin-left: 25px; 
+}
+
+.atualizaCampo:hover {
+    background-color: rgb(64, 128, 128);
+}
+.atualizaCampo:active {
+    background-color: #003f80; 
+}
+
+.nomeMinhaConta{
+	margin-right: 550px;
+	size: 20px;
+}
+.nomeMinhaContatelefone{
+	margin-right: 490px;
+	size: 20px;
+}
+.atualizaCampoNome{
+	    background-color: rgb(0, 128, 128); 
+    color: #fff;
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    margin-left: 25px; 
+}
+.atualizaCampoNome:hover {
+	background-color: rgb(64, 128, 128);
+}
+.atualizaCampoNome:active{
+	 background-color: #003f80;
+}
+
+.erro-mensagem-nome {
+    background-color: #ffe6e6; /* Cor de fundo mais suave */
+    color: #ff3333; /* Cor do texto */
+    padding: 6px;
+    border: 2px solid #ff3333;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.erro-mensagem-nome:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+.erro-mensagem-telefone{
+	background-color: #ffe6e6; /* Cor de fundo mais suave */
+    color: #ff3333; /* Cor do texto */
+    padding: 6px;
+    border: 2px solid #ff3333;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.erro-mensagem-telefone:hover{
+	transform: scale(1.1);
+    transition: transform 0.5s ease;
+}

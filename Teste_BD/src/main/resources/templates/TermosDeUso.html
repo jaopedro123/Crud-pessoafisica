@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="sueve" lang="en">
 <head>
     
     <meta charset="UTF-8">
@@ -9,108 +9,265 @@
     <link rel="stylesheet" href="assets/CSS/css.css">
     <title>Termos De Uso</title>
 </head>
-<body id="CorpoTermos">
-    <header class="header">
+<body id="largterm">
+        <header class="header">
 
-        <!--Menu Lateral-->
+         <!-- MENU LATERAL -->
+         <div class="left-sidebar" id="sidebar">
 
-   <div class="pagina">
+            <!-- LOGO DO TOPO -->
+            <div class="LateralLinhaLogo">
+                <a class="menu-logo" href="#">
+                    <img id="logoDoMenuLateral" th:src="@{/icones/logorapa.png}">
+                </a>
+            </div>
+            <!-- Botão de fechamento -->
+            <div id="closeBtn" class="close-button">X</div>
 
-       <!-- MENU LATERAL -->
-       <div class="left-sidebar" id="sidebar">
+            <!-- CONTEUDO DO CENTRO DO MENU -->
+            <div class="conteudo-sidebar">
+                <ul>
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                <img th:src="@{/icones/cpu.png}">
+                                <p class="nomeDasCategorias">Hardware</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/processador-32.png}">
+                                    <p class="pCategoriasDropDown">Processadores</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/placa-mãe-32.png}">
+                                    <p class="pCategoriasDropDown">Placa mãe</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/ram.png}">
+                                    <p class="pCategoriasDropDown">Pentes de Memória</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/hdd-32.png}">
+                                    <p class="pCategoriasDropDown">Disco Rígido interno (HD)</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-         <!-- LOGO DO TOPO -->
-         <a class="menu-logo" href="#">
-           <img id="logoDoMenuLateral" src="icones/logorapa.png">
-         </a>
-         <!-- Botão de fechamento -->
-           <div id="closeBtn" class="close-button">X</div>
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                 <img th:src="@{/icones/gaming-pc.png}">
+                                <p class="nomeDasCategorias">Computadores</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/compGamer.png}">
+                                    <p class="pCategoriasDropDown">Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/mac-pro-32.png}">
+                                    <p class="pCategoriasDropDown">Workstation</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/pc.png}">
+                                    <p class="pCategoriasDropDown">Home Office</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-         <!-- CONTEUDO DO CENTRO DO MENU -->
-         <div class="conteudo-sidebar">
-           
-           <a class="menu-item" href="#">
-             <img src="icones/cpu.png">
-             <p class="nomeDasCategorias">Hardware</p>
-           </a>
-   
-           <a class="menu-item" href="#">
-             <img src="icones/gaming-pc.png">
-             <p class="nomeDasCategorias">Computadores</p>
-           </a>
-   
-           <a class="menu-item" href="#">
-           <img src="icones/teclado-e-mouse.png">
-          <p class="nomeDasCategorias">Periféricos</p>
-           </a>
-   
-           <a class="menu-item" href="#">
-           <img src="icones/dispositivos-eletronicos.png">
-           <p class="nomeDasCategorias">Eletrônicos</p>
-           </a>
-   
-           <a class="menu-item" href="#">
-           <img src="icones/monitor.png">
-           <p class="nomeDasCategorias">Monitores</p>
-           </a>
-   
-           <a class="menu-item" href="#">
-           <img src="icones/jogos.png">
-           <p class="nomeDasCategorias">Espaço Gamer</p>
-           </a>
-   
-           <a class="menu-item bottom" href="Configurações.html">
-           <img src="icones/configuracoes-cog.png">
-           <p class="nomeConfiguraçoes">Configurações</p>
-           </a>
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                 <img th:src="@{/icones/teclado-e-mouse.png}">
+                                <p class="nomeDasCategorias">Periféricos</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/teclado-32.png}">
+                                    <p class="pCategoriasDropDown">Teclado</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/mouse.png}">
+                                    <p class="pCategoriasDropDown">Mouse</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/fones-de-ouvido-32.png}">
+                                    <p class="pCategoriasDropDown">Fones de Ouvido</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-         </div>  
-</div>
-       </div>
-       <!-- Botao hamburguer -->
-       <section>
-         <nav>      
-           <ul class="hamburguer"> 
-             <li class="hamburguertamanho">
-               <a id="menuBtn" class="active" href="#">
-                 <img src="icones/cardapio.png">     
-               </a>
-             </li>
-           </ul>
-         </nav>
-       </section>
-       <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
-       <div class="overlay hidden" id="overlay"></div>
-     <!--Final do Menu Lateral-->
-       <div class="logoheader">
-         <a href="index.html" > <img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
-       </div>
-       <!--Começo da Barra de pesquisa-->
-       <div class="barra">
-           <span class="search-icon">
-               <img src="icones/lupa.png">
-           </span>
-           <input type="text" placeholder="Pesquisar...">
-       </div>
-       <!--FIM da Barra de pesquisa-->
-       <div class="icone2">
-         <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
-           <label for="switch-flat"></label>
-           </div>
-           <div class="icone">
-               <a href="Favoritos.html" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
-               <a href="html.html" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
-               <a href="Conta.html" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
-           </div>
-       </header>
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                <img th:src="@{/icones/dispositivos-eletronicos.png}">
+                                <p class="nomeDasCategorias">Eletrônicos</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/notebook-32.png}">
+                                    <p class="pCategoriasDropDown">Notebooks</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/NotGamer.png}">
+                                    <p class="pCategoriasDropDown">Notebooks Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/celular-32.png}">
+                                    <p class="pCategoriasDropDown">Celulares</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-    <h1 class="h1termos"><i>Termos De Uso</i></h1>
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                <img th:src="@{/icones/monitor.png}">
+                                <p class="nomeDasCategorias">Monitores</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitorGamer.png}">
+                                    <p class="pCategoriasDropDown">Monitores Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitor-32.png}">
+                                    <p class="pCategoriasDropDown">Monitores Home Office</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitor1.png}">
+                                    <p class="pCategoriasDropDown">Suporte Monitor</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                             <img th:src="@{/icones/jogos.png}">
+                                <p class="nomeDasCategorias">Espaço Gamer</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/office-chair-32.png}">
+                                    <p class="pCategoriasDropDown">Cadeira Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/pc-de-mesa-32.png}">
+                                    <p class="pCategoriasDropDown">Mesa Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/controle-gamer.png}">
+                                    <p class="pCategoriasDropDown">Kits Gamer</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    
+
+                </ul>
+
+                <div class="LateralLinhaConfig">
+                    <a class="LateralconfigCategorias" href="Configurações.html">
+                        <img th:src="@{/icones/configuracoes-cog.png}">
+                        <p class="nomeConfiguraçoes">Configurações</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Botao hamburguer -->
+    <section>
+        <nav>
+            <ul class="hamburguer">
+                <li class="hamburguertamanho">
+                    <a id="menuBtn" class="active" href="#">
+                       <img th:src="@{/icones/cardapio.png}"> 
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
+    <div class="overlay hidden" id="overlay"></div>
+    <!--Final do Menu Lateral-->
+        <div class="logoheader">
+          <a th:href="@{/}" ><img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
+        </div>
+        <!--Começo da Barra de pesquisa-->
+        <div class="search-container">
+       
+            <input type="text" class="search-bar" name="q" placeholder="Pesquisar oque você procura..."> 
+           <i class="search-icon"><img src="icones/lupa.png" class="lupadobarra"></i>
+        </div>
+        <!--FIM da Barra de pesquisa-->
+        <div class="icone2">
+          <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
+            <label for="switch-flat"></label>
+            </div>
+            <div class="icone">
+                <a th:href="@{/Favoritos}" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
+                <a th:href="@{/Carrinho}" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
+                <a th:href="@{/Cadastro}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
+            </div>
+        </header>
+    <h1 class="h1termos">Termos De Uso</h1>
+    
+    <div id="container-figurastermos">
+        <div class="separacao-icons"><a id="a"  href="#Topico1"> <img class="mini" src="Imagens/alvo.png"></a><pre><h1>Objetivo</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico2"><img class="mini" src="Imagens/compras-online.png"></a><pre><h1>Comprar</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico3"><img class="mini" src="Imagens/entregavel.png"></a><pre><h1>Reserva</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico4"><img class="mini" src="Imagens/aperto-de-mao.png"></a><pre><h1>Cliente</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico5"><img class="mini" src="Imagens/confiar.png"></a><pre><h1>E-Commerce</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico6"><img class="mini" src="Imagens/responsavel.png"></a><pre><h1>Isenção</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico7"><img class="mini" src="Imagens/responsabilidade.png"></a><pre><h1>Propriedade</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico8"><img class="mini" src="Imagens/forma-de-pagamento.png"></a><pre><h1>Pagamento</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico9"><img class="mini" src="Imagens/entrega-rapida.png"></a><pre><h1>Entrega</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico10"><img class="mini" src="Imagens/reembolso-termos.png"></a><pre><h1>Reembolso</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico11"><img class="mini" src="Imagens/protecao-de-dados.png"></a><pre><h1>Proteção</h1></pre></div>
+        <div class="separacao-icons"><a id="a"  href="#Topico12"><img class="mini" src="Imagens/marketing-afiliado.png"></a><pre><h1>Afiliado</h1></pre></div>
+    </div>
+         
         
         <br>
+        <a name="Topico1"></a> 
         <h1 class="Topicoh1"><em>1. Finalidade Principal</em></h1>
          <p id="texttermos">
-        1.1 Essa plataforma tem como finalidade ser um “e-commerce digital”, ou seja, disponibilizar a venda de produtos via online disponibilizados em nosso site no setor de informática, Com a comercialização de hardware (componentes de computador), computadores em geral. Como por exemplos Notebooks, computadores Workstation (estações de trabalho), Gamer, Home Office (casa e escritório),monitores entre outros. Visando sempre oferecer segurança, bons preços qualidade aos produtos e qualidade de atendimento aos nossos clientes. 
+        1.1 Essa plataforma tem como finalidade ser um “e-commerce digital”, ou seja, disponibilizar a venda de produtos via online disponibilizados em nosso site no setor de informática, Com a comercialização de hardware (componentes de computador), computadores em geral. Como por exemplos Notebooks, Computadores Workstation (estações de trabalho), Gamer, Home Office (casa e escritório),monitores entre outros. Visando sempre oferecer segurança, bons preços qualidade aos produtos e qualidade de atendimento aos nossos clientes. 
         </p> 
+        <a name="Topico2"></a> 
         <h1 class="Topicoh1"><em>2. Como Comprar</em></h1>
         <p id="texttermos">  
         2.1 Ao acessar o site o cliente terá várias opções de compra de diferentes produtos, ao se interessar por algum produto o cliente deverá clicar em adicionar ao carrinho.
@@ -123,12 +280,14 @@
         <br><br>
         2.5 O cliente selecionará fazer pedido, desta forma haverá comprado o produto.
     </p><br>
+        <a name="Topico3"></a> 
          <h1 class="Topicoh1"><em>3. Reserva de Produtos </em></h1>
         <p id="texttermos"> 
         3.1 Nosso website não trabalha com nenhuma possibilidade de reservar qualquer um dos produtos ofertados em nossa plataforma.
         <br> <br>
         3.2 O fato de o produto estar no carrinho de compras não é tido como uma reserva e não impossibilita que outras pessoas possam adquirir o produto e eles venham a se esgotar.
         </p><br>
+        <a name="Topico4"></a> 
     <h1 class="Topicoh1"> <em>4. Obrigações do Cliente</em></h1>
          <p id="texttermos"> 
         4.1 O cliente deverá informar os dados de forma completa e correta no momento de cadastro em nossa plataforma.
@@ -153,6 +312,7 @@
         <br> <br>
         4.10 Não fornecer qualquer informação falsa, fraudulenta ou que não seja correspondente aos seus dados.
     </p><br> 
+    <a name="Topico5"></a> 
     <h1 class="Topicoh1"> <em>5. Obrigações do Proprietário do E-Commerce</em></h1>
          <p id="texttermos"> 
         5.1 Informar de forma ostensiva e verdadeira sobre as características e especificações do produto disponível para venda de forma clara e completa. ( Ex: Cores, altura, material ou largura).
@@ -167,6 +327,7 @@
         <br> <br>
         5.6 Informar como deve ocorrer o manuseio, a limpeza ou lavagem do produto e qualquer informação considerada relevante relacionada ao produto.
     </p><br> 
+    <a name="Topico6"></a> 
     <h1 class="Topicoh1"><em>6. Isenção de Responsabilidade</em></h1>
          <p id="texttermos"> 
         6.1 Não nos responsabilizamos pelo mau uso ou manuseio errado do produto, bem como de qualquer dano que possa ocorrer na instalação de qualquer produto adquirido em nossa plataforma.
@@ -174,7 +335,8 @@
         6.2 Todos os produtos que vendemos estão dentro dos padrões e condições que vem de fábrica, do distribuidor ou da empresa que revendeu o produto.
         <br> <br>
         6.3 Fornecemos todas as informações pertinentes relacionadas ao produto, bem como os mesmos vão acompanhados de instruções de uso e cuidados em suas caixas ou através de manual de instruções.
-    </p> <br> 
+    </p> <br>
+    <a name="Topico7"></a>  
     <h1 class="Topicoh1"><em>7. Propriedade Intelectual</em></h1> 
          <p id="texttermos">
         7.1 Todo o design e paginação são de propriedade do nosso website, e foram desenvolvidos por um prestador de serviços que foi contratado para tal finalidade.
@@ -197,6 +359,7 @@
         <br> <br>
         7.8 É vedado compartilhar, copiar, plagiar ou disponibilizar qualquer conteúdo, foto, vídeo ou áudio encontrado em nosso site sem consentimento expresso.
         </p><br> </p>
+        <a name="Topico8"></a> 
     <em><h1 class="Topicoh1">8. Formas de Pagamentos</h1> </em>
         <p id="texttermos">
         8.1 As formas de pagamento aceitas em nosso e-commerce são cartão de crédito e débito, ou boleto bancário.
@@ -217,6 +380,7 @@
         <br> <br>
         8.6 Para solicitar o estorno entre em contato com a nossa Central de Atendimento ou SAC.
         </p><br> 
+        <a name="Topico9"></a> 
     <h1 class="Topicoh1"> <em>9. Prazos e Entregas</em></h1>
          <p id="texttermos"> 
         9.1 O produto será enviado assim que o pagamento for confirmado, podendo ser enviado até 7 dias após a confirmação do pagamento.
@@ -227,6 +391,7 @@
         <br> <br>
         9.3 O cliente pagará pela entrega (ou utilizará um cupom de frete grátis) e o envio do produto com faixas pré-definidas, ou de acordo com o peso padrão da categoria.
     </p> <br> 
+    <a name="Topico10"></a> 
     <h1 class="Topicoh1"> <em>10. Análise e Reembolso</em></h1>
          <p id="texttermos">
         10.1 O cliente poderá devolver o produto ou trocar que foi adquirido em nosso e-commerce em até 7 dias, seja qual for a razão, conforme a previsão expressa no Código de Defesa do Consumidor em seu art. 49.
@@ -243,15 +408,17 @@
         <br> <br>
         10.3.2 Se o pagamento foi feito via boleto bancário, o valor de reembolso será restituído dentro de 30 dias úteis diretamente na conta que solicitaremos no momento de sua requisição de devolução.
     </p> <br> 
-    <h1 class="Topicoh1"><em>11. Política de Privacidade e Proteção de Dados</em></h1>
+    <a name="Topico11"></a> 
+    <h1 class="Topicoh1"><em>11. Proteção de Dados</em></h1>
        <p id="texttermos">  
         11.1 Você pode conferir a nossa política de privacidade , onde informamos como ocorre a coleta e o tratamentos dos dados cadastrados em nosso site, bem como da navegação.
      <br> <br>
       11.2 Fica eleito o foro da Cidade da nossa empresa, para dirimir quaisquer controvérsias, dúvidas, desentendimentos, litígios ou questões advindas da relação cliente e e-commerce, mesmo que possa existir algum local, por mais privilegiado que possa ser.
     </p> <br>
+    <a name="Topico12"></a> 
 <h1 class="Topicoh1"><em>12.Programa de Afiliados</em></h1>
      <p id="texttermos"> 
-    <em> 12.1 Aceitaremos em nosso programa de afilados apenas se tiverem no minímo 16 anos de idade.</em>
+    <em> 12.1 Aceitaremos em nosso programa de afilados apenas se tiverem no minímo 18 anos de idade.</em>
      <br><br>
     <em>12.2 O trabalho em si funciona do seguinte meio, assim que o candidato é aceito como um de nossos afiliados o mesmo passaram a se responsabilizar por divulgar alguns de nossos produtos de sua escolha pessoal.</em>
      <br><br>
@@ -274,25 +441,27 @@
             </ul>
             <ul>
                <h1 class="textofooter">Dúvidas:</h1><br/>
-               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
-               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
-               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+               <li><a href class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+               <li><a href class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+               <li><a href class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
             </ul>
             <ul> 
                <h1 class="textofooter">Cliente:</h1><br/>
-               <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
-               <li><a href="Conta.html" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+               <li><a href class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+               <li><a href class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
                <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
             </ul>
             <ul>
                 <h1 class="textofooter">Ajuda:</h1><br/> 
-                <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
-                <li><a href="Politica De Privacidade.html" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+                <li><a href class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+                <li><a href class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
                 <li><a href="teste.html" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
             </ul>
         </div>
         <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
     </footer>
+    <script src="assets/script/script.js"></script>
+    <script src="assets/script/slideshow.js"></script>
 
 
 
