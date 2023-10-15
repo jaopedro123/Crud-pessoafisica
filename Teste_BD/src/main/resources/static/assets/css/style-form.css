@@ -4,14 +4,13 @@
     margin: 0;
     box-sizing: border-box;
 }
-#CorpoCadastro{
+.CorpoCadastro{
     font-family: 'Inter', sans-serif;
     width: 100%;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
-    background: #313338;
+    background-color: #313338;
 }
 
 /* Conteiner Cadastro */ 
@@ -20,6 +19,9 @@
     height: 760px; 
     width: 850px;
     padding: 5rem;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
 
     /* Posição dos Elementos */
     display: flex;
@@ -308,9 +310,13 @@
 /* Conteiner Login*/
 .meudivlogin{  
     /* Tamanho do Conteiner Login*/
-    height: 620px; 
+    height: 730px; 
     width: 650px;
     padding: 5rem;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
 
     /* Posição dos Elementos */
     display: flex;
@@ -446,8 +452,12 @@
 .meudivsenha{   
     /* Tamanho do Conteiner "Esqueci a Senha"*/
     width: 550px;
-    height: 420px;
+    height: 520px;
     padding: 5rem;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-bottom: 100px;
+    margin-right: auto;
     
     /* Posição dos elementos "Esqueci a Senha"*/
     display: flex;
@@ -765,3 +775,800 @@
   transition: transform 0.5s ease; 
 }
 
+/*header*/
+/*HEADER*/
+.header {
+    background-color: #232428;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    color: aliceblue;
+  }
+  
+  .header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, rgb(172, 77, 158), rgb(180, 78, 164), rgb(148, 78, 206), rgb(124, 59, 177));
+    animation: AnimarBordaHeader 4s linear infinite;
+    margin-top: 64px;
+  }
+  
+  @keyframes AnimarBordaHeader {
+    0% {
+      background-position: 0;
+    }
+  
+    100% {
+      background-position: 1920px;
+    }
+  }
+  
+  .menulateral {
+    float: left;
+  }
+  
+  .menulateral img {
+    margin-left: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .logoheader {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .logoimagemheader {
+    float: left;
+    height: 40px;
+    width: 250px;
+    margin-left: 70px;
+  }
+  
+  /* BARRA DE PESQUISA */
+  .barra {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  .barra input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    width: 100%;
+  }
+  
+  .barra input[type="text"]:focus {
+    outline: none;
+  }
+  
+  /* FIM DA BARRA DE PESQUISA */
+  .icone {
+    padding: 10px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .icone2 {
+    text-align: right;
+    margin-bottom: 17px;
+    float: right;
+    margin-left: 330px;
+  }
+  
+  .logo img {
+    max-height: 40px;
+  }
+  
+  .icone img {
+    margin-left: 10px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  /* X que fecha o botao */
+  .close-button {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 41px;
+    right: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 25px;
+    transition: color 0.3s ease;
+    /* Adiciona uma transição de cor com duração de 0.3 segundos e curva de transição ease */
+  }
+  
+  .close-button:hover {
+    color: rgb(255, 42, 42);
+    /* Nova cor quando o mouse estiver sobre o botão*/
+  }
+  
+  #sidebar {
+    position: fixed;
+    min-width: 230px;
+    max-width: 230px;
+    /* Parte sem nome */
+    background-color: #232428;
+    transition: all 0.3s;
+    height: 100vh;
+    margin-left: -230px;
+    /* borda do menu */
+    z-index: 3;
+  
+  }
+  
+  #sidebar.active {
+    margin-left: 0px;
+    z-index: 3;
+  }
+  
+  .menu-logo {
+    /* Fundo do nome */
+    display: block;
+    background-color: #232428;
+    padding: 19px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .menu-item {
+    /* Fundo das categorias */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232428;
+    padding: 16px 20px 16px 20px;
+    text-decoration: none;
+    /* Cor do nome das categorias */
+    color: rgb(246, 244, 244);
+  }
+  
+  .LateralconfigCategorias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232428;
+    padding: 16px 20px 16px 39px;
+    text-decoration: none;
+    color: rgb(246, 244, 244);
+  }
+  
+  .LateralLinhaLogo::after {
+    content: '';
+    position: absolute;
+    width: 245px;
+    height: 3px;
+    background: linear-gradient(45deg, rgb(172, 77, 158), rgb(180, 78, 164), rgb(148, 78, 206), rgb(124, 59, 177));
+    margin-left: -15px;
+    animation: AnimarBorda 2s linear infinite;
+  }
+  
+  .LinhaMenorLateral::after {
+    content: '';
+    position: absolute;
+    width: 245px;
+    height: 2px;
+    background: linear-gradient(45deg, rgb(172, 77, 158), rgb(180, 78, 164), rgb(148, 78, 206), rgb(124, 59, 177));
+    margin-left: -15px;
+    animation: AnimarBorda 2s linear infinite;
+  }
+  
+  .LateralLinhaConfig {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .LateralLinhaConfig::before {
+    content: '';
+    position: absolute;
+    width: 245px;
+    height: 2px;
+    background: linear-gradient(45deg, rgb(172, 77, 158), rgb(180, 78, 164), rgb(148, 78, 206), rgb(124, 59, 177));
+    margin-left: -15px;
+    animation: AnimarBorda 2s linear infinite;
+  }
+  
+  .ulLateralDropdown {
+    position: absolute;
+    left: 232px;
+    margin-top: -53px;
+    width: 262px;
+    display: none;
+  }
+  
+  .aCategoriasDropDown {
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .imgCategoriasDropDown {
+    height: 18px;
+    width: 18px;
+    margin-left: 13px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .menu-itemDropDown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232428;
+    padding-left: 13px;
+    color: rgb(246, 244, 244);
+    height: 48px;
+    margin-top: 2px;
+  }
+  
+  .menu-itemDropDown::after {
+    filter: blur(2px);
+  }
+  
+  .menu-itemDropDown::before,
+  .menu-itemDropDown::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 266px;
+    height: 52px;
+    background: linear-gradient(45deg, rgb(177, 98, 165), rgb(171, 93, 175), rgb(165, 89, 174), rgb(159, 85, 173), rgb(153, 80, 171), rgb(147, 76, 170), rgb(141, 72, 169), rgb(135, 67, 167), rgb(129, 63, 166), rgb(124, 59, 165));
+    margin-left: -15px;
+    border-radius: 2px;
+    animation: AnimarBorda 2s linear infinite;
+  }
+  
+  @keyframes AnimarBorda {
+    0% {
+      background-position: 0;
+    }
+  
+    100% {
+      background-position: 500px;
+    }
+  }
+  
+  .CategoriaItem:hover .ulLateralDropdown {
+    display: block;
+  }
+  /* Quando passa o mouse muda a cor */
+  .menu-item:hover {
+    background-color: rgb(177, 98, 165);
+    transition: 0.3s;
+  }
+  
+  .menu-itemDropDown:hover {
+    background-color: rgb(177, 98, 165);
+    transition: 0.3s;
+  }
+  
+  .LateralconfigCategorias:hover {
+    background-color: rgb(177, 98, 165);
+    transition: 0.3s;
+  }
+  
+  /* SETA das categorias */
+  .menu-item::after {
+    content: "";
+    display: inline-block;
+    border-bottom: 1px solid rgb(242, 238, 238);
+    border-right: 1px solid rgb(242, 238, 238);
+    height: 8px;
+    width: 8px;
+    /* Muda a seta de DIREÇAO */
+    transform: rotate(-45deg);
+    margin-left: auto;
+    /* Adiciona esta linha para alinhar a seta à direita */
+  }
+  
+  .conteudo-sidebar {
+    overflow-y: auto;
+    height: 90vh;
+  }
+  
+  .hamburguer {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  .hamburguertamanho {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  .hamburguertamanho:hover {
+    background-color: rgb(177, 98, 165);
+    transition: 0.5s;
+  }
+  
+  #menuBtn {
+    font-size: 24px;
+  }
+  
+  #logoDoMenuLateral {
+    width: 100px;
+  }
+  
+  /*Nome do site no menu lateral */
+  .nomeDasCategorias {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fffffff6;
+    font-size: 17px;
+    margin-left: 25px;
+    text-align: left;
+  }
+  
+  .pCategoriasDropDown {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fffffff6;
+    font-size: 15px;
+    margin-left: 12px;
+    text-align: left;
+  }
+  
+  .nomeConfiguraçoes {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    color: #fffffff6;
+    margin-left: 25px;
+    text-align: left;
+    /* Alinha o texto à esquerda  */
+  }
+  
+  /*Muda o fundo quando CLICA no botao */
+  #sidebar {
+    position: fixed;
+    top: 0;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.503);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  
+  .overlay.hidden {
+    display: none;
+  }
+  
+  /* Fim do menu Lateral */
+      /*produtos abaixo do carrosel*/
+      .divprod3{
+        width: 1600px;
+        height: 400px;
+        margin-left: 130px;
+        background-color: rgba(26, 26, 29, 0.3);
+      }
+      .anuncioProd3 {
+        width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 400px;
+      }
+      .divprod4{
+        width: 800px;
+        height: 400px;
+        background-color: rgba(26, 26, 29, 0.3);
+        margin-right: 10px;
+        
+      }
+      .anuncioProd4 {
+        width: 800px;
+        height: 400px;
+      }
+      .displayflexhome2{
+        display: flex;
+        margin-left: 125px;
+      }
+    
+      .divprod4:last-child {
+        margin-right: 0; /* Remove a margem da última div para evitar espaçamento extra */
+      }
+      .textolistadeprod{
+        font-size: 30px;
+        color: white;
+        margin-left: 150px;
+      }
+    .items2 {
+      display: flex;
+      margin-left: 12px;
+     padding: 10px;
+      /* Para um carrossel horizontal, defina a largura como a soma de (número de itens) * (largura do item) */
+    }
+    .divprodgeral{
+      height: 1960px;
+      width: 1565px;
+      margin-left: 150px;
+      background-color: rgba(26, 26, 29, 0.3);
+    }
+    /*fim*/
+    
+  /*barra de pesquisa */
+    .search-container {
+      display: flex;
+      align-items: center;
+      background-color: #232428;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 600px;
+    }
+    
+    .search-bar {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background-color: #232428;
+      color: white;
+    }
+    
+    .search-icon {
+    width: 35px;
+      
+      background-color: #f5f5f5;
+      color: #000000;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      cursor: pointer;
+    
+      height: 38px;
+    }
+    .search-icon img{
+    margin-top: 5px;
+    margin-left: 5px;
+    }
+    /* fim barra de pesquisa */
+    /*botao toggle*/
+/* Estilo iOS */
+.switch {
+    visibility: hidden;
+  }
+  .switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  }
+  
+  .switch--shadow + label {
+    padding: 2px;
+    width: 50px;
+    height: 30px;
+    background-color: #979797;
+    border-radius: 25px;
+  }
+  
+  .switch--shadow + label:before,
+  .switch--shadow + label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: "";
+  }
+  
+  .switch--shadow + label:before {
+    right: 1px;
+    background-color: #979797;
+    border-radius: 25px;
+  }
+  
+  .switch--shadow + label:after {
+    width: 20px;
+    background-color: #979797;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+  }
+  
+  .switch--shadow:checked + label:before {
+    background-color: #1a1a1d;
+  }
+  
+  .switch--shadow:checked + label:after {
+    transform: translateX(5px);
+  }
+  
+  /* Estilo Flat */
+  .switch--flat + label {
+    padding: 2px;
+    width: 50px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 25px;
+  }
+  
+  .switch--flat + label:before,
+  .switch--flat + label:after {
+    display: block;
+    position: absolute;
+    content: "";
+  }
+  
+  .switch--flat + label:before {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    transition:0.4s;
+  }
+  
+  .switch--flat + label:after {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    width: 25px;
+    background-color: #979797;
+    border-radius: 20px;
+    transition:   0.4s;
+  }
+  
+  .switch--flat:checked + label {
+    background-color: #1a1a1d;
+  }
+  
+  .switch--flat:checked + label:after {
+    margin-left: 20px;
+    background-color: #1a1a1d;
+  }
+  /*tema claro e escuro*/
+  .dark-mode .header{
+    background-color: #d3c01a62; /* Cor de fundo no modo escuro */
+    color: black; /* Cor do texto no modo escuro */
+  }
+  .dark-mode .CorpoCadastro{
+    background-color:rgb(255, 255, 255); /* Cor de fundo no modo escuro */
+  }
+/*footer*/
+/*FOOTER*/
+.footer {
+    background-color: #232428;
+    height: 280px;
+    width: 100%;
+  
+  }
+  
+  .footer:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, rgb(172, 77, 158), rgb(180, 78, 164), rgb(148, 78, 206), rgb(124, 59, 177));
+    animation: AnimarBordaHeader 4s linear infinite;
+  }
+  
+  
+  footer .container {
+    color: white;
+    display: flex;
+    margin-top: 33px;
+    padding-top: 32px;
+  
+  }
+  
+  footer .container ul {
+    width: 25%;
+    margin-left: 100px;
+  }
+  
+  .meio {
+    text-align: center;
+    color: white;
+  }
+  
+  .logofooter {
+    height: 50px;
+    width: 75%;
+  }
+  
+  .textofooter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 17px;
+  }
+  
+  .textofooter2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    margin-left: 10px;
+  }
+  
+  .redes {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+  }
+  
+  .redessocial {
+    position: left;
+    width: 150px;
+  }
+  
+  .redessocial2 {
+    position: left;
+    width: 140px;
+  }
+  
+  .footerlinks {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /*sobre nos*/
+  .contSobreNos {
+    margin-top: 112px;
+    margin-bottom: 168px;
+  }
+  
+  .containersobre {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .pSobreNos {
+    color: #ffffff;
+  }
+  
+  .mission-vision-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .values {
+    flex-basis: 25%;
+    padding: 30px;
+    background-color: #25262b;
+    border: 2px solid #ca91f9;;
+    border-radius: 5px;
+  }
+  
+  .vision {
+    flex-basis: 25%;
+    padding: 30px;
+    background-color: #25262b;
+    border: 2px solid #ca91f9;;
+    border-radius: 5px;
+  }
+  
+  .missao {
+    flex-basis: 25%;
+    padding: 30px;
+    background-color: #25262b;
+    border: 2px solid #ca91f9;;
+    border-radius: 5px;
+  }
+  
+  .missao::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 367px;
+    height: 219px;
+    background: linear-gradient(45deg, rgb(177, 98, 165), rgb(171, 93, 175), rgb(165, 89, 174), rgb(159, 85, 173), rgb(193, 103, 248), rgb(220, 115, 255), rgb(141, 72, 169), rgb(135, 67, 167), rgb(129, 63, 166), rgb(159, 47, 229));
+    margin-left: -34px;
+    margin-top: -34px;
+    border-radius: 2px;
+    animation: AnimarBorda 2s linear infinite;
+  }
+  
+  .vision::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 367px;
+    height: 219px;
+    background: linear-gradient(45deg, rgb(177, 98, 165), rgb(171, 93, 175), rgb(165, 89, 174), rgb(159, 85, 173), rgb(193, 103, 248), rgb(220, 115, 255), rgb(141, 72, 169), rgb(135, 67, 167), rgb(129, 63, 166), rgb(159, 47, 229));
+    margin-left: -34px;
+    margin-top: -34px;
+    border-radius: 2px;
+    animation: AnimarBorda 2s linear infinite;
+  }
+  
+  .values::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 367px;
+    height: 219px;
+    background: linear-gradient(45deg, rgb(177, 98, 165), rgb(171, 93, 175), rgb(165, 89, 174), rgb(159, 85, 173), rgb(193, 103, 248), rgb(220, 115, 255), rgb(141, 72, 169), rgb(135, 67, 167), rgb(129, 63, 166), rgb(159, 47, 229));
+    margin-left: -34px;
+    margin-top: -34px;
+    border-radius: 2px;
+    animation: AnimarBorda 2s linear infinite;
+  }
+  
+  .missao::before {
+    filter: blur(8px);
+  }
+  
+  .vision::before {
+    filter: blur(8px);
+  }
+  
+  .values::before {
+    filter: blur(8px);
+  }
+  
+  .contact-info {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .meio2 {
+    text-align: center;
+    color: #d107fa;
+  }
+  
+  .thz {
+    color: #e381f7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+  }
+  
+  .h2Sobre {
+    color: #ca91f9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 7px;
+  }
+  
+  .SobreNosTitulo {
+    color: #ca91f9;
+    text-align: center;
+    font-size: 38px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .redessobre {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 535px;
+  }
+  ::-webkit-scrollbar{
+    width: 10px;
+    background: #1b1a1d;
+  }
+  ::-webkit-scrollbar-thumb{
+    width: 10px;
+    background: #7c3bb1;
+  }
+  
+  
