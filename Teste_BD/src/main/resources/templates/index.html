@@ -28,7 +28,7 @@
                 <ul>
                     <li class="CategoriaItem">
                         <div class="LinhaMenorLateral">
-                            <a class="menu-item" href="#">
+                            <a class="menu-item" th:href="@{/Hardware}">
                                 <img th:src="@{/icones/cpu.png}">
                                 <p class="nomeDasCategorias">Hardware</p>
                             </a>
@@ -294,15 +294,17 @@
                             <!-- Itens do Carrossel 1 -->
                             <div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" src="Imagens/pc1.jpg" alt="Imagem">
+                                    <img class="imagemeae" src="Imagens/playstation-5.jpg" alt="Playstation 5">
                                     
                                 </div>
                                 <div class="product-info">
-                                    <h2>PC GAMER MOTHERBOARD</h2>
-                                    <p class="description">INTEL I3-10100, GEFORCE RTX 3060 8GB, 16GB DDR4, SSD M.2 480GB</p>
-                                    <p class="price-previous">R$ 6.407,80</p>
-                                    <p class="price-current">R$  3.889,82</p>
-                                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                                    <h2>PLAYSTATION 5</h2>
+                                    <p class="description"> PS5 é um console de videogame de última geração desenvolvido pela Sony</p>
+                                    <p class="price-previous">R$ 3999.90</p>
+                                    <p class="price-current">R$ 3500.00</p>
+                                    <a th:href="@{Playstation5}">
+                                    <button  class="add-to-cart">Adicionar ao Carrinho</button>
+                                    </a>
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">

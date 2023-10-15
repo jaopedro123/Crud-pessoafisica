@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="assets/css/css.css">
+        <script src="assets/script/script.js"></script>
+        <script src="assets/script/js.js"></script>
+        <meta charset="UTF-8">
+        <title>Categoria - Hardware</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="icones/logorapa.png">
+    </head>
+    <body>
+    <header class="header">
+
+         <!-- MENU LATERAL -->
+         <div class="left-sidebar" id="sidebar">
+
+            <!-- LOGO DO TOPO -->
+            <div class="LateralLinhaLogo">
+                <a class="menu-logo" href="#">
+                    <img id="logoDoMenuLateral" th:src="@{/icones/logorapa.png}">
+                </a>
+            </div>
+            <!-- Botão de fechamento -->
+            <div id="closeBtn" class="close-button">X</div>
+
+            <!-- CONTEUDO DO CENTRO DO MENU -->
+            <div class="conteudo-sidebar">
+                <ul>
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" th:href="@{/Hardware}">
+                                <img th:src="@{/icones/cpu.png}">
+                                <p class="nomeDasCategorias">Hardware</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/processador-32.png}">
+                                    <p class="pCategoriasDropDown">Processadores</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/placa-mãe-32.png}">
+                                    <p class="pCategoriasDropDown">Placa mãe</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/ram.png}">
+                                    <p class="pCategoriasDropDown">Pentes de Memória</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/hdd-32.png}">
+                                    <p class="pCategoriasDropDown">Disco Rígido interno (HD)</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                 <img th:src="@{/icones/gaming-pc.png}">
+                                <p class="nomeDasCategorias">Computadores</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/compGamer.png}">
+                                    <p class="pCategoriasDropDown">Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/mac-pro-32.png}">
+                                    <p class="pCategoriasDropDown">Workstation</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/pc.png}">
+                                    <p class="pCategoriasDropDown">Home Office</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                 <img th:src="@{/icones/teclado-e-mouse.png}">
+                                <p class="nomeDasCategorias">Periféricos</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/teclado-32.png}">
+                                    <p class="pCategoriasDropDown">Teclado</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/mouse.png}">
+                                    <p class="pCategoriasDropDown">Mouse</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/fones-de-ouvido-32.png}">
+                                    <p class="pCategoriasDropDown">Fones de Ouvido</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                <img th:src="@{/icones/dispositivos-eletronicos.png}">
+                                <p class="nomeDasCategorias">Eletrônicos</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/notebook-32.png}">
+                                    <p class="pCategoriasDropDown">Notebooks</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/NotGamer.png}">
+                                    <p class="pCategoriasDropDown">Notebooks Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/celular-32.png}">
+                                    <p class="pCategoriasDropDown">Celulares</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                <img th:src="@{/icones/monitor.png}">
+                                <p class="nomeDasCategorias">Monitores</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitorGamer.png}">
+                                    <p class="pCategoriasDropDown">Monitores Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitor-32.png}">
+                                    <p class="pCategoriasDropDown">Monitores Home Office</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitor1.png}">
+                                    <p class="pCategoriasDropDown">Suporte Monitor</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                             <img th:src="@{/icones/jogos.png}">
+                                <p class="nomeDasCategorias">Espaço Gamer</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/office-chair-32.png}">
+                                    <p class="pCategoriasDropDown">Cadeira Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/pc-de-mesa-32.png}">
+                                    <p class="pCategoriasDropDown">Mesa Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/controle-gamer.png}">
+                                    <p class="pCategoriasDropDown">Kits Gamer</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    
+
+                </ul>
+
+                <div class="LateralLinhaConfig">
+                    <a class="LateralconfigCategorias" href="Configurações.html">
+                        <img th:src="@{/icones/configuracoes-cog.png}">
+                        <p class="nomeConfiguraçoes">Configurações</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Botao hamburguer -->
+    <section>
+        <nav>
+            <ul class="hamburguer">
+                <li class="hamburguertamanho">
+                    <a id="menuBtn" class="active" href="#">
+                       <img th:src="@{/icones/cardapio.png}"> 
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
+    <div class="overlay hidden" id="overlay"></div>
+    <!--Final do Menu Lateral-->
+        <div class="logoheader">
+          <a th:href="@{/}" ><img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
+        </div>
+        <!--Começo da Barra de pesquisa-->
+        <div class="search-container">
+       
+            <input type="text" class="search-bar" name="q" placeholder="Pesquisar oque você procura..."> 
+           <i class="search-icon"><img src="icones/lupa.png" class="lupadobarra"></i>
+        </div>
+        <!--FIM da Barra de pesquisa-->
+        <div class="icone2">
+          <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
+            <label for="switch-flat"></label>
+            </div>
+            <div class="icone">
+                <a th:href="@{/Favoritos}" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
+                <a th:href="@{/Carrinho}" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
+                <a th:href="@{/Cadastro}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
+            </div>
+        </header>
+
+        <br /><br />
+        <div class="containerlista">
+            <div class="sidebarlista">
+                <h2>Categoria: Hardware</h2>
+
+                <h3>Filtrar por:</h3>
+
+                <div class="filters">
+                    <div class="filter-item">
+                        <label for="price-filter" class="labellista">Preço:</label><!--data-price=""-->
+                        <input type="range" id="price-filter"
+                            class="custom-range" min="1" max="10000" step="1"
+                            value="10000">
+                        <span id="price-value">10,000</span>
+                    </div>
+                    <div class="filter-item">
+                        <label for="type-filter" class="labellista">Tipo de
+                            Produto:</label><!--data-type=""-->
+                        <select id="type-filter" class="custom-select">
+                            <option value="all">Todos</option>
+                            <option value="Fontes">Fontes</option>
+                            <option value="Cooler">Coolers</option>
+                            <option value="KitHardware">Kit Hardware</option>
+                            <option value="Placas-mae">Placas-mãe</option>
+                            <option value="Processadores">Processador</option>
+                            <option value="Armazenamento">armazenamento</option>
+                            <option value="memoria">Memoria ram</option>
+                            <option value="placadevideo">placa de video</option>
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="brand-filter" class="labellista">Marca:</label><!--data-brand="" -->
+                        <select id="brand-filter" class="custom-select">
+                            <option value="all">Todos</option>
+                            <option value="Kingston">Kingston</option>
+                            <option value="INTEL">INTEL</option>
+                            <option value="AMD">AMD</option>
+                            <option value="NVIDIA">NVIDIA</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label for="precessador" class="labellista">processador:</label><!--data-processador="" -->
+                        <select id="processador" class="custom-select">
+                            <option value="all">Todos</option>
+                            <option value="Ryzen9">AMD Ryzen 9</option>
+                            <option value="Athlon">AMD Athlon</option>
+                            <option value="Ryzen3">AMD Ryzen 3</option>
+                            <option value="Ryzen5">AMD Ryzen 5</option>
+                            <option value="Ryzen7">AMD Ryzen 7</option>
+                            <option value="i3">Intel i3</option>
+                            <option value="i5">Intel i5</option>
+                            <option value="i7">Intel i7</option>
+                            <option value="i9">Intel i9</option>
+                            <option value="Xeon">Intel Xeon</option>
+                            <option value="Gold">Pentium Gold</option>
+                            <option value="Pentium">Pentium</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label for="ram" class="labellista">Ram:</label><!--data-ram="" -->
+                        <select id="ram" class="custom-select">
+                            <option value="all">Todos</option>
+                            <option value="4">4 GB</option>
+                            <option value="8">8 GB</option>
+                            <option value="12">12 GB</option>
+                            <option value="16">16 GB</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label for="velram" class="labellista">Velocidade da
+                            memoria Ram:</label><!--data-velRam="" -->
+                        <select id="velram" class="custom-select">
+                            <option value="all">Todos</option>
+                            <option value="1066">1066 MHz</option>
+                            <option value="1333">1333 MHz</option>
+                            <option value="1600">1600 MHz</option>
+                            <option value="1866">1866 MHz</option>
+                            <option value="2133">2133 MHz</option>
+                            <option value="2400">2400 MHz</option>
+                            <option value="2666">2666 MHz</option>
+                            <option value="2933">2933 MHz</option>
+                            <option value="3000">3000 MHz</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label for="armazenamento" class="labellista">Armazenamento:</label><!--data-armazenamento="" -->
+                        <select id="armazenamento" class="custom-select">
+                            <option value="all">Todos</option>
+                            <option value="120-128">120 - 128 GB</option>
+                            <option value="240-256">240 - 256 GB</option>
+                            <option value="480-512">480 - 512 GB</option>
+                            <option value="960-1">960 GB - 1 TB</option>
+                            <option value="3">3 TB</option>
+                            <option value="4">4 TB</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-item">
+                        <label for="pv" class="labellista">Placa de video</label><!--data-pv="" -->
+                        <select id="pv" class="custom-select">
+                            <option value="all">Todos</option>
+                            <option value="RTX">RTX</option>
+                            <option value="GTX">GTX</option>
+                            <option value="RADEON">RADEON</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label for="vram" class="labellista">Video ram:</label><!--data-vram="" -->
+                        <select id="vram" class="custom-select">
+                            <option value="all">Todos</option>
+                            <option value="4">4 GB</option>
+                            <option value="8">8 GB</option>
+                            <option value="12">12 GB</option>
+                            <option value="16">16 GB</option>
+                        </select>
+                    </div>
+                    <button class="filter-button">Aplicar Filtros</button>
+                </div>
+            </div>
+
+            <div class="contenteae2">
+                <h1>Produtos em Destaque</h1>
+                <div class="product-grid" id="product-grid">
+                    <!-- Aqui você pode listar seus produtos -->
+                    <div>
+                        <div data-type="Placas-mae" data-brand="AMD" data-price="320" class="product66">
+                            <div class="container1">
+                                <a href="#">
+                                <img class="imagemeae2"
+                                    src="Imagens/placa1.jpg"
+                                    alt="Imagem">
+                                </a>
+                            </div>
+                            <div class="iconeHardware"></div>
+                            <a class="linkCategoria" href="#" target="_blank">
+                                <div class="product-info2">
+
+                                    <h2>Placa Mãe MSI A320M-A Pro</h2>
+                                    <p class="description2">As placas-mãe
+                                        MSI apresentam toneladas de design
+                                        conveniente e inteligente, como zona
+                                        de bloqueio de pinos conveniente,
+                                        localização SATA e USB amigável e
+                                        assim por diante...</p>
+                                    <div class="prices2">
+                                        <p class="price-previous2">R$ 585,99</p>
+                                        <p class="price-current2">R$ 319,99</p>
+                                    </div>
+                                    <button class="add-to-cart2">Adicionar
+                                        ao Carrinho</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div data-type="Smartwatches" data-brand="" data-price="20" class="product66" >
+                            <div class="container1">
+                                <a href="#">
+                                <img class="imagemeae2"
+                                    src="Imagens/pasta-termica-rise-silver.jpg"
+                                    alt="Imagem">
+                                </a>
+                            </div>
+                            <div class="iconeHardware"></div>
+                            <a class="linkCategoria" href="#" target="_blank">
+                                <div class="product-info2">
+                                    <h2>Pasta Térmica Rise Silver Frost</h2>
+                                    <p class="description2">A Pasta térmica Rise
+                                        Mode Frost é um produto de alta
+                                        performance, indicado para ser aplicado
+                                        em processadores de notebooks e
+                                        computadores, ela é altamente
+                                        eficiente...</p>
+                                    <div class="prices2">
+                                        <p class="price-previous2">R$ 25,99</p>
+                                        <p class="price-current2">R$ 19,99</p>
+                                    </div>
+                                    <button class="add-to-cart2">Adicionar
+                                        ao Carrinho</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div data-type="memoria" data-brand="" data-price="350" class="product66" data-ram="16" data-velram="3200" >
+                            <div class="container1">
+                                <a href="#">
+                                <img class="imagemeae2"
+                                    src="Imagens/memoria-adata-xpg-spectrix-d35g.jpg"
+                                    alt="Imagem">
+                                </a>
+                            </div>
+                            <div class="iconeHardware"></div>
+                            <a class="linkCategoria" href="#" target="_blank">
+                                <div class="product-info2">
+                                    <h2>Memória XPG Spectrix D35G</h2>
+                                    <p class="description2">
+                                        A memória Adata XPG Spectrix D35G, RGB,
+                                        16GB, 3200MHZ, DDR4, CL16 é uma ótima
+                                        opção para quem deseja aumentar o
+                                        desempenho e a personalização do seu
+                                        computador. Com 16GB ...</p>
+                                    <div class="prices2">
+                                        <p class="price-previous2">R$ 475,99</p>
+                                        <p class="price-current2">R$ 349,99</p>
+                                    </div>
+                                    <button class="add-to-cart2">Adicionar ao
+                                        Carrinho</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div data-type="Cooler" data-brand="" data-price="25" class="product66" >
+
+                            <div class="container1">
+                                <a href="#">
+                                <img class="imagemeae2"
+                                    src="Imagens/cooler-fan-rise-mode.jpg"
+                                    alt="Imagem">
+                                </a>
+                            </div>
+                            <div class="iconeHardware"></div>
+                            <a class="linkCategoria" href="#" target="_blank">
+                                <div class="product-info2">
+
+                                    <h2>Cooler FAN Rise Mode</h2>
+                                    <p class="description2"> Fans super
+                                        silenciosos em rotação máxima.
+                                        Controlador com suporte para 10 fans.
+                                        Conexão híbrida permitindo que seja
+                                        conectado apenas diretamente à fonte ou
+                                        via conexão RGB em placas-mãe padrão 4p
+                                        12v.
+                                        Conector 4p 12v R </p>
+                                    <div class="prices2">
+                                        <p class="price-previous2">R$ 35,28</p>
+                                        <p class="price-current2">R$ 24,99</p>
+                                    </div>
+                                    <button class="add-to-cart2">Adicionar
+                                        ao Carrinho</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div>
+                        <div data-type="Fontes" data-brand="" data-price="270" class="product66" >
+
+                            <div class="container1">
+                                <a href="#">
+                                    <img class="imagemeae2"
+                                        src="Imagens/fonte-gamemax-600w.jpg"
+                                        alt="Imagem">
+                                </a>
+                            </div>
+                            <div class="iconeHardware"></div>
+                            <a class="linkCategoria" href="#" target="_blank">
+                                <div class="product-info2">
+
+                                    <h2>Fonte Gamemax 600W</h2>
+                                    <p class="description2">Desenvolvida com as
+                                        melhores tecnologias existentes no
+                                        mercado, garantiondo o melhor
+                                        fornecimento de energia para seu
+                                        computador atingir todo potencial
+                                        necessário...</p>
+                                    <div class="prices2">
+                                        <p class="price-previous2">R$ 364,69</p>
+                                        <p class="price-current2">R$ 269,99</p>
+                                    </div>
+                                    <button class="add-to-cart2">Adicionar ao
+                                        Carrinho</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div data-type="memoria" data-brand="" data-price="100" class="product66"data-ram="8" data-velram="2666" >
+                            <div class="container1">
+                                <a href="#">
+                                    <img class="imagemeae2"
+                                        src="Imagens/memoria-husky-8gb.jpg"
+                                        alt="Imagem">
+                                </a>
+                            </div>
+                            <div class="iconeHardware"></div>
+                            <a class="linkCategoria" href="#" target="_blank">
+                                <div class="product-info2">
+
+                                    <h2>Memória Gamer Husky Gaming</h2>
+                                    <p class="description2">
+                                        Chegue ao próximo nível em desempenho
+                                        com o seu computador gamer com a Memória
+                                        Gamer Husky Gaming. Em busca do
+                                        minimalismo e...
+                                    </p>
+                                    <div class="prices2">
+                                        <p class="price-previous2">R$ 129,99</p>
+                                        <p class="price-current2">R$ 99,99</p>
+                                    </div>
+                                    <button class="add-to-cart2">Adicionar ao
+                                        Carrinho</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div data-type="meoria" data-brand="Kingston"
+                            data-price="500" class="product66" data-ram="12" data-velram="3200">
+                            <div class="container1">
+                                <a href="#">
+                                    <img class="imagemeae2"
+                                        src="Imagens/memoria-kingston-fury-impact-16gb.jpg"
+                                        alt="Imagem">
+                                </a>
+                            </div>
+                            <div class="iconeHardware"></div>
+                            <a class="linkCategoria" href="#" target="_blank">
+                                <div class="product-info2">
+                                    <h2>Memória Kingston Fury Impact</h2>
+                                    <p class="description2">Faz overclock
+                                        automaticamente para a frequência mais
+                                        alta publicada, até 3200MHz *, para
+                                        suportar as tecnologias de CPU mais
+                                        recentes ...</p>
+                                    <div class="prices2">
+                                        <p class="price-previous2">R$ 352,93</p>
+                                        <p class="price-current2">R$ 279,99</p>
+                                    </div>
+                                    <button class="add-to-cart2">Adicionar
+                                        ao Carrinho</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div data-type="Placas-mae" data-brand="" data-price="840" class="product66">
+
+                            <div class="container1">
+                                <a href="#">
+                                    <img class="imagemeae2"
+                                        src="Imagens/placa2.jpg" alt="Imagem">
+                                </a>
+                            </div>
+                            <div class="iconeHardware"></div>
+                            <a class="linkCategoria" href="#" target="_blank">
+                                <div class="product-info2">
+                                    <h2>Placa Mãe Gigabyte</h2>
+                                    <p class="description2">As placas-mãe da
+                                        série de jogos B550 usam um design de
+                                        MOSFETs PWM + baixo RDS (on) digital de
+                                        5 + 3 fases para oferecer suporte aos
+                                        processadores AMD Ryzen de...</p>
+                                    <div class="prices2">
+                                        <p class="price-previous2">R$ 1117,64</p>
+                                        <p class="price-current2">R$ 839,99</p>
+                                    </div>
+                                    <button class="add-to-cart2">Adicionar
+                                        ao Carrinho</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+<div>
+    <div data-type="Processadores" data-brand="INTEL" data-processador="i5" data-price="440" class="product66">
+
+        <div class="container1">
+            <a href="#">
+                <img class="imagemeae2"
+                    src="Imagens/processador-intel-core-i5-10400f-cache-12mb-2-9ghz-lga-1200-bx8070110400f_1589199927_gg.jpg" alt="Imagem">
+            </a>
+        </div>
+        <div class="iconeHardware"></div>
+        <a class="linkCategoria" href="#" target="_blank">
+            <div class="product-info2">
+                <h2>Processador Intel Core i5-10400F</h2>
+                <p class="description2">Processador Intel Core i5-10400F Os novos processadores
+                     Intel Core da 10ª 
+                    Geração oferecem atualizações de desempenho incríveis para melhorar
+                     a produtividade e proporcionar entretenimento surpreendente, e muito mais...</p>
+                <div class="prices2">
+                    <p class="price-previous2">R$ 999,64</p>
+                    <p class="price-current2">R$ 439,99</p>
+                </div>
+                <button class="add-to-cart2">Adicionar
+                    ao Carrinho</button>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div>
+    <div data-type="Processadores" data-brand="AND" data-processador="Ryzen7" data-price="1440" class="product66">
+
+        <div class="container1">
+            <a href="#">
+                <img class="imagemeae2"
+                    src="Imagens/processador-amd-ryzen-7-5700x-cache-36mb-3-8ghz-4-6ghz-max-turbo-am4-100-100000926wof_1647636511_gg.jpg" alt="Imagem">
+            </a>
+        </div>
+        <div class="iconeHardware"></div>
+        <a class="linkCategoria" href="#" target="_blank">
+            <div class="product-info2">
+                <h2>Placa Mãe Gigabyte</h2>
+                <p class="description2">De maneira impressionante, os ganhos de desempenho da arquitetura 
+                    “Zen 3” podem ser fornecidos sem aumento no
+                     consumo de energia ou TDP. A combinação de uma arquitetura de última geração com o processo de 7 nm
+                      líder do setor dá ao AMD Ryzen série 5000...</p>
+                <div class="prices2">
+                    <p class="price-previous2">R$ 2567,64</p>
+                    <p class="price-current2">R$ 1439,99</p>
+                </div>
+                <button class="add-to-cart2">Adicionar
+                    ao Carrinho</button>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div>
+    <div data-type="Armazenamento" data-brand="Kingston" data-price="151" class="product66" data-armazenamento="480-512">
+
+        <div class="container1">
+            <a href="#">
+                <img class="imagemeae2"
+                    src="Imagens/85198_1484306114_gg.jpg" alt="Imagem">
+            </a>
+        </div>
+        <div class="iconeHardware"></div>
+        <a class="linkCategoria" href="#" target="_blank">
+            <div class="product-info2">
+                <h2>SSD 480 GB Kingston A400</h2>
+                <p class="description2">SSD 480 GB Kingston A400, SATA, Leitura: 500MB/s e Gravação: 450MB/s 
+                    SSD Kingston A400 é o mais confiável e durável do que um disco rígido
+                    A unidade de estado sólido A400 da Kingston...</p>
+                <div class="prices2">
+                    <p class="price-previous2">R$ 300,00</p>
+                    <p class="price-current2">R$ 150,99</p>
+                </div>
+                <button class="add-to-cart2">Adicionar
+                    ao Carrinho</button>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div>
+    <div data-type="placadevideo" data-brand="AMD" data-price="151" class="product66" data-pv="RADEON" data-vram="12">
+
+        <div class="container1">
+            <a href="#">
+                <img class="imagemeae2"
+                    src="Imagens/placa-de-video-rx-6750-xt-mech-2x-12g-v1-radeon-12gb-gddr6-freesync-dual-fan_1689965385_gg.jpg" alt="Imagem">
+            </a>
+        </div>
+        <div class="iconeHardware"></div>
+        <a class="linkCategoria" href="#" target="_blank">
+            <div class="product-info2">
+                <h2>Placa de Vídeo RX 6750 XT MECH 2X 12G V1 Radeon</h2>
+                <p class="description2">Uma placa de vídeo de alto desempenho que oferece excelente qualidade de imagem e 
+                    desempenho em jogos. Ela é baseada na arquitetura AMD RDNA 2 e possui 12 GB de memória GDDR6,
+                     o que a torna uma ótima opção para jogos em 1440p...</p>
+                <div class="prices2">
+                    <p class="price-previous2">R$ 3000,00</p>
+                    <p class="price-current2">R$ 1999,99</p>
+                </div>
+                <button class="add-to-cart2">Adicionar
+                    ao Carrinho</button>
+            </div>
+        </a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        <footer class="footer">
+        <div class="container">
+            <ul>
+                <a th:href="@{/}" > <img class="logofooter" th:src="@{/icones/image-light.png}"><br/><br/></a>
+                <li><a th:href="@{/SobreNos}" class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
+                <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
+                    <div class="redessocial">
+                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" th:src="@{/icones/insta.png}"></a>
+                        <a href="https://twitter.com/Motherboardtec"><img class="redes" th:src="@{/icones/twitter.png}"></a>
+                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" th:src="@{/icones/yt.png}"></a>
+                    </div>
+            </ul>
+            <ul>
+               <h1 class="textofooter">Dúvidas:</h1><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+            </ul>
+            <ul> 
+               <h1 class="textofooter">Cliente:</h1><br/>
+               <li><a th:href="@{/Cadastro}" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+               <li><a th:href="@{/Cadastro}" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
+            </ul>
+            <ul>
+                <h1 class="textofooter">Ajuda:</h1><br/> 
+                <li><a th:href="@{/FaleConosco}" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+                <li><a th:href="@{/Politica-De-Privacidade}" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+                <li><a th:href="@{/SobreNos}" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+            </ul>
+        </div>
+        <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
+    </footer>
+    </body>
+</html>

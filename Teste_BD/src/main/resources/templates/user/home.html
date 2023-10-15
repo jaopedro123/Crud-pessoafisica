@@ -29,7 +29,7 @@
                     <li class="CategoriaItem">
                         <div class="LinhaMenorLateral">
                             <a class="menu-item" href="#">
-                                <img th:src="@{/icones/cpu.png}">
+                               <a class="menu-item" th:href="@{/Hardware}">
                                 <p class="nomeDasCategorias">Hardware</p>
                             </a>
                         </div>
@@ -229,7 +229,7 @@
         <div class="search-container">
        
             <input type="text" class="search-bar" name="q" placeholder="Pesquisar oque você procura..."> 
-            <i class="fas fa-search search-icon"></i>
+           <i class="search-icon"><img th:src="@{/icones/lupa.png}" class="lupadobarra"></i>
         </div>
         <!--FIM da Barra de pesquisa-->
         <div class="icone2">
@@ -237,8 +237,8 @@
             <label for="switch-flat"></label>
             </div>
             <div class="icone">
-                <a th:href="@{/Favoritos}" > <img th:src="@{/icones/favoritos (1).png}" alt="favoritos"></a>
-                <a th:href="@{/html}" >      <img th:src="@{/icones/carrinho-de-compras (2).png}" alt="carrinho de compras"></a>
+                <a th:href="@{/Favoritos}" > <img th:src="@{/icones/favoritos (1).png}"  alt="favoritos"></a>
+                <a th:href="@{/Carrinho}" ><img th:src="@{/icones/carrinho-de-compras (2).png}" alt="carrinho de compras"></a>
                 <a th:href="@{/user/Conta}" ><img th:src="@{/icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png}" alt="configurações de usuario"></a>
             </div>
         </header>
@@ -279,7 +279,7 @@
       <span class="dot" onclick="currentSlide(3)"></span> 
     </div>
     
-      <br/>  <br/> 
+    <br/>  <br/> 
     <!--slideshowFIM-->
     <!--divisão de produtos-->
     <div class="display">
@@ -294,19 +294,21 @@
                             <!-- Itens do Carrossel 1 -->
                             <div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" th:src="@{/Imagens/pc1.jpg}" alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/playstation-5.jpg}" alt="Playstation 5">
                                     
                                 </div>
                                 <div class="product-info">
-                                    <h2>PC GAMER MOTHERBOARD</h2>
-                                    <p class="description">INTEL I3-10100, GEFORCE RTX 3060 8GB, 16GB DDR4, SSD M.2 480GB</p>
-                                    <p class="price-previous">R$ 6.407,80</p>
-                                    <p class="price-current">R$  3.889,82</p>
-                                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                                    <h2>PLAYSTATION 5</h2>
+                                    <p class="description"> PS5 é um console de videogame de última geração desenvolvido pela Sony</p>
+                                    <p class="price-previous">R$ 3999.90</p>
+                                    <p class="price-current">R$ 3500.00</p>
+                                    <a th:href="@{Playstation5}">
+                                    <button  class="add-to-cart">Adicionar ao Carrinho</button >
+                                    </a>
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae"  th:src="@{/Imagens/pc2.jpg}" alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pc2.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -384,7 +386,7 @@
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae"th:src="@{/Imagens/pro2.jpg}"  alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pro2.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -396,7 +398,7 @@
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" th:src="@{/Imagens/pro3.jpg}"  alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pro3.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -408,7 +410,7 @@
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" th:src="@{/Imagens/pro4.jpg}"  alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pro4.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -420,7 +422,7 @@
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" src="" alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pro4.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -432,7 +434,7 @@
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" th:src="@{/Imagens/pro6.jpg}"  alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pro6.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -460,7 +462,7 @@
                             <!-- Itens do Carrossel 3 -->
                             <div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" src="Imagens/pla1.jpg" alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pla1.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -472,7 +474,7 @@
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" src="Imagens/pla2.jpg" alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pla2.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -484,7 +486,7 @@
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" src="Imagens/pla3.jpg" alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pla3.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -496,7 +498,7 @@
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" src="Imagens/pla4.jpg" alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pla4.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -508,7 +510,7 @@
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" src="Imagens/pla5.jpg" alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pla5.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -521,7 +523,7 @@
                                 </div>
                             </div><div>&nbsp&nbsp&nbsp</div><div class="product">
                                 <div class="container1">
-                                    <img class="imagemeae" src="Imagens/pla6.jpg" alt="Imagem">
+                                    <img class="imagemeae" th:src="@{/Imagens/pla6.jpg}" alt="Imagem">
                                     
                                 </div>
                                 <div class="product-info">
@@ -542,16 +544,16 @@
     </div>
     <section>
         <div class="divprod3">
-            <img class="anuncioProd3" src="Imagens/pcgamer.png">
+            <img class="anuncioProd3" th:src="@{/Imagens/pcgamer.png}">
         </div>
         </section>
         <br/>
         <section class="displayflexhome2">
         <div class="divprod4">
-            <img class="anuncioProd4" src="Imagens/WhatsApp Image 2023-10-02 at 19.02.29.jpeg">
+            <img class="anuncioProd4" th:src="@{/Imagens/WhatsApp Image 2023-10-02 at 19.02.29.jpeg}">
         </div>
         <div class="divprod4">
-            <img class="anuncioProd4" src="Imagens/MotherBoard (3).png">
+            <img class="anuncioProd4" th:src="@{/Imagens/MotherBoard (3).png}">
         </div>
         <br/>
     </section>
@@ -563,7 +565,7 @@
                 <div class="product2">
                     <div class="maindosprodutos">
                     <div class="container1">
-                        <img class="imagemeae2" src="Imagens/peri1.jpg" alt="Ima">
+                        <img class="imagemeae2" th:src="@{/Imagens/peri1.jpg}" alt="Ima">
                     </div>
                     <div class="product-info2">
                         <h2>KIT PERIFÉRICOS GAMER MOTHERBOARD</h2>
@@ -579,7 +581,7 @@
             <div class="product2">
                 <div class="maindosprodutos">
                 <div class="container1">
-                    <img class="imagemeae2" src="Imagens/peri2.jpg" alt="Imagemne">
+                    <img class="imagemeae2" th:src="@{/Imagens/peri2.jpg}" alt="Imagemne">
                 </div>
                 <div class="product-info2">
                     <h2>KIT PERIFÉRICOS GAMER MOTHERBOARD</h2>
@@ -595,7 +597,7 @@
         <div class="product2">
             <div class="maindosprodutos">
             <div class="container1">
-                <img class="imagemeae2" src="Imagens/peri3.jpg" alt="Imagem">
+                <img class="imagemeae2" th:src="@{/Imagens/peri3.jpg}" alt="Imagem">
 
             </div>
             <div class="product-info2">
@@ -612,7 +614,7 @@
     <div class="product2">
         <div class="maindosprodutos">
         <div class="container1">
-            <img class="imagemeae2" src="Imagens/peri4.jpg" alt="Imagem">
+            <img class="imagemeae2" th:src="@{/Imagens/peri4.jpg}" alt="Imagem">
             
         </div>
         <div class="product-info2">
@@ -629,7 +631,7 @@
     <div class="product2">
         <div class="maindosprodutos">
         <div class="container1">
-            <img class="imagemeae2" src="Imagens/mou1.jpg" alt="Imagem">
+            <img class="imagemeae2" th:src="@{/Imagens/mou1.jpg}" alt="Imagem">
             
         </div>
         <div class="product-info2">
@@ -646,7 +648,7 @@
     <div class="product2">
         <div class="maindosprodutos">
         <div class="container1">
-            <img class="imagemeae2" src="Imagens/mou2.jpg" alt="Imagem">
+            <img class="imagemeae2" th:src="@{/Imagens/mou2.jpg}" alt="Imagem">
             
         </div>
         <div class="product-info2">
@@ -663,7 +665,7 @@
     <div class="product2">
         <div class="maindosprodutos">
         <div class="container1">
-            <img class="imagemeae2" src="Imagens/mou3.jpg" alt="Imagem">
+            <img class="imagemeae2" th:src="@{/Imagens/mou3.jpg}" alt="Imagem">
             
         </div>
         <div class="product-info2">
@@ -680,7 +682,7 @@
     <div class="product2">
         <div class="maindosprodutos">
         <div class="container1">
-            <img class="imagemeae2" src="Imagens/mou4.jpg" alt="Imagem">
+            <img class="imagemeae2" th:src="@{/Imagens/mou4.jpg}" alt="Imagem">
             
         </div>
         <div class="product-info2">
@@ -698,7 +700,7 @@
     <div class="product2">
         <div class="maindosprodutos">
         <div class="container1">
-            <img class="imagemeae2" src="Imagens/tec1.jpg" alt="Imagem">
+            <img class="imagemeae2" th:src="@{/Imagens/tec1.jpg}" alt="Imagem">
             
         </div>
         <div class="product-info2">
@@ -715,7 +717,7 @@
     <div class="product2">
         <div class="maindosprodutos">
         <div class="container1">
-            <img class="imagemeae2" src="Imagens/tec2.jpg" alt="Imagem">
+            <img class="imagemeae2" th:src="@{/Imagens/tec2.jpg}" alt="Imagem">
             
         </div>
         <div class="product-info2">
@@ -732,7 +734,7 @@
     <div class="product2">
         <div class="maindosprodutos">
         <div class="container1">
-            <img class="imagemeae2" src="Imagens/tec3.jpg" alt="Imagem">
+            <img class="imagemeae2" th:src="@{/Imagens/tec3.jpg}" alt="Imagem">
             
         </div>
         <div class="product-info2">
@@ -749,7 +751,7 @@
     <div class="product2">
         <div class="maindosprodutos">
         <div class="container1">
-            <img class="imagemeae2" src="Imagens/tec4.jpg" alt="Imagem">
+            <img class="imagemeae2" th:src="@{/Imagens/tec4.jpg}" alt="Imagem">
             
         </div>
         <div class="product-info2">
@@ -770,12 +772,12 @@
         </div><br/>
     </section>
     
-    <script th:src="@{assets/script/script.js}"></script>
+    <script src="assets/script/script.js"></script>
     <footer class="footer">
         <div class="container">
             <ul>
                 <a th:href="@{/user/}" > <img class="logofooter" th:src="@{/icones/image-light.png}"><br/><br/></a>
-                <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
+                <li><a th:href="@{/SobreNos}" class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
                 <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
                     <div class="redessocial">
                         <a href="https://www.instagram.com/motherboard.__/"><img class="redes" th:src="@{/icones/insta.png}"></a>
@@ -791,19 +793,20 @@
             </ul>
             <ul> 
                <h1 class="textofooter">Cliente:</h1><br/>
-               <li><a th:href="@{/Conta}" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
-               <li><a th:href="@{/Conta}" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+               <li><a th:href="@{/Cadastro}" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+               <li><a th:href="@{/Cadastro}" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
                <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
             </ul>
             <ul>
                 <h1 class="textofooter">Ajuda:</h1><br/> 
-                <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+                <li><a th:href="@{/FaleConosco}" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
                 <li><a th:href="@{/Politica-De-Privacidade}" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
-                <li><a th:href="@{/teste}" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+                <li><a th:href="@{/SobreNos}" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
             </ul>
         </div>
         <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
     </footer>
     <script th:src="@{/assets/script/script.js}"></script>
+      <script th:src="@{/assets/script/slideshow.js}"></script>
 </body>
 </html>

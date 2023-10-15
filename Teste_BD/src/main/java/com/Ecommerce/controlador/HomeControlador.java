@@ -42,11 +42,6 @@ public class HomeControlador {
 	public String carrinho() {
 		return "Carrinho";
 	}
-	
-	@GetMapping("/Pagamento")
-	public String pagamento() {
-		return "Pagamento";
-	}
 
 	@GetMapping("/")
 	public String index() {
@@ -87,6 +82,17 @@ public class HomeControlador {
 	public String esqueciASenha() {
 		return "Esqueci-a-Senha";
 	}
+	
+	@GetMapping("/Hardware")
+	public String hardware() {
+		return "Hardware";
+	}
+	
+	@GetMapping("/Playstation5")
+	public String playstation5() {
+		return "Playstation5";
+	}
+	
 	
 	//CADASTRO
 

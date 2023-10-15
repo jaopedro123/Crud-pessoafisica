@@ -10,7 +10,7 @@
     <title>Termos De Uso</title>
 </head>
 <body id="largterm">
-        <header class="header">
+       <header class="header">
 
          <!-- MENU LATERAL -->
          <div class="left-sidebar" id="sidebar">
@@ -29,7 +29,7 @@
                 <ul>
                     <li class="CategoriaItem">
                         <div class="LinhaMenorLateral">
-                            <a class="menu-item" href="#">
+                            <a class="menu-item" th:href="@{/Hardware}">
                                 <img th:src="@{/icones/cpu.png}">
                                 <p class="nomeDasCategorias">Hardware</p>
                             </a>
@@ -243,6 +243,7 @@
                 <a th:href="@{/Cadastro}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
             </div>
         </header>
+        
     <h1 class="h1termos">Termos De Uso</h1>
     
     <div id="container-figurastermos">
@@ -430,32 +431,32 @@
     <footer class="footer">
         <div class="container">
             <ul>
-                <a href="index.html" > <img class="logofooter" src="icones/image-light.png"><br/><br/></a>
-                <li><a href class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
+                <a th:href="@{/}" > <img class="logofooter" th:src="@{/icones/image-light.png}"><br/><br/></a>
+                <li><a th:href="@{/SobreNos}" class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
                 <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
                     <div class="redessocial">
-                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" src="icones/insta.png"></a>
-                        <a href="https://twitter.com/Motherboardtec"><img class="redes" src="icones/twitter.png"></a>
-                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" src="icones/yt.png"></a>
+                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" th:src="@{/icones/insta.png}"></a>
+                        <a href="https://twitter.com/Motherboardtec"><img class="redes" th:src="@{/icones/twitter.png}"></a>
+                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" th:src="@{/icones/yt.png}"></a>
                     </div>
             </ul>
             <ul>
                <h1 class="textofooter">Dúvidas:</h1><br/>
-               <li><a href class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
-               <li><a href class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
-               <li><a href class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
             </ul>
             <ul> 
                <h1 class="textofooter">Cliente:</h1><br/>
-               <li><a href class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
-               <li><a href class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
-               <li><a href="Atendimento.html" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
+               <li><a th:href="@{/Cadastro}" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+               <li><a th:href="@{/Cadastro}" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
             </ul>
             <ul>
                 <h1 class="textofooter">Ajuda:</h1><br/> 
-                <li><a href class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
-                <li><a href class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
-                <li><a href="teste.html" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+                <li><a th:href="@{/FaleConosco}" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+                <li><a th:href="@{/Politica-De-Privacidade}" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+                <li><a th:href="@{/SobreNos}" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
             </ul>
         </div>
         <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>

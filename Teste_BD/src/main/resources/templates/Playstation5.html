@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <title>Playstation 5</title>
+        <link rel="stylesheet" href="assets/css/css.css" type="text/css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="icones/logorapa.png">
+    </head>
+     <body>
+     <header class="header">
+
+         <!-- MENU LATERAL -->
+         <div class="left-sidebar" id="sidebar">
+
+            <!-- LOGO DO TOPO -->
+            <div class="LateralLinhaLogo">
+                <a class="menu-logo" href="#">
+                    <img id="logoDoMenuLateral" th:src="@{/icones/logorapa.png}">
+                </a>
+            </div>
+            <!-- Botão de fechamento -->
+            <div id="closeBtn" class="close-button">X</div>
+
+            <!-- CONTEUDO DO CENTRO DO MENU -->
+            <div class="conteudo-sidebar">
+                <ul>
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" th:href="@{/Hardware}">
+                                <img th:src="@{/icones/cpu.png}">
+                                <p class="nomeDasCategorias">Hardware</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/processador-32.png}">
+                                    <p class="pCategoriasDropDown">Processadores</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/placa-mãe-32.png}">
+                                    <p class="pCategoriasDropDown">Placa mãe</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/ram.png}">
+                                    <p class="pCategoriasDropDown">Pentes de Memória</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/hdd-32.png}">
+                                    <p class="pCategoriasDropDown">Disco Rígido interno (HD)</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                 <img th:src="@{/icones/gaming-pc.png}">
+                                <p class="nomeDasCategorias">Computadores</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/compGamer.png}">
+                                    <p class="pCategoriasDropDown">Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/mac-pro-32.png}">
+                                    <p class="pCategoriasDropDown">Workstation</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#">
+                                    <img class="imgCategoriasDropDown" th:src="@{/icones/pc.png}">
+                                    <p class="pCategoriasDropDown">Home Office</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                 <img th:src="@{/icones/teclado-e-mouse.png}">
+                                <p class="nomeDasCategorias">Periféricos</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/teclado-32.png}">
+                                    <p class="pCategoriasDropDown">Teclado</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/mouse.png}">
+                                    <p class="pCategoriasDropDown">Mouse</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/fones-de-ouvido-32.png}">
+                                    <p class="pCategoriasDropDown">Fones de Ouvido</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                <img th:src="@{/icones/dispositivos-eletronicos.png}">
+                                <p class="nomeDasCategorias">Eletrônicos</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/notebook-32.png}">
+                                    <p class="pCategoriasDropDown">Notebooks</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/NotGamer.png}">
+                                    <p class="pCategoriasDropDown">Notebooks Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/celular-32.png}">
+                                    <p class="pCategoriasDropDown">Celulares</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                                <img th:src="@{/icones/monitor.png}">
+                                <p class="nomeDasCategorias">Monitores</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitorGamer.png}">
+                                    <p class="pCategoriasDropDown">Monitores Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitor-32.png}">
+                                    <p class="pCategoriasDropDown">Monitores Home Office</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/monitor1.png}">
+                                    <p class="pCategoriasDropDown">Suporte Monitor</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="CategoriaItem">
+                        <div class="LinhaMenorLateral">
+                            <a class="menu-item" href="#">
+                             <img th:src="@{/icones/jogos.png}">
+                                <p class="nomeDasCategorias">Espaço Gamer</p>
+                            </a>
+                        </div>
+                        <ul class="ulLateralDropdown">
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/office-chair-32.png}">
+                                    <p class="pCategoriasDropDown">Cadeira Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/pc-de-mesa-32.png}">
+                                    <p class="pCategoriasDropDown">Mesa Gamer</p>
+                                </a>
+                            </li>
+                            <li class="menu-itemDropDown">
+                                <a class="aCategoriasDropDown" href="#"><img class="imgCategoriasDropDown" th:src="@{/icones/controle-gamer.png}">
+                                    <p class="pCategoriasDropDown">Kits Gamer</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    
+
+                </ul>
+
+                <div class="LateralLinhaConfig">
+                    <a class="LateralconfigCategorias" href="Configurações.html">
+                        <img th:src="@{/icones/configuracoes-cog.png}">
+                        <p class="nomeConfiguraçoes">Configurações</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Botao hamburguer -->
+    <section>
+        <nav>
+            <ul class="hamburguer">
+                <li class="hamburguertamanho">
+                    <a id="menuBtn" class="active" href="#">
+                       <img th:src="@{/icones/cardapio.png}"> 
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <!--Aplica a cor (CINZA) quando clica no hamngurguer-->
+    <div class="overlay hidden" id="overlay"></div>
+    <!--Final do Menu Lateral-->
+        <div class="logoheader">
+          <a th:href="@{/}" ><img class="logoimagemheader" src="icones/image-light.png" data-theme="light" alt="Imagem"></a>
+        </div>
+        <!--Começo da Barra de pesquisa-->
+        <div class="search-container">
+       
+            <input type="text" class="search-bar" name="q" placeholder="Pesquisar oque você procura..."> 
+           <i class="search-icon"><img src="icones/lupa.png" class="lupadobarra"></i>
+        </div>
+        <!--FIM da Barra de pesquisa-->
+        <div class="icone2">
+          <input  onclick="toggleMode()" id="switch-flat" class="switch switch--flat" type="checkbox">
+            <label for="switch-flat"></label>
+            </div>
+            <div class="icone">
+                <a th:href="@{/Favoritos}" > <img src="icones/favoritos (1).png" alt="favoritos"></a>
+                <a th:href="@{/Carrinho}" ><img src="icones/carrinho-de-compras (2).png" alt="carrinho de compras"></a>
+                <a th:href="@{/Cadastro}" ><img src="icones/botao-redondo-da-conta-com-o-usuario-dentro (1).png" alt="configurações de usuario"></a>
+            </div>
+        </header>
+        
+            <!--meio da pagina-->
+                <div class="divprodvenda">
+                    <div class="divprodvendaslide">
+                      <div class="image-gallery">
+                            <button class="botaoesquerda" id="prevBtn">&#10094;</button>
+                          <button class="botaodireita" id="nextBtn">&#10095;</button>
+                         
+                          <img src="Imagens/playstation-5.jpg" alt="Imagem 1" class="gallery-image">
+                          <img src="Imagens/playstation5next1.jpg" alt="Imagem 2" class="gallery-image">
+                          <img src="Imagens/playstation5next2.jpg" alt="Imagem 3" class="gallery-image">
+                          <img src="Imagens/playstation5next3.jpg" alt="Imagem 4" class="gallery-image">
+                          <img src="Imagens/playstation5next4.jpg" alt="Imagem 5" class="gallery-image">
+                          <img src="Imagens/playstation5next5.jpg" alt="Imagem 6" class="gallery-image">
+                          <img src="Imagens/playstation5next6.jpg" alt="Imagem 7" class="gallery-image">
+                      </div> <br/><br/>
+                      <div class="image-buttons">
+                          <img class="image-button" src="Imagens/playstation-5.jpg" data-index="0">
+                          <img class="image-button" src="Imagens/playstation5next1.jpg" data-index="1">
+                          <img class="image-button" src="Imagens/playstation5next2.jpg" data-index="2">
+                          <img class="image-button" src="Imagens/playstation5next3.jpg" data-index="3">
+                          <img class="image-button" src="Imagens/playstation5next4.jpg" data-index="4">
+                          <img class="image-button" src="Imagens/playstation5next5.jpg" data-index="3">
+                          <img class="image-button" src="Imagens/playstation5next6.jpg" data-index="4">
+                        </div>                 
+                        </div>
+                         <div class="divprodvendadesc">
+                          <h1 class="TituloProd">Console Sony Playstation 5, SSD 1TB, Controle sem fio DualSense, Edição Digital, Branco</h1><br/>
+                          <p class="vendedorProd">Vendido por: <b>Motherboard!</b></p>
+                          <p class="vendedorProd">|</p>
+                          <p class="EstoqueProd"> Em Estoque</p>
+                          <p class="vendedorProd">|</p>
+                          <p class="vendedorProd2">Marca: <b>Sony</b></p>
+                          <p class="vendedorProd">|</p>
+                          <span class="starfake">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br/>
+                          <div class="comtemplaopreço">
+                          <div class="comprasyeye">
+                          <p class="ValorProd">De R$ 3.999,90</p>
+                          <h1 class="precoprod">Por R$ 3.500.00</h1>
+                          <p class="pixprod">À vista no PIX com desconto</p>
+                          <p class="ValorProd2">R$ 3.999,90</p>
+                          <p class="pixprod">Em até 10x de R$ 399,98 sem juros no cartão</p>
+                          <p class="pixprod">Ou em 1x no cartão com até 7% OFF</p>
+                          </div> 
+                          <div class="botaocomprardiv">
+                          <button class="botaocomprar">  COMPRAR</button>
+                          <button class="botaocomprar2"><img class="imagembotao" src="icones/favoritos branco que fica em cima.png"></button>
+                          </div>
+                         
+                        </div>
+                        <div class="calculecep">
+                          <h1 class="TituloProd">Calcule seu CEP</h1>
+                          <input type="number" class="botaessaporradeapilucas" id="cepInput" placeholder="insira seu cep...">
+                          <button class="botaocomprarok" onclick="verificarCEP()">OK</button>
+                        </div>
+                        
+                        <div id="freteResult" style="display: none;">
+                          <h3 class="valorfrete">Valor do frete: R$ <span id="freteValue"></span></h3>
+                        </div><Br/><Br/>
+                        <h2 class="carousel-title">Produtos semelhantes</h2>
+                        <div class="container652">
+                          
+                          <button class="scroll-button2 scroll-left2 scroll-left-1">&lt; </button>
+                          <div class="carousel52">
+                            
+                              <div class="itemsPRODUTOS">
+                         
+                                  <!-- Itens do Carrossel 1 -->
+                                  <div class="productPRODUTO">
+                                    <a href="#" class="linkdoproduto">
+                                    <div class="produtodosprodutos">
+                                    <div class="container1productPRODUTO">
+                                        <img class="imagemeae2productPRODUTO" src="Imagens/series-x.jpg" alt="Imagem">
+                                        
+                                    </div>
+                                    <div class="product-info2PRODUTO">
+                                        
+                                        <div class="prices2PRODUTO">
+                                            <p class="price-previous2PRODUTO">R$ 4.599,90
+                                            </p>
+                                            <p class="price-current2PRODUTO">R$ 3.600,00</p>
+                                        </div>
+                                       
+                                    </div>
+                                </div></a>
+                                </div>
+                                <div class="productPRODUTO">
+                                  <a href="#" class="linkdoproduto">
+                                  <div class="produtodosprodutos">
+                                  <div class="container1productPRODUTO">
+                                      <img class="imagemeae2productPRODUTO" src="Imagens/pc2.jpg" alt="Imagem">
+                                      
+                                  </div>
+                                  <div class="product-info2PRODUTO">
+                                      
+                                      <div class="prices2PRODUTO">
+                                          <p class="price-previous2PRODUTO">R$ 7.081,70</p>
+                                          <p class="price-current2PRODUTO">R$ 4.299,83</p>
+                                      </div>
+                                     
+                                  </div>
+                              </div></a>
+                              </div><div class="productPRODUTO"><a href="#" class="linkdoproduto">
+                                <div class="produtodosprodutos">
+                                <div class="container1productPRODUTO">
+                                    <img class="imagemeae2productPRODUTO" src="Imagens/smart-tv-55-polegadas-samsung-qled-4k-3-hdmi-2-usb-bluetooth-wi-fi-gaming-hub-tela-sem-limites-alexa-built-in-qn55q60cagxzd_1687872187_gg.jpg" alt="Imagem">
+                                    
+                                </div>
+                                <div class="product-info2PRODUTO">
+                                    
+                                    <div class="prices2PRODUTO">
+                                        <p class="price-previous2PRODUTO">R$ 2.999,99</p>
+                                        <p class="price-current2PRODUTO">R$ 1900,00</p>
+                                    </div>
+                                   
+                                </div></a>
+                            </div>
+                            </div><div class="productPRODUTO">
+                              <a href="#" class="linkdoproduto">
+                              <div class="produtodosprodutos">
+                              <div class="container1productPRODUTO">
+                                  <img class="imagemeae2productPRODUTO" src="Imagens/pro4.jpg" alt="Imagem">
+                                  
+                              </div>
+                              <div class="product-info2PRODUTO">
+                                  
+                                  <div class="prices2PRODUTO">
+                                      <p class="price-previous2PRODUTO">R$ 7.599,79</p>
+                                      <p class="price-current2PRODUTO">R$ 4.799,99</p>
+                                  </div>
+                                 
+                              </div>
+                          </div>
+                        </a>
+                          </div><div class="productPRODUTO">
+                            <a href="#" class="linkdoproduto">
+                            <div class="produtodosprodutos">
+                            <div class="container1productPRODUTO">
+                                <img class="imagemeae2productPRODUTO" src="Imagens/smartwatch-samsung-galaxy-watch5-bt-44mm-tela-cristal-safira-grafite-sm-r910nzapzto_1659984848_gg.jpg" alt="Imagem">
+                                
+                            </div>
+                            <div class="product-info2PRODUTO">
+                                
+                                <div class="prices2PRODUTO">
+                                    <p class="price-previous2PRODUTO">R$ 1.200,99</p>
+                                    <p class="price-current2PRODUTO">R$ 599,99</p>
+                                </div>
+                               
+                            </div>
+                        </div></a>
+                        </div><div class="productPRODUTO">
+                          <a href="#" class="linkdoproduto">
+                          <div class="produtodosprodutos">
+                          <div class="container1productPRODUTO">
+                              <img class="imagemeae2productPRODUTO" src="Imagens/85198_1484306114_gg.jpg" alt="Imagem">
+                              
+                          </div>
+                          <div class="product-info2PRODUTO">
+                              
+                              <div class="prices2PRODUTO">
+                                  <p class="price-previous2PRODUTO">R$ 300,00</p>
+                                  <p class="price-current2PRODUTO">R$ 150,99</p>
+                              </div>
+                             
+                          </div>
+                      </div></a>
+                      </div><div class="productPRODUTO">
+                        <a href="#" class="linkdoproduto">
+                        <div class="produtodosprodutos">
+                        <div class="container1productPRODUTO">
+                            <img class="imagemeae2productPRODUTO" src="Imagens/tablet-samsung-galaxy-tab-a8-4g-64gb-4gb-ram-tela-10-5-camera-8mp-android-11-nano-sim-cinza-sm-x205nzauzto_1649082256_gg.jpg" alt="Imagem">
+                            
+                        </div>
+                        <div class="product-info2PRODUTO">
+                            
+                            <div class="prices2PRODUTO">
+                                <p class="price-previous2PRODUTO">R$ 999,90</p>
+                                <p class="price-current2PRODUTO">R$ 500,00</p>
+                            </div>
+                           
+                        </div>
+                    </div></a>
+                    </div><div class="productPRODUTO">
+                      <a href="#" class="linkdoproduto">
+                      <div class="produtodosprodutos">
+                      <div class="container1productPRODUTO">
+                          <img class="imagemeae2productPRODUTO" src="Imagens/placa-de-video-rx-6750-xt-mech-2x-12g-v1-radeon-12gb-gddr6-freesync-dual-fan_1689965385_gg.jpg" alt="Imagem">
+                          
+                      </div>
+                      <div class="product-info2PRODUTO">
+                          
+                          <div class="prices2PRODUTO">
+                              <p class="price-previous2PRODUTO">R$ 3.000,00</p>
+                              <p class="price-current2PRODUTO">R$ 1.999,99</p>
+                          </div>
+                         
+                      </div>
+                  </div></a>
+                  </div><div class="productPRODUTO">
+                    
+                    <a href="#" class="linkdoproduto">
+                    <div class="produtodosprodutos">
+                    <div class="container1productPRODUTO">
+                        <img class="imagemeae2productPRODUTO" src="Imagens/echo-dot-5-geracao-amazon-com-alexa-smart-speaker-preto-b09b8vgcr8_1684324203_gg.jpg" alt="Imagem">
+                        
+                    </div>
+                    <div class="product-info2PRODUTO">
+                        
+                        <div class="prices2PRODUTO">
+                            <p class="price-previous2PRODUTO">R$ 599,90</p>
+                            <p class="price-current2PRODUTO">R$ 450,00</p>
+                            
+                        </div>
+                       
+                    </div>
+                </div></a>
+                </div>
+               
+                                  <!-- Adicione mais itens conforme necessário -->
+                              </div>
+                          </div>
+                         
+                          <button class="scroll-button2 scroll-right2 scroll-right-1">&gt;</button>
+                      </div>
+                  
+                </div>
+                        
+                    
+
+                    <div class="proddesc">
+                      <p class="TituloProd2">Descrição do produto</p>
+                      <p class="descricaoprod">
+                        <b>Jogar no PS5 Não Tem Limites</b>
+                      </p>
+                      <p class="descricaoprod">
+                        Desfrute do carregamento do seu PS5, extremamente rápido com o SSD de altíssima velocidade, uma imersão mais profunda com suporte a <b>feedback tátil, gatilhos adaptáveis e áudio 3D</b>, além de uma geração inédita de jogos incríveis para <b>PlayStation</b>.
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Veloz como um raio, SSD ultrarrápido</b>
+                      </p>
+                      <p class="descricaoprod">
+                        Domine o poder de uma  <b>CPU e GPU personalizadas</b> e o SSD com E/S integradas que redefinem as regras do que o console PlayStation pode fazer.
+                        Maximize suas sessões de jogo com tempo de <b>carregamento praticamente instantâneo</b> para jogos do <b>PS5</b> instalados.
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Jogos impressionantes para PS5</b>
+                      </p>
+                      <p class="descricaoprod">
+                        Maravilhe-se com os gráficos incríveis e experimente os recursos do novo PS5. <b>"Ray Tracing"</b> (Rastreamento de raios) Mergulhe em mundos com um nível inédito de realismo enquanto os raios de luz são simulados individualmente, criando sombras e reflexos realistas em jogos compatíveis com Playstation 5.
+                        Jogos para <b>TVs 4K</b> Curta seus jogos favoritos do PS5 na sua incrível TV 4K. Até 120 fps com saída em <b>120 Hz</b> Desfrute da fluidez e taxa de quadros de até <b>120 fps em jogos compatíveis</b>, com suporte a saída de 120 Hz em telas 4K.
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Tecnologia HDR</b>
+                      </p>
+                      <p class="descricaoprod">
+                        Com uma TV HDR, os jogos compatíveis do PS5 exibem uma variedade de cores inacreditavelmente vibrantes e realistas. Saída em 8K Os consoles PS5 oferecem suporte à <b>saída 8K</b>, para que você possa jogar na sua tela com resolução de <b>4320p</b>.
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Tempest 3D AudioTech</b>
+                      </p>
+                      <p class="descricaoprod">
+                        Mergulhe em palcos sonoros que farão você acreditar que os <b>sons estão vindo de todas as direções</b>. Seja com seus fones de ouvido ou os alto-falantes de sua TV, seu ambiente ganhará vida com o Tempest 3D AudioTech em jogos compatíveis.
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Resposta tátil</b>
+                      </p>
+                      <p class="descricaoprod">
+                        Experimente a resposta tátil com o controle sem fio DualSense em jogos selecionados do PS5 e sinta o impacto de suas ações no jogo através da <b>resposta sensorial dinâmica.</b>
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Gatilhos adaptáveis</b>
+                      </p>
+                      <p class="descricaoprod">
+                        Assuma o controle com os imersivos gatilhos adaptáveis, agora com níveis dinâmicos de resistência que  <b>simulam o impacto físico</b> das atividades em jogos selecionados do PS5.
+                      </p><br/>
+                      <p class="TituloProd2">Informações técnicas</p>
+                      <p class="descricaoprod">
+                        <b>Características:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Marca: Sony<br/>
+                        - Modelo: PlayStation 5 Edição Digital
+                      </p>
+                      <p class="descricaoprod">
+                        <b>CPU:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - x86-64-AMD Ryzen “Zen 2”<br/>
+                        - 8 Cores / 16 Threads<br/>
+                        - Frequência variável, até 3.5 GHz
+                      </p>
+                      <p class="descricaoprod">
+                        <b>GPU:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Mecanismo de gráficos baseado em AMD Radeon RDNA 2<br/>
+                        - Aceleração Ray Tracing<br/>
+                        - Frequência variável, até 2.23 GHz (10.3 TFLOPS)                  
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Memória:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Tipo: GDDR6<br/>
+                        - Capacidade: 16GB<br/>
+                        - Largura de banda de 448 GB/s
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Armazenamento:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Tipo: SSD<br/>
+                        - Capacidade: 1TB<br/>
+                        - Largura de banda de leitura de 5.5GB/s (Raw)
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Disco dos Jogos:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Tipo: Ultra HD Blu-ray<br/>
+                        - Até 100GB / disco
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Saída de Vídeo:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Suporte a TVs de 120Hz 4K, TVs 8K, VRR (especificado pelo HDMI versão2.1)
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Áudio:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - “Tempest” 3D AudioTech
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Recurso:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Compatível com VR (PSVR)
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Físico:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Cor: Branco<br/>
+                        - Dimensões: 390 x 104 x 260 mm
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Tensão de Alimentação:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Voltagem: 100-240V 1.65-0.75A 50/60Hz 350W
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Entrada / Saída:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - 1x USB Type-A port (Hi-Speed USB)<br/>
+                        - 2x USB Type-A port (Super-Speed USB 10Gbps)<br/>
+                        - 1x USB Type-C port (Super-Speed USB 10Gbps)
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Rede:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Ethernet (10BASE-T, 100BASE-TX, 1000BASE-T)<br/>
+                        - IEEE 802.11 a/b/g/n/ac/ax<br/>
+                        - Bluetooth 5.1
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Temperatura de Operação:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - 5º C a 35º C
+                      </p>
+                      <p class="descricaoprod">
+                        <b>CONTROLE SEM FIO DUALSENSE</b>
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Físico:</b>
+                      </p>
+                      <p class="descricaoprod">
+                          - Cor: Branco<br/>
+                          - Dimensões: 160 x 66 x 106 mm
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Botões:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Botão PS<br/>
+                        - Botão Criar<br/>
+                        - Botão Options<br/>
+                        - Botões direcionais (Cima/Baixo/Esquerda/Direita)<br/>
+                        - Botões de Ação (Triângulo, Círculo, Cruz, Quadrado)<br/>
+                        - Botões R1/L1, Botões R2/L2 (com efeitos de gatilho)<br/>
+                        - Controle esquerdo / botão L3- Controle direito / botão R3<br/>
+                        - Botão do Touch Pad- Botão MUTE
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Touch Pad:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - 2 Point Touch Pad<br/>
+                        - Capacitive Type<br/>
+                        - Click Mechanism
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Sensor de Movimento:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Sistema sensor de movimento com 6 eixos (giroscópio de 3 eixos + acelerômetro de 3 eixos)
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Bateria:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Tipo: Bateria de íon-lítio recarregável embutida<br/>
+                        - Voltagem: DC 3.65V<br/>
+                        - Capacidade: 1560mAh
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Comunicação:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Sem Fio: Bluetooth Ver5.1<br/>
+                        - Com Fio: USB connection (HID, Audio)
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Resposta:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Efeitos de gatilho (nos botões R2/L2)<br/>
+                        - Vibração (resposta tátil com atuador duplo)<br/>
+                        - Indicadores (indicador de luz / indicador de jogador / indicador do MUTE)
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Áudio:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Microfone embutido<br/>
+                        - Alto-Falante Mono integrado, entrada para Headset Stereo<br/>
+                        - Output : 48kHz/16bit, Input : 24kHz/16bit
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Conteúdo da Embalagem:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        - Console PlayStation 5<br/>
+                        - Controle sem fio DualSense<br/>
+                        - 1TB SSD<br/>
+                        - Base<br/>
+                        - Cabo HDMI<br/>
+                        - Cabo de energia AC<br/>
+                        - Cabo USB<br/>
+                        - Materiais impressos (idioma Português)<br/>
+                        - ASTRO’s PLAYROOM (jogo pré-instalado)*<br/>
+                        * O console pode precisar ser atualizado para a versão mais recente do software do sistema. Necessário conexão com a Internet.
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Garantia:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        12 meses de garantia
+                      </p>
+                      <p class="descricaoprod">
+                        <b>Peso:</b>
+                      </p>
+                      <p class="descricaoprod">
+                        6843 gramas (bruto com embalagem)
+                      </p><br/><br/><br/>
+                      <div class="rating">
+                        <span class="star" data-rating="1">&#9733;</span>
+                        <span class="star" data-rating="2">&#9733;</span>
+                        <span class="star" data-rating="3">&#9733;</span>
+                        <span class="star" data-rating="4">&#9733;</span>
+                        <span class="star" data-rating="5">&#9733;</span>
+                      </div>
+                      <p id="rating-value">Avaliação: 0 estrelas</p>
+                      <br/>
+                      <input class="avaliacaoprod" type="text" maxlength="500" placeholder="Deixe seu comentário:">
+                      <br/><br/>
+                      <button class="enviaavaliacao" type="submit">Enviar a avaliação</button>
+                  </div>
+                    </div>      
+                <br/>
+           <script src="assets/script/Scriptprod.js"></script>
+           <script src="assets/script/script.js"></script>
+          <footer class="footer">
+        <div class="container">
+            <ul>
+                <a th:href="@{/}" > <img class="logofooter" th:src="@{/icones/image-light.png}"><br/><br/></a>
+                <li><a th:href="@{/SobreNos}" class="footerlinks"><h1 class="textofooter2">Quem somos</h1></a></li><br/>
+                <li><h1 class="textofooter2">Nossas redes:</h1></li><br/>
+                    <div class="redessocial">
+                        <a href="https://www.instagram.com/motherboard.__/"><img class="redes" th:src="@{/icones/insta.png}"></a>
+                        <a href="https://twitter.com/Motherboardtec"><img class="redes" th:src="@{/icones/twitter.png}"></a>
+                        <a href="https://youtube.com/@Motherboard-np4fg"><img class="redes" th:src="@{/icones/yt.png}"></a>
+                    </div>
+            </ul>
+            <ul>
+               <h1 class="textofooter">Dúvidas:</h1><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Prazos e entregas</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Formas de pagamento</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Reembolso</h1></a></li>
+            </ul>
+            <ul> 
+               <h1 class="textofooter">Cliente:</h1><br/>
+               <li><a th:href="@{/Cadastro}" class="footerlinks"><h1 class="textofooter2">Minha conta</h1></a></li><br/>
+               <li><a th:href="@{/Cadastro}" class="footerlinks"><h1 class="textofooter2">Meus pedidos</h1></a></li><br/>
+               <li><a th:href="@{/Atendimento}" class="footerlinks"><h1 class="textofooter2">Atendimento ao cliente</h1></a></li><br/>
+            </ul>
+            <ul>
+                <h1 class="textofooter">Ajuda:</h1><br/> 
+                <li><a th:href="@{/FaleConosco}" class="footerlinks"><h1 class="textofooter2">Fale conosco</h1></a></li><br/>
+                <li><a th:href="@{/Politica-De-Privacidade}" class="footerlinks"><h1 class="textofooter2">Política de privacidade</h1></a></li><br/>
+                <li><a th:href="@{/SobreNos}" class="footerlinks"><h1 class="textofooter2">Sobre nós</h1></a></li><br/> 
+            </ul>
+        </div>
+        <p class="meio">&copy; 2023 Motherboard Tecnologic. Todos os direitos reservados.</p>
+    </footer>
+    </body>
+    </html>
